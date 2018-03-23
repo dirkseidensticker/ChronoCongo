@@ -1,0 +1,1 @@
+# Maven JAR for console
