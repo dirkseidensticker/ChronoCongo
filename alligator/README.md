@@ -35,10 +35,10 @@ In order to run the Main Class in Netbeans use `Run / Debug`.
 
 Running `mvn test` will run the unit tests with `JUnit`.
 
-## Documentation
+## Developers and License Holder
 
-TBD
+Florian Thiery<sup>1</sup>, RGZM<sup>2</sup>
 
-## Repo Developers
+<sup>1</sup> Florian Thiery M.Sc. [`ORCID:0000-0002-3246-3531`](http://orcid.org/0000-0002-3246-3531)
 
-Florian Thiery M.Sc. (RGZM)
+<sup>2</sup> Römisch-Germanisches Zentralmuseum Mainz, Leibniz-Forschungsinstitut für Archäologie [`rgzm.de`](http://rgzm.de/)
