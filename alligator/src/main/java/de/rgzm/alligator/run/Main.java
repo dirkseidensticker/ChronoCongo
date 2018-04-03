@@ -41,6 +41,8 @@ public class Main {
             System.out.println("maxDist:" + alligator.maxDistance);
             System.out.println("minDistNorm:" + alligator.minDistanceNorm);
             System.out.println("maxDistNorm:" + alligator.maxDistanceNorm);
+            System.out.println("minAlpha:" + alligator.minAlpha);
+            System.out.println("maxAlpha:" + alligator.maxAlpha);
             // validate
             AlligatorEvent a = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent b = alligator.getEventByName("Pompeii-Hoard");
@@ -88,7 +90,22 @@ public class Main {
                 }
                 out.append("\r\n");
             }
-
+            out.append("\r\n").append("-- angles [" + alligator.minAlpha + ";" + alligator.maxAlpha + "]").append("\r\n").append("\r\n");
+            out.append("            ").append("\t");
+            for (String id : alligator.eventIDs) {
+                out.append(id).append("\t");
+            }
+            out.append("\r\n");
+            for (String id : alligator.eventIDs) {
+                out.append(id).append("\t");
+                AlligatorEvent thisEvent = alligator.getEventById(id);
+                HashMap dm = thisEvent.angels;
+                for (String id2 : alligator.eventIDs) {
+                    DecimalFormat df = new DecimalFormat("#00.000000000");
+                    out.append(String.valueOf(df.format(dm.get(id2)))).append("\t");
+                }
+                out.append("\r\n");
+            }
             out.flush();
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
