@@ -2,6 +2,8 @@
 
 [![java](https://img.shields.io/badge/jdk-1.8-red.svg)](#)  [![maven](https://img.shields.io/badge/maven-3.5.0-orange.svg)](#) [![output](https://img.shields.io/badge/output-jar-red.svg)](#)   [![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/RGZM/foolib/blob/master/LICENSE)
 
+![logo](https://cdn.pixabay.com/photo/2013/07/13/14/00/alligator-161909_640.png | width=100)
+
 ## Prerequisites
 
 The code is developed using and tested with:
