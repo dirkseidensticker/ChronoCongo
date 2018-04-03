@@ -114,7 +114,7 @@ public class Alligator {
                 double norm = Math.abs((value - minDistance) / abstand);
                 norm = norm * 100;
                 distancesNormalised.put(key, norm);
-                if (norm < minDistanceNorm && norm > 0.0) {
+                if (norm < minDistanceNorm) {
                     minDistanceNorm = norm;
                 }
                 if (norm > maxDistanceNorm) {
@@ -150,7 +150,7 @@ public class Alligator {
         double b = Math.pow((y2 - y1), 2);
         double c = Math.pow((z2 - z1), 2);
         double dist = Math.sqrt(a + b + c);
-        if (dist < minDistance && dist > 0.0) {
+        if (dist < minDistance) {
             minDistance = dist;
         }
         if (dist > maxDistance) {
