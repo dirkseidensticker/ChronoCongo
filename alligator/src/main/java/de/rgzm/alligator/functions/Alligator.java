@@ -13,8 +13,8 @@ import org.hashids.Hashids;
 public class Alligator {
 
     private List<AlligatorEvent> events = new ArrayList();
-    private List<AlligatorEvent> events_fixed = new ArrayList();
-    private List<AlligatorEvent> events_fuzzy = new ArrayList();
+    private List<String> events_fixed = new ArrayList();
+    private List<String> events_fuzzy = new ArrayList();
     public double minDistance = 1000000.0;
     public double maxDistance = -1000000.0;
     public double minDistanceNorm = 1000000.0;
@@ -27,14 +27,6 @@ public class Alligator {
 
     public Alligator() {
 
-    }
-
-    public List<AlligatorEvent> getFixedEvents() {
-        return events_fixed;
-    }
-
-    public List<AlligatorEvent> getFuzzyEvents() {
-        return events_fuzzy;
     }
 
     public List<AlligatorEvent> getEvents() {
@@ -79,9 +71,9 @@ public class Alligator {
                 events.add(ae);
                 eventIDs.add(ae.id);
                 if (ae.fixed) {
-                    events_fixed.add(ae);
+                    events_fixed.add(ae.id);
                 } else {
-                    events_fuzzy.add(ae);
+                    events_fuzzy.add(ae.id);
                 }
             }
             return true;
