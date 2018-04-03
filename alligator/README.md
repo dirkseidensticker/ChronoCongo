@@ -2,7 +2,7 @@
 
 [![java](https://img.shields.io/badge/jdk-1.8-red.svg)](#)  [![maven](https://img.shields.io/badge/maven-3.5.0-orange.svg)](#) [![output](https://img.shields.io/badge/output-jar-red.svg)](#)   [![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/dirkseidensticker/ChronoCongo/blob/master/alligator/LICENSE)
 
-![logo](https://cdn.pixabay.com/photo/2013/07/13/14/00/alligator-161909_640.png)
+![logo](https://github.com/dirkseidensticker/ChronoCongo/raw/master/img/alligator-400h.png)
 
 ## Prerequisites
 
