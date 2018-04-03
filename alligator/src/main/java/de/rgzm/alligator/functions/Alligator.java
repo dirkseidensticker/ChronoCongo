@@ -21,6 +21,8 @@ public class Alligator {
     public double maxDistanceNorm = -1000000.0;
     public double minAlpha = 361.0;
     public double maxAlpha = -1.0;
+    public double minAlphaNorm = 361.0;
+    public double maxAlphaNorm = -1.0;
     public List<String> eventIDs = new ArrayList();
 
     public Alligator() {
@@ -103,6 +105,7 @@ public class Alligator {
             thisEvent.distances = distances;
             thisEvent.angels = angels;
         }
+        // calculate normed distance
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
             HashMap distancesNormalised = new HashMap();
@@ -124,6 +127,29 @@ public class Alligator {
                 }
             }
             thisEvent.distancesNormalised = distancesNormalised;
+        }
+        // calculate normed angle
+        for (Object event : events) {
+            AlligatorEvent thisEvent = (AlligatorEvent) event;
+            HashMap anglesNormalised = new HashMap();
+            HashMap angles = thisEvent.angels;
+            Iterator iter = angles.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry mEntry = (Map.Entry) iter.next();
+                String key = (String) mEntry.getKey();
+                double value = (double) mEntry.getValue();
+                double abstand = (maxAlpha - minAlpha);
+                double norm = Math.abs((value - minAlpha) / abstand);
+                norm = norm * 100;
+                anglesNormalised.put(key, norm);
+                if (norm < minAlphaNorm) {
+                    minAlphaNorm = norm;
+                }
+                if (norm > maxAlphaNorm) {
+                    maxAlphaNorm = norm;
+                }
+            }
+            thisEvent.angelsNormalised = anglesNormalised;
         }
     }
 

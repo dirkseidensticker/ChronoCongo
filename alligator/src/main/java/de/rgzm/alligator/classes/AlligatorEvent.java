@@ -17,6 +17,7 @@ public class AlligatorEvent {
     public HashMap distances;
     public HashMap distancesNormalised;
     public HashMap angels;
+    public HashMap angelsNormalised;
     
     public String toString() {
         return id + " " + name + " " + x + " " + y + " " + z + " " + a + " " + b + " " + fixed + " " + startFixed + " " + endFixed;
