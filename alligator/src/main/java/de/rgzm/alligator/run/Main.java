@@ -36,19 +36,11 @@ public class Main {
             }
             in.close();
             alligator.writeToAlligatorEventList(inputfile);
-            System.out.println("--fixed events");
-            for (Object a : alligator.getFixedEvents()) {
-                AlligatorEvent tmp = (AlligatorEvent) a;
-                System.out.println(tmp.toString());
-            }
-            System.out.println("--fuzzy events");
-            for (Object a : alligator.getFuzzyEvents()) {
-                AlligatorEvent tmp = (AlligatorEvent) a;
-                System.out.println(tmp.toString());
-            }
             alligator.calculateDistancesAndAngles();
             System.out.println("minDist:" + alligator.minDistance);
             System.out.println("maxDist:" + alligator.maxDistance);
+            System.out.println("minDistNorm:" + alligator.minDistanceNorm);
+            System.out.println("maxDistNorm:" + alligator.maxDistanceNorm);
             // validate
             AlligatorEvent a = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent b = alligator.getEventByName("Pompeii-Hoard");
