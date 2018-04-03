@@ -17,6 +17,9 @@ public class Alligator {
     private List<AlligatorEvent> events_fuzzy = new ArrayList();
     public double minDistance = 1000000.0;
     public double maxDistance = -1000000.0;
+    public double minDistanceNorm = 1000000.0;
+    public double maxDistanceNorm = -1000000.0;
+    public List<String> eventIDs = new ArrayList();
 
     public Alligator() {
 
@@ -29,7 +32,7 @@ public class Alligator {
     public List<AlligatorEvent> getFuzzyEvents() {
         return events_fuzzy;
     }
-    
+
     public List<AlligatorEvent> getEvents() {
         return events;
     }
@@ -70,6 +73,7 @@ public class Alligator {
                     ae.endFixed = true;
                 }
                 events.add(ae);
+                eventIDs.add(ae.id);
                 if (ae.fixed) {
                     events_fixed.add(ae);
                 } else {
@@ -106,9 +110,16 @@ public class Alligator {
                 Map.Entry mEntry = (Map.Entry) iter.next();
                 String key = (String) mEntry.getKey();
                 double value = (double) mEntry.getValue();
-                double norm = (value - minDistance) / (maxDistance - minDistance);
-                double nHundert = (100.0 / (maxDistance - minDistance)) * norm;
-                distancesNormalised.put(key, nHundert);
+                double abstand = (maxDistance - minDistance);
+                double norm = Math.abs((value - minDistance) / abstand);
+                norm = norm * 100;
+                distancesNormalised.put(key, norm);
+                if (norm < minDistanceNorm && norm > 0.0) {
+                    minDistanceNorm = norm;
+                }
+                if (norm > maxDistanceNorm) {
+                    maxDistanceNorm = norm;
+                }
             }
             thisEvent.distancesNormalised = distancesNormalised;
         }
@@ -118,6 +129,16 @@ public class Alligator {
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
             if (thisEvent.name.equals(name)) {
+                return thisEvent;
+            }
+        }
+        return null;
+    }
+
+    public AlligatorEvent getEventById(String id) {
+        for (Object event : events) {
+            AlligatorEvent thisEvent = (AlligatorEvent) event;
+            if (thisEvent.id.equals(id)) {
                 return thisEvent;
             }
         }
