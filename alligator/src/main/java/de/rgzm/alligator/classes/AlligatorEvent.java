@@ -15,6 +15,8 @@ public class AlligatorEvent {
     public boolean startFixed = false;
     public boolean endFixed = false;
     public HashMap distances;
+    public HashMap distancesNormalised;
+    public HashMap angels;
     
     public String toString() {
         return id + " " + name + " " + x + " " + y + " " + z + " " + a + " " + b + " " + fixed + " " + startFixed + " " + endFixed;
