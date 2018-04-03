@@ -19,6 +19,8 @@ public class Alligator {
     public double maxDistance = -1000000.0;
     public double minDistanceNorm = 1000000.0;
     public double maxDistanceNorm = -1000000.0;
+    public double minAlpha = 361.0;
+    public double maxAlpha = -1.0;
     public List<String> eventIDs = new ArrayList();
 
     public Alligator() {
@@ -160,18 +162,27 @@ public class Alligator {
     }
 
     private double angle3D(double x1, double y1, double z1, double x2, double y2, double z2) {
-        double angle;
+        double alpha = 0.0;
         // Skalarprodukt a * b
         double zaehler = (x1 * x2) + (y1 * y2) + (z1 * z2);
         // |a|*|b|
         double nenner = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2) + Math.pow(z1, 2)) * Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2) + Math.pow(z2, 2));
         // cosinus(alpha)
-        angle = zaehler / nenner;
+        alpha = zaehler / nenner;
         // alpha[rad]
-        angle = Math.acos(angle);
+        alpha = Math.acos(alpha);
         // alpha [degree]
-        angle = Math.toDegrees(angle);
-        return angle;
+        alpha = Math.toDegrees(alpha);
+        if (alpha < 0.001 || Double.isNaN(alpha)) {
+            alpha = 0.0;
+        }
+        if (alpha < minAlpha) {
+            minAlpha = alpha;
+        }
+        if (alpha > maxAlpha) {
+            maxAlpha = alpha;
+        }
+        return alpha;
     }
 
     private static String getHASHIDParams(int length) {
