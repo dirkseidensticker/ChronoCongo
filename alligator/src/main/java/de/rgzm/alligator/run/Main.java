@@ -3,6 +3,7 @@ package de.rgzm.alligator.run;
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
+import de.rgzm.allogator.allen.AllenIA;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -128,6 +129,11 @@ public class Main {
                 out.append("\r\n");
             }
             out.flush();
+            // Allen Tests
+            AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
+            AlligatorEvent t2 = alligator.getEventByName("Pompeii-Hoard");
+            System.out.println(t1.name + " " + AllenIA.getAllenRelationShortDescriptions(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
+            System.out.println(t1.name + " " + AllenIA.getAllenRelationSigns(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
         }
