@@ -16,9 +16,7 @@ import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
 
@@ -37,6 +35,11 @@ public class Main {
             in.close();
             alligator.writeToAlligatorEventList(inputfile);
             alligator.calculateDistancesAndAngles();
+            System.out.println("eventIDs:" + alligator.eventIDs.size());
+            System.out.println("events_fixed_beginn:" + alligator.events_fixed_beginn.size());
+            System.out.println("events_fuzzy_beginn:" + alligator.events_fuzzy_beginn.size());
+            System.out.println("events_fixed_end:" + alligator.events_fixed_end.size());
+            System.out.println("events_fuzzy_end:" + alligator.events_fuzzy_end.size());
             System.out.println("minDist:" + alligator.minDistance);
             System.out.println("maxDist:" + alligator.maxDistance);
             System.out.println("minDistNorm:" + alligator.minDistanceNorm);

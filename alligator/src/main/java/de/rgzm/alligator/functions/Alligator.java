@@ -12,9 +12,12 @@ import org.hashids.Hashids;
 
 public class Alligator {
 
-    private List<AlligatorEvent> events = new ArrayList();
-    private List<String> events_fixed = new ArrayList();
-    private List<String> events_fuzzy = new ArrayList();
+    public List<AlligatorEvent> events = new ArrayList();
+    public List<String> events_fixed = new ArrayList();
+    public List<String> events_fixed_beginn = new ArrayList();
+    public List<String> events_fixed_end = new ArrayList();
+    public List<String> events_fuzzy_beginn = new ArrayList();
+    public List<String> events_fuzzy_end = new ArrayList();
     public double minDistance = 1000000.0;
     public double maxDistance = -1000000.0;
     public double minDistanceNorm = 1000000.0;
@@ -24,14 +27,6 @@ public class Alligator {
     public double minAlphaNorm = 361.0;
     public double maxAlphaNorm = -1.0;
     public List<String> eventIDs = new ArrayList();
-
-    public Alligator() {
-
-    }
-
-    public List<AlligatorEvent> getEvents() {
-        return events;
-    }
 
     public boolean writeToAlligatorEventList(List inputLines) {
         try {
@@ -53,11 +48,7 @@ public class Alligator {
                 ae.z = Double.parseDouble(linesplit[3]);
                 ae.a = Double.parseDouble(linesplit[4]);
                 ae.b = Double.parseDouble(linesplit[5]);
-                if (ae.a == 20.0 && ae.b == 130.0) {
-                    ae.fixed = false;
-                } else {
-                    ae.fixed = true;
-                }
+                // check if beginn or end is fixed and populate id lists
                 if (ae.a == 20.0) {
                     ae.startFixed = false;
                 } else {
@@ -68,13 +59,19 @@ public class Alligator {
                 } else {
                     ae.endFixed = true;
                 }
+                if (!ae.startFixed) {
+                    events_fuzzy_beginn.add(ae.id);
+                } else {
+                    events_fixed_beginn.add(ae.id);
+                }
+                if (!ae.endFixed) {
+                    events_fuzzy_end.add(ae.id);
+                } else {
+                    events_fixed_end.add(ae.id);
+                }
+                // populate lists
                 events.add(ae);
                 eventIDs.add(ae.id);
-                if (ae.fixed) {
-                    events_fixed.add(ae.id);
-                } else {
-                    events_fuzzy.add(ae.id);
-                }
             }
             return true;
         } catch (Exception e) {
@@ -145,6 +142,10 @@ public class Alligator {
         }
     }
 
+    public List<AlligatorEvent> getEvents() {
+        return events;
+    }
+    
     public AlligatorEvent getEventByName(String name) {
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
