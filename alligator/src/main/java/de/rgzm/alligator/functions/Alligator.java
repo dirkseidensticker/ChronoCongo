@@ -145,7 +145,26 @@ public class Alligator {
     public List<AlligatorEvent> getEvents() {
         return events;
     }
-    
+
+    public String getEventsAsCypherNodes() {
+        String nodes = "";
+        for (Object event : events) {
+            AlligatorEvent thisEvent = (AlligatorEvent) event;
+            nodes += "CREATE (" + thisEvent.id + ":Event{label: '" + thisEvent.name + "'})" + "\r\n";
+        }
+        return nodes;
+    }
+
+    public String getEventsAsCypherReturn() {
+        String ret = "RETURN ";
+        for (Object event : events) {
+            AlligatorEvent thisEvent = (AlligatorEvent) event;
+            ret += thisEvent.id + ",";
+        }
+        ret = ret.substring(0, ret.length() - 1);
+        return ret;
+    }
+
     public AlligatorEvent getEventByName(String name) {
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
@@ -208,7 +227,12 @@ public class Alligator {
         UUID newUUID = UUID.randomUUID();
         Hashids hashids = new Hashids(newUUID.toString(), length);
         String hash = hashids.encode(1234567L);
-        return hash;
+        char ch = hash.charAt(0);
+        if (Character.isDigit(ch)) {
+            return getHASHIDParams(12);
+        } else {
+            return hash;
+        }
     }
 
 }
