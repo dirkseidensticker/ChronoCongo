@@ -1,5 +1,6 @@
 package de.rgzm.allogator.allen;
 
+import de.rgzm.alligator.classes.AlligatorEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -164,6 +165,60 @@ public class AllenIA {
         }
         if (b1 == b2 && a1 == a2) {
             relations.add("https://www.w3.org/TR/2017/REC-owl-time-20171019/#time:intervalEquals"); // 1 equals 2
+        }
+        return relations;
+    }
+
+    /**
+     * get Allen relation as description following Freksa's "Temporal Reasoning
+     * Based on Semi-Intervals" '92
+     *
+     * @param a1 start event 1
+     * @param b1 end event 1
+     * @param a2 start event 2
+     * @param b2 end event 2
+     * @return list of short Allen relation descriptions
+     */
+    public static List<String> getAllenRelationCypherProperties(double a1, double b1, double a2, double b2, AlligatorEvent one, AlligatorEvent two) {
+        List<String> relations = new ArrayList();
+        if (b1 < a2 && b1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:BEFORE]->(" + two.id + ")"); // 1 before 2
+        }
+        if (a1 < b2 && a1 < a2) {
+            relations.add("MERGE (" + one.id + ")-[:AFTER]->(" + two.id + ")"); // 1 after 2
+        }
+        if (b1 == a2 && b1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:MEETS]->(" + two.id + ")"); // 1 meets 2
+        }
+        if (a1 == b2 && a1 < a2) {
+            relations.add("MERGE (" + one.id + ")-[:MET_BY]->(" + two.id + ")"); // 1 met-by 2
+        }
+        if (b1 > a2 && b1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:OVERLAPS]->(" + two.id + ")"); // 1 overlaps 2
+        }
+        if (a1 < b2 && a1 > a2) {
+            relations.add("MERGE (" + one.id + ")-[:OVERLAPPED_BY]->(" + two.id + ")"); // 1 overlapped-by 2
+        }
+        if (a1 == a2 && b1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:STARTS]->(" + two.id + ")"); // 1 starts 2
+        }
+        if (a1 == a2 && b1 > b2) {
+            relations.add("MERGE (" + one.id + ")-[:STARTED_BY]->(" + two.id + ")"); // 1 started-by 2
+        }
+        if (b1 == b2 && a1 > a2) {
+            relations.add("MERGE (" + one.id + ")-[:FINISHES]->(" + two.id + ")"); // 1 finishes 2
+        }
+        if (b1 == b2 && a1 < a2) {
+            relations.add("MERGE (" + one.id + ")-[:FINISHED_BY]->(" + two.id + ")"); // 1 finished-by 2
+        }
+        if (a1 < b2 && b1 > a2) {
+            relations.add("MERGE (" + one.id + ")-[:DURING]->(" + two.id + ")"); // 1 during 2
+        }
+        if (b1 > b2 && a1 < a2) {
+            relations.add("MERGE (" + one.id + ")-[:CONTAINS]->(" + two.id + ")"); // 1 contains 
+        }
+        if (b1 == b2 && a1 == a2) {
+            relations.add("MERGE (" + one.id + ")-[:EQUALS]->(" + two.id + ")"); // 1 equals 2
         }
         return relations;
     }
