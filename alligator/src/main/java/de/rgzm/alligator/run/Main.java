@@ -128,7 +128,6 @@ public class Main {
                 }
                 out.append("\r\n");
             }
-            out.flush();
             // Allen Tests
             AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent t2 = alligator.getEventByName("Pompeii-Hoard");
@@ -142,7 +141,9 @@ public class Main {
                 listString += s + "\r\n";
             }
             String ret = alligator.getEventsAsCypherReturn();
-            System.out.println(nodes + listString + ret);
+            out.append("\r\n").append("-- cypher").append("\r\n\r\n").append(nodes + listString + ret).append("\r\n");
+            // write output
+            out.flush();
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
         }
