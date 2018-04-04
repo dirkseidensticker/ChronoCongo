@@ -1,7 +1,9 @@
 package de.rgzm.alligator.functions;
 
+import de.rgzm.alligator.classes.AllenObject;
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.log.Logging;
+import de.rgzm.allogator.allen.AllenIA;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -139,6 +141,23 @@ public class Alligator {
                 }
             }
             thisEvent.angelsNormalised = anglesNormalised;
+        }
+    }
+
+    public void calculateAllenSigns() {
+        for (Object event : events) {
+            AlligatorEvent thisEvent = (AlligatorEvent) event;
+            List rel = new ArrayList();
+            for (Object event2 : events) {
+                AlligatorEvent loopEvent = (AlligatorEvent) event2;
+                List realRealtions = AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b);
+                for (Object item : realRealtions) {
+                    String tmp = (String) item;
+                    rel.add(new AllenObject(thisEvent.id, loopEvent.id, tmp));
+                }
+            }
+            // set allen relations
+            thisEvent.allenRelations = rel;
         }
     }
 

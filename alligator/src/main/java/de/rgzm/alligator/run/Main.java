@@ -144,6 +144,8 @@ public class Main {
             }
             String ret = alligator.getEventsAsCypherReturn();
             out.append("\r\n").append("-- cypher").append("\r\n\r\n").append(nodes + listString + ret).append("\r\n");
+            // more Allen
+            alligator.calculateAllenSigns();
             // write output
             out.flush();
         } catch (Exception e) {
