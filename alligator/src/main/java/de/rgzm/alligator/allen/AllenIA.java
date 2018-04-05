@@ -169,6 +169,64 @@ public class AllenIA {
         if (b1 == b2 && a1 == a2) {
             relations.add("equals"); // 1 equals 2
         }
+        // Freksa (1992) "Temporal Reasoning Based on Semi-Intervals" p.21
+        // F1
+        if (a1 < a2) {
+            relations.add("older"); // 1 older 2
+        }
+        if (a1 == a2) {
+            relations.add("head to head with"); // 1 head to head with 2
+        }
+        if (a1 > a2) {
+            relations.add("younger"); // 1 younger 2
+        }
+        // F2
+        if (b1 < b2) {
+            relations.add("survived by"); // 1 survived by 2
+        }
+        if (b1 == b2) {
+            relations.add("tail to tail with"); // 1 tail to tail with 2
+        }
+        if (b1 > b2) {
+            relations.add("survives"); // 1 survives 2
+        }
+        // F3
+        if (a1 < b2) {
+            relations.add("born before death of"); // 1 born before death of 2
+        }
+        if (b1 > a2) {
+            relations.add("died after birth of"); // 1 died after birth of 2
+        }
+        // F4
+        if (b1 <= a2) {
+            relations.add("precedes"); // 1 precedes 2
+        }
+        if (a2 >= b2) {
+            relations.add("succeeds"); // 1 succeeds 2
+        }
+        // F5
+        if (a1 < b2 && b1 > a2) {
+            relations.add("contemporary of"); // 1 contemporary of 2
+        }
+        // F6
+        if (a1 < a2 && b1 < b2) {
+            relations.add("older and survived by"); // 1 older and survived by 2
+        }
+        if (a1 > a2 && b1 > b2) {
+            relations.add("younger and survives"); // 1 younger and survives 2
+        }
+        if (a1 < a2 && b1 > a2) {
+            relations.add(" older contemporary of"); // 1 older contemporary of 2
+        }
+        if (a1 > a2 && a1 > b2) {
+            relations.add("younger contemporary of"); // 1 younger contemporary of 2
+        }
+        if (a1 < b2 && b1 > b2) {
+            relations.add("surviving contemporary of"); // 1 surviving contemporary of 2
+        }
+        if (b1 > a2 && b1 < b2) {
+            relations.add("survived by contemporary of"); // 1 survived by contemporary of 2
+        }
         return relations;
     }
 
