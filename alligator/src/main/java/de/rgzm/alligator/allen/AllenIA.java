@@ -293,6 +293,8 @@ public class AllenIA {
      * @param b1 end event 1
      * @param a2 start event 2
      * @param b2 end event 2
+     * @param one AlligatorEvent 1
+     * @param two AlligatorEvent 2
      * @return list of short Allen relation descriptions
      */
     public static List<String> getAllenRelationCypherProperties(double a1, double b1, double a2, double b2, AlligatorEvent one, AlligatorEvent two) {
