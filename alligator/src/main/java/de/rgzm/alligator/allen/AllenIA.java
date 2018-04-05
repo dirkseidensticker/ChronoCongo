@@ -216,7 +216,7 @@ public class AllenIA {
             relations.add("younger and survives"); // 1 younger and survives 2
         }
         if (a1 < a2 && b1 > a2) {
-            relations.add(" older contemporary of"); // 1 older contemporary of 2
+            relations.add("older contemporary of"); // 1 older contemporary of 2
         }
         if (a1 > a2 && a1 > b2) {
             relations.add("younger contemporary of"); // 1 younger contemporary of 2
@@ -335,6 +335,64 @@ public class AllenIA {
         }
         if (b1 == b2 && a1 == a2) {
             relations.add("MERGE (" + one.id + ")-[:EQUALS]->(" + two.id + ")"); // 1 equals 2
+        }
+        // Freksa (1992) "Temporal Reasoning Based on Semi-Intervals" p.21
+        // F1
+        if (a1 < a2) {
+            relations.add("MERGE (" + one.id + ")-[:OLDER]->(" + two.id + ")"); // 1 older 2
+        }
+        if (a1 == a2) {
+            relations.add("MERGE (" + one.id + ")-[:HEAD_TO_HEAD_WITH]->(" + two.id + ")"); // 1 head to head with 2
+        }
+        if (a1 > a2) {
+            relations.add("MERGE (" + one.id + ")-[:YOUNGER]->(" + two.id + ")"); // 1 younger 2
+        }
+        // F2
+        if (b1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:SURVIVED_BY]->(" + two.id + ")"); // 1 survived by 2
+        }
+        if (b1 == b2) {
+            relations.add("MERGE (" + one.id + ")-[:TAIL_TO_TAIL_WITH]->(" + two.id + ")"); // 1 tail to tail with 2
+        }
+        if (b1 > b2) {
+            relations.add("MERGE (" + one.id + ")-[:SURVIVES]->(" + two.id + ")"); // 1 survives 2
+        }
+        // F3
+        if (a1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:BORN_BEFORE_DEATH_OF]->(" + two.id + ")"); // 1 born before death of 2
+        }
+        if (b1 > a2) {
+            relations.add("MERGE (" + one.id + ")-[:DIED_AFTER_BIRTH_OF]->(" + two.id + ")"); // 1 died after birth of 2
+        }
+        // F4
+        if (b1 <= a2) {
+            relations.add("MERGE (" + one.id + ")-[:PRECEDES]->(" + two.id + ")"); // 1 precedes 2
+        }
+        if (a2 >= b2) {
+            relations.add("MERGE (" + one.id + ")-[:SUCCEEDS]->(" + two.id + ")"); // 1 succeeds 2
+        }
+        // F5
+        if (a1 < b2 && b1 > a2) {
+            relations.add("MERGE (" + one.id + ")-[:CONTEMPORARY_OF]->(" + two.id + ")"); // 1 contemporary of 2
+        }
+        // F6
+        if (a1 < a2 && b1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:OLDER_AND_SURVIVED_BY]->(" + two.id + ")"); // 1 older and survived by 2
+        }
+        if (a1 > a2 && b1 > b2) {
+            relations.add("MERGE (" + one.id + ")-[:YOUNGER_AND_SURVIVES]->(" + two.id + ")"); // 1 younger and survives 2
+        }
+        if (a1 < a2 && b1 > a2) {
+            relations.add("MERGE (" + one.id + ")-[:OLDER_CONTEMPORARY_OF]->(" + two.id + ")"); // 1 older contemporary of 2
+        }
+        if (a1 > a2 && a1 > b2) {
+            relations.add("MERGE (" + one.id + ")-[:YOUNGER_CONTEMPORARY_OF]->(" + two.id + ")"); // 1 younger contemporary of 2
+        }
+        if (a1 < b2 && b1 > b2) {
+            relations.add("MERGE (" + one.id + ")-[:SURVIVING_CONTEMPORARY_OF]->(" + two.id + ")"); // 1 surviving contemporary of 2
+        }
+        if (b1 > a2 && b1 < b2) {
+            relations.add("MERGE (" + one.id + ")-[:SURVIVED_BY_CONTEMPORARY_OF]->(" + two.id + ")"); // 1 survived by contemporary of 2
         }
         return relations;
     }
