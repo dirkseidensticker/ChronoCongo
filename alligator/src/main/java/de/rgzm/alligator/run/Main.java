@@ -131,6 +131,8 @@ public class Main {
             // Allen Tests
             AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent t2 = alligator.getEventByName("Pompeii-Hoard");
+            System.out.println(t1.name + " [" + t1.a + ";" + t1.b + "]");
+            System.out.println(t2.name + " [" + t2.a + ";" + t2.b + "]");
             System.out.println(t1.name + " " + AllenIA.getAllenRelationShortDescriptions(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
             System.out.println(t1.name + " " + AllenIA.getAllenRelationSigns(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
             System.out.println(t2.name + " " + AllenIA.getAllenRelationShortDescriptions(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
