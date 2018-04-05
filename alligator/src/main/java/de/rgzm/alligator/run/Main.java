@@ -3,7 +3,7 @@ package de.rgzm.alligator.run;
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
-import de.rgzm.allogator.allen.AllenIA;
+import de.rgzm.alligator.allen.AllenIA;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;

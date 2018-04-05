@@ -3,7 +3,7 @@ package de.rgzm.alligator.functions;
 import de.rgzm.alligator.classes.AllenObject;
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.log.Logging;
-import de.rgzm.allogator.allen.AllenIA;
+import de.rgzm.alligator.allen.AllenIA;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;

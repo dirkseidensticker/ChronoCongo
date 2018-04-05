@@ -1,4 +1,4 @@
-package de.rgzm.allogator.allen;
+package de.rgzm.alligator.allen;
 
 import de.rgzm.alligator.classes.AlligatorEvent;
 import java.util.ArrayList;
