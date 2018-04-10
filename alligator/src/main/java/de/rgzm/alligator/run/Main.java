@@ -4,6 +4,7 @@ import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
 import de.rgzm.alligator.allen.AllenIA;
+import de.rgzm.alligator.amt.AMT;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -150,6 +151,10 @@ public class Main {
             alligator.calculateAllenSigns();
             // write output
             out.flush();
+            
+            // AMT test
+            AMT amt = new AMT("http://ls-dev.i3mainz.hs-mainz.de/rdf4j-server/repositories/graphs");
+            System.out.println(amt.GRAPH.toJSONString());
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
         }
