@@ -155,6 +155,7 @@ public class Main {
             // AMT test
             AMT amt = new AMT("http://ls-dev.i3mainz.hs-mainz.de/rdf4j-server/repositories/graphs");
             System.out.println(amt.GRAPH.toJSONString());
+            amt.queryStore("SELECT ?concept ?label ?placeholder WHERE { ?concept rdf:type amt:Concept . ?concept rdfs:label ?label . ?concept amt:placeholder ?placeholder . }", null);
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
         }
