@@ -42,6 +42,8 @@ public class AMT {
         // load data
         CONCEPTS = queryStore("SELECT ?concept ?label ?placeholder WHERE { ?concept rdf:type amt:Concept . ?concept rdfs:label ?label . ?concept amt:placeholder ?placeholder . }");
         System.out.println(CONCEPTS);
+        ROLES = queryStore("SELECT ?role ?label ?domain ?range WHERE { ?role rdf:type amt:Role . ?role rdfs:label ?label . ?role rdfs:domain ?domain . ?role rdfs:range ?range . }");
+        System.out.println(ROLES);
         return GRAPH;
     }
     
