@@ -27,6 +27,7 @@ public class AMT {
     public JSONArray AXIOMS = new JSONArray();
     public String PREFIX = "http://academic-meta-tool.xyz/vocab#";
     public String STORE = "";
+    public JSONObject graph = new JSONObject();
 
     public AMT(String store) {
         original.put("nodes", original_nodes);
@@ -39,12 +40,15 @@ public class AMT {
     }
 
     public JSONObject loadGraph() throws IOException, MalformedURLException, ParseException {
-        // load data
         CONCEPTS = queryStore("SELECT ?concept ?label ?placeholder WHERE { ?concept rdf:type amt:Concept . ?concept rdfs:label ?label . ?concept amt:placeholder ?placeholder . }");
-        System.out.println(CONCEPTS);
         ROLES = queryStore("SELECT ?role ?label ?domain ?range WHERE { ?role rdf:type amt:Role . ?role rdfs:label ?label . ?role rdfs:domain ?domain . ?role rdfs:range ?range . }");
-        System.out.println(ROLES);
-        return GRAPH;
+        JSONArray nodes = new JSONArray();
+        nodes = queryStore("SELECT ?id ?label ?concept WHERE { ?concept rdf:type amt:Concept . ?id amt:instanceOf ?concept . ?id rdfs:label ?label . }");
+        JSONArray edges = new JSONArray();
+        edges = queryStore("SELECT ?role ?from ?to ?width WHERE { ?role rdf:type amt:Role . ?stmt rdf:subject ?from . ?stmt rdf:predicate ?role . ?stmt rdf:object ?to . ?stmt amt:weight ?width . }");
+        graph.put("nodes", nodes);
+        graph.put("edges", edges);
+        return graph;
     }
     
     private JSONArray queryStore(String query) throws MalformedURLException, IOException, ParseException {
