@@ -153,9 +153,9 @@ public class Main {
             out.flush();
             
             // AMT test
-            AMT amt = new AMT("http://ls-dev.i3mainz.hs-mainz.de/rdf4j-server/repositories/graphs");
+            AMT amt = new AMT("http://ls-dev.i3mainz.hs-mainz.de/rdf4j-server/repositories/amtcaa2018");
             System.out.println(amt.GRAPH.toJSONString());
-            amt.queryStore("SELECT ?concept ?label ?placeholder WHERE { ?concept rdf:type amt:Concept . ?concept rdfs:label ?label . ?concept amt:placeholder ?placeholder . }", null);
+            amt.loadGraph();
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
         }

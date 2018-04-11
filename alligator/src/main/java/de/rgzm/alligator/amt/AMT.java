@@ -6,8 +6,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.Iterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class AMT {
 
@@ -34,59 +38,42 @@ public class AMT {
         STORE = store;
     }
 
-    public void queryStore(String query, String callback) throws MalformedURLException, IOException {
-        URL obj = new URL(STORE + "?queryLn=SPARQL&query=PREFIX amt: <" + PREFIX + "> " + query);
+    public JSONObject loadGraph() throws IOException, MalformedURLException, ParseException {
+        // load data
+        CONCEPTS = queryStore("SELECT ?concept ?label ?placeholder WHERE { ?concept rdf:type amt:Concept . ?concept rdfs:label ?label . ?concept amt:placeholder ?placeholder . }");
+        System.out.println(CONCEPTS);
+        return GRAPH;
+    }
+    
+    private JSONArray queryStore(String query) throws MalformedURLException, IOException, ParseException {
+        String q = "?query=" + URLEncoder.encode("PREFIX amt: <" + PREFIX + "> " + query, "UTF-8");
+        URL obj = new URL(STORE + q);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
         con.setRequestProperty("Accept", "application/json");
-        con.setRequestProperty("Accept-Encoding", "*");
         if (con.getResponseCode() == 200) {
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream(), "UTF8"));
             String inputLine;
-            StringBuilder response = new StringBuilder();
+            String data = "";
             while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
+                data += inputLine;
             }
             in.close();
-            System.out.println(response.toString());
+            JSONObject jsonObject = (JSONObject) new JSONParser().parse(data.toString());
+            JSONObject results = (JSONObject) jsonObject.get("results");
+            JSONArray bindings = (JSONArray) results.get("bindings");
+            for (Object i : bindings) {
+                JSONObject tmp1 = (JSONObject) i;
+                for (Iterator iterator = tmp1.keySet().iterator(); iterator.hasNext();) {
+                    String key = (String) iterator.next();
+                    JSONObject value = (JSONObject) tmp1.get(key);
+                    tmp1.put(key, value.get("value"));
+                }
+            }
+            return bindings;
         } else {
-             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream(), "UTF8"));
-            String inputLine;
-            StringBuilder response = new StringBuilder();
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close();
-            System.out.println(response.toString());
+            return new JSONArray();
         }
     }
 
-    /*
-    var queryStore = function(query,callback) {
-		$.ajax({
-			url: STORE,
-			dataType: 'jsonp',
-			type: 'GET',
-			data: {
-				queryLn: 'SPARQL',
-				query: "PREFIX amt: <"+PREFIX+"> " + query,
-				Accept: 'application/json'
-			},
-			success: function(data) {
-				var bindings = data.results.bindings;
-				for (var i in bindings) {
-					for (var j in bindings[i]) {
-						if (bindings[i][j].value)
-							bindings[i][j] = bindings[i][j].value;
-					}
-				}
-				callback(bindings);
-			},
-			error: function(data) {
-				console.log("Es ist ein Fehler aufgetreten: "+data);
-				callback([]);
-			}
-		});
-	};
-     */
 }
