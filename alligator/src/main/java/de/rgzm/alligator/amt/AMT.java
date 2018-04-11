@@ -48,6 +48,24 @@ public class AMT {
         edges = queryStore("SELECT ?role ?from ?to ?width WHERE { ?role rdf:type amt:Role . ?stmt rdf:subject ?from . ?stmt rdf:predicate ?role . ?stmt rdf:object ?to . ?stmt amt:weight ?width . }");
         graph.put("nodes", nodes);
         graph.put("edges", edges);
+        // load AXIOMS
+        JSONArray axioms = queryStore("SELECT * WHERE { ?axiom rdf:type ?type . ?type rdfs:subClassOf ?grp . ?grp rdfs:subClassOf amt:Axiom . ?axiom ?p ?o . }");
+        System.out.println(axioms.toJSONString());
+        for (Object item : axioms) {
+            JSONObject quintupel = (JSONObject) item;
+            String axiom = (String) quintupel.get("axiom");
+        }
+        /*
+        for (var i in data) {
+				if (!AXIOMS[data[i].axiom])
+					AXIOMS[data[i].axiom] = {};
+				if (data[i].p == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+					AXIOMS[data[i].axiom].type = data[i].o.substr(PREFIX.length);
+				else {
+					AXIOMS[data[i].axiom][data[i].p.substr(PREFIX.length)] = data[i].o;
+				}
+			}
+        */
         return graph;
     }
     
