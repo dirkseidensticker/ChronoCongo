@@ -9,6 +9,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -51,35 +52,51 @@ public class AMT {
         graph.put("edges", edges);
         // load AXIOMS
         JSONArray axioms = queryStore("SELECT * WHERE { ?axiom rdf:type ?type . ?type rdfs:subClassOf ?grp . ?grp rdfs:subClassOf amt:Axiom . ?axiom ?p ?o . }");
-        System.out.println(axioms.toJSONString());
+        // create unique axiom set
         HashSet axiomList = new HashSet();
         for (Object item : axioms) {
             JSONObject quintupel = (JSONObject) item;
             String axiom = (String) quintupel.get("axiom");
             axiomList.add(axiom);
         }
-        
+        // transform set to JSONObject
         for (Object item : axiomList) {
             String axiom = (String) item;
             JSONObject axiomJSON = new JSONObject();
             axiomJSON.put(axiom, new JSONObject());
             AXIOMS.add(axiomJSON);
         }
-        System.out.println(AXIOMS.toJSONString());
-        /*
-        for (var i in data) {
-				if (!AXIOMS[data[i].axiom])
-					AXIOMS[data[i].axiom] = {};
-				if (data[i].p == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
-					AXIOMS[data[i].axiom].type = data[i].o.substr(PREFIX.length);
-				else {
-					AXIOMS[data[i].axiom][data[i].p.substr(PREFIX.length)] = data[i].o;
-				}
-			}
-        */
+        // populate AXIOMS
+        for (Object item : axioms) {
+            JSONObject quintupel = (JSONObject) item;
+            String key = (String) quintupel.get("axiom");
+            String type = (String) quintupel.get("type");
+            String grp = (String) quintupel.get("grp");
+            String p = (String) quintupel.get("p");
+            String o = (String) quintupel.get("o");
+            if (p.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")) {
+                JSONObject thisObj = getJSONObjectByKeyFromJSONArray(AXIOMS, key);
+                JSONObject thisObjValue = (JSONObject) thisObj.get(key);
+                o = o.substring(PREFIX.length());
+                thisObjValue.put("type", o);
+                thisObj.remove(key);
+                thisObj.put(key, thisObjValue);
+                AXIOMS = removeJSONObjectByKeyFromJSONArray(AXIOMS, key);
+                AXIOMS.add(thisObj);
+            } else {
+                JSONObject thisObj = getJSONObjectByKeyFromJSONArray(AXIOMS, key);
+                JSONObject thisObjValue = (JSONObject) thisObj.get(key);
+                p = p.substring(PREFIX.length());
+                thisObjValue.put(p, o);
+                thisObj.remove(key);
+                thisObj.put(key, thisObjValue);
+                AXIOMS = removeJSONObjectByKeyFromJSONArray(AXIOMS, key);
+                AXIOMS.add(thisObj);
+            }
+        }
         return graph;
     }
-    
+
     private JSONArray queryStore(String query) throws MalformedURLException, IOException, ParseException {
         String q = "?query=" + URLEncoder.encode("PREFIX amt: <" + PREFIX + "> " + query, "UTF-8");
         URL obj = new URL(STORE + q);
@@ -109,6 +126,39 @@ public class AMT {
         } else {
             return new JSONArray();
         }
+    }
+    
+    private JSONObject getJSONObjectByKeyFromJSONArray(JSONArray arr, String key) {
+        for (Object item : arr) {
+            JSONObject obj = (JSONObject) item;
+            String thisKey = "";
+            Set a = obj.keySet();
+            for (Object b : a) {
+                thisKey = (String) b;
+                break;
+            }
+            if (thisKey.equals(key)) {
+                return obj;
+            }
+        }
+        return null;
+    }
+
+    private JSONArray removeJSONObjectByKeyFromJSONArray(JSONArray arr, String key) {
+        for (Object item : arr) {
+            JSONObject obj = (JSONObject) item;
+            String thisKey = "";
+            Set a = obj.keySet();
+            for (Object b : a) {
+                thisKey = (String) b;
+                break;
+            }
+            if (thisKey.equals(key)) {
+                arr.remove(obj);
+                return arr;
+            }
+        }
+        return null;
     }
 
 }
