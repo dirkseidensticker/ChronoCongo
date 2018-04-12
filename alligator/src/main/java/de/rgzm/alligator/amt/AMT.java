@@ -58,7 +58,14 @@ public class AMT {
             String axiom = (String) quintupel.get("axiom");
             axiomList.add(axiom);
         }
-        System.out.println(axiomList.toString());
+        
+        for (Object item : axiomList) {
+            String axiom = (String) item;
+            JSONObject axiomJSON = new JSONObject();
+            axiomJSON.put(axiom, new JSONObject());
+            AXIOMS.add(axiomJSON);
+        }
+        System.out.println(AXIOMS.toJSONString());
         /*
         for (var i in data) {
 				if (!AXIOMS[data[i].axiom])
