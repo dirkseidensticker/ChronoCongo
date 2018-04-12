@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.HashSet;
 import java.util.Iterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -51,10 +52,13 @@ public class AMT {
         // load AXIOMS
         JSONArray axioms = queryStore("SELECT * WHERE { ?axiom rdf:type ?type . ?type rdfs:subClassOf ?grp . ?grp rdfs:subClassOf amt:Axiom . ?axiom ?p ?o . }");
         System.out.println(axioms.toJSONString());
+        HashSet axiomList = new HashSet();
         for (Object item : axioms) {
             JSONObject quintupel = (JSONObject) item;
             String axiom = (String) quintupel.get("axiom");
+            axiomList.add(axiom);
         }
+        System.out.println(axiomList.toString());
         /*
         for (var i in data) {
 				if (!AXIOMS[data[i].axiom])
