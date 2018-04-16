@@ -27,7 +27,7 @@ public class Main {
             // init Alligator
             Alligator alligator = new Alligator();
             // read
-            File fileDir = new File("roman.tsv");
+            File fileDir = new File("../data/roman.tsv");
             BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileDir), "UTF8"));
             String str;
             List inputfile = new ArrayList();
