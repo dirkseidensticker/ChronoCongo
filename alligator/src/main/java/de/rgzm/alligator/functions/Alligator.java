@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import org.hashids.Hashids;
+import org.json.simple.JSONObject;
 
 public class Alligator {
 
@@ -144,6 +145,55 @@ public class Alligator {
         }*/
     }
 
+    public void getNextFixedNeighbours() {
+        // begin
+        System.out.println("beginn: ===================================");
+        int i = 1;
+        for (Object event : events_fuzzy_beginn) {
+            String NFBN_ID = null;
+            double NFBN_DIST = 200.0;
+            String fuzzyBeginnEventID = (String) event;
+            for (Object event2 : events_fixed_beginn) {
+                String fixedBeginnEventID = (String) event2;
+                AlligatorEvent ae = getEventById(fuzzyBeginnEventID);
+                HashMap dn = ae.distancesNormalised;
+                String NFBN_ID_THIS = fixedBeginnEventID;
+                double NFBN_DIST_THIS = (double) dn.get(fixedBeginnEventID);
+                if (NFBN_DIST_THIS < NFBN_DIST) {
+                    NFBN_DIST = NFBN_DIST_THIS;
+                    NFBN_ID = NFBN_ID_THIS;
+                }
+            }
+            JSONObject NFBN_JSON_KV = new JSONObject();
+            NFBN_JSON_KV.put(NFBN_ID, NFBN_DIST);
+            System.out.println(i++ + ": " + getEventById(fuzzyBeginnEventID).name + " --> " + getEventById(NFBN_ID).name + " " + NFBN_JSON_KV.toJSONString() + " a: " + getEventById(NFBN_ID).a);
+            getEventById(fuzzyBeginnEventID).nextFixedEndNeighbour = NFBN_JSON_KV;
+        }
+        // end
+        System.out.println("end: ===================================");
+        int j = 1;
+        for (Object event : events_fuzzy_end) {
+            String NFEN_ID = null;
+            double NFEN_DIST = 200.0;
+            String fuzzyEndEventID = (String) event;
+            for (Object event2 : events_fixed_end) {
+                String fixedEndEventID = (String) event2;
+                AlligatorEvent ae = getEventById(fuzzyEndEventID);
+                HashMap dn = ae.distancesNormalised;
+                String NFEN_ID_THIS = fixedEndEventID;
+                double NFEN_DIST_THIS = (double) dn.get(fixedEndEventID);
+                if (NFEN_DIST_THIS < NFEN_DIST) {
+                    NFEN_DIST = NFEN_DIST_THIS;
+                    NFEN_ID = NFEN_ID_THIS;
+                }
+            }
+            JSONObject NFEN_JSON_KV = new JSONObject();
+            NFEN_JSON_KV.put(NFEN_ID, NFEN_DIST);
+            System.out.println(j++ + ": " + getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_JSON_KV.toJSONString() + " b: " + getEventById(NFEN_ID).b);
+            getEventById(fuzzyEndEventID).nextFixedEndNeighbour = NFEN_JSON_KV;
+        }
+    }
+
     public void calculateAllenSigns() {
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
@@ -241,7 +291,6 @@ public class Alligator {
         }
         return alpha;
     }*/
-
     private static String getHASHIDParams(int length) {
         UUID newUUID = UUID.randomUUID();
         Hashids hashids = new Hashids(newUUID.toString(), length);

@@ -2,6 +2,7 @@ package de.rgzm.alligator.classes;
 
 import java.util.HashMap;
 import java.util.List;
+import org.json.simple.JSONObject;
 
 public class AlligatorEvent {
 
@@ -17,6 +18,7 @@ public class AlligatorEvent {
     public boolean endFixed = false;
     public HashMap distances;
     public HashMap distancesNormalised;
+    public JSONObject nextFixedEndNeighbour = new JSONObject();
     //public HashMap angels;
     //public HashMap angelsNormalised;
     public List<AllenObject> allenRelations;

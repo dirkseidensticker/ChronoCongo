@@ -50,6 +50,7 @@ public class Main {
             System.out.println("maxAlpha:" + alligator.maxAlpha);
             System.out.println("minAlphaNorm:" + alligator.minAlphaNorm);
             System.out.println("maxAlphaNorm:" + alligator.maxAlphaNorm);*/
+            alligator.getNextFixedNeighbours();
             // validate
             AlligatorEvent a = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent b = alligator.getEventByName("Pompeii-Hoard");
