@@ -212,6 +212,7 @@ public class Alligator {
             System.out.println(j++ + ": " + getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_JSON_KV.toJSONString() + " b: " + getEventById(NFEN_ID).b + " sign: " + NFEN_SIGN);
             getEventById(fuzzyEndEventID).nextFixedEndNeighbour = NFEN_JSON_KV;
         }
+        System.out.println("=============== END ===============");
     }
 
     public void calculateAllenSigns() {
