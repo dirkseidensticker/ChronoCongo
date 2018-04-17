@@ -30,6 +30,8 @@ public class Alligator {
     //public double minAlphaNorm = 361.0;
     //public double maxAlphaNorm = -1.0;
     public List<String> eventIDs = new ArrayList();
+    double yearCoefficientBeginn = 1;
+    double yearCoefficientEnd = 1; 
 
     public boolean writeToAlligatorEventList(List inputLines) {
         try {
@@ -176,7 +178,8 @@ public class Alligator {
             }
             JSONObject NFBN_JSON_KV = new JSONObject();
             NFBN_JSON_KV.put(NFBN_ID, NFBN_DIST);
-            System.out.println(i++ + ": " + getEventById(fuzzyBeginnEventID).name + " --> " + getEventById(NFBN_ID).name + " " + NFBN_JSON_KV.toJSONString() + " a: " + getEventById(NFBN_ID).a + " sign: " + NFBN_SIGN);
+            double virtualAnno = getEventById(NFBN_ID).a + ((NFBN_DIST * yearCoefficientBeginn) * NFBN_SIGN);
+            System.out.println(i++ + ": " + getEventById(fuzzyBeginnEventID).name + " --> " + getEventById(NFBN_ID).name + " " + NFBN_JSON_KV.toJSONString() + " a: " + getEventById(NFBN_ID).a + " sign: " + NFBN_SIGN + " vAnno: " + virtualAnno);
             getEventById(fuzzyBeginnEventID).nextFixedEndNeighbour = NFBN_JSON_KV;
         }
         // end
@@ -209,7 +212,8 @@ public class Alligator {
             }
             JSONObject NFEN_JSON_KV = new JSONObject();
             NFEN_JSON_KV.put(NFEN_ID, NFEN_DIST);
-            System.out.println(j++ + ": " + getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_JSON_KV.toJSONString() + " b: " + getEventById(NFEN_ID).b + " sign: " + NFEN_SIGN);
+            double virtualAnno = getEventById(NFEN_ID).b + ((NFEN_DIST * yearCoefficientEnd) * NFEN_SIGN);
+            System.out.println(j++ + ": " + getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_JSON_KV.toJSONString() + " b: " + getEventById(NFEN_ID).b + " sign: " + NFEN_SIGN + " vAnno: " + virtualAnno);
             getEventById(fuzzyEndEventID).nextFixedEndNeighbour = NFEN_JSON_KV;
         }
         System.out.println("=============== END ===============");
