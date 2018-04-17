@@ -24,10 +24,10 @@ public class Alligator {
     public double maxDistance = -1000000.0;
     public double minDistanceNorm = 1000000.0;
     public double maxDistanceNorm = -1000000.0;
-    public double minAlpha = 361.0;
-    public double maxAlpha = -1.0;
-    public double minAlphaNorm = 361.0;
-    public double maxAlphaNorm = -1.0;
+    //public double minAlpha = 361.0;
+    //public double maxAlpha = -1.0;
+    //public double minAlphaNorm = 361.0;
+    //public double maxAlphaNorm = -1.0;
     public List<String> eventIDs = new ArrayList();
 
     public boolean writeToAlligatorEventList(List inputLines) {
@@ -90,11 +90,11 @@ public class Alligator {
             for (Object event2 : events) {
                 AlligatorEvent loopEvent = (AlligatorEvent) event2;
                 distances.put(loopEvent.id, distance3D(thisEvent.x, thisEvent.y, thisEvent.z, loopEvent.x, loopEvent.y, loopEvent.z));
-                angels.put(loopEvent.id, angle3D(thisEvent.x, thisEvent.y, thisEvent.z, loopEvent.x, loopEvent.y, loopEvent.z));
+                //angels.put(loopEvent.id, angle3D(thisEvent.x, thisEvent.y, thisEvent.z, loopEvent.x, loopEvent.y, loopEvent.z));
             }
             // set distances (origin) and angels in degree
             thisEvent.distances = distances;
-            thisEvent.angels = angels;
+            //thisEvent.angels = angels;
         }
         // calculate normed distance
         for (Object event : events) {
@@ -119,7 +119,7 @@ public class Alligator {
             }
             thisEvent.distancesNormalised = distancesNormalised;
         }
-        // calculate normed angle
+        /*// calculate normed angle
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
             HashMap anglesNormalised = new HashMap();
@@ -141,7 +141,7 @@ public class Alligator {
                 }
             }
             thisEvent.angelsNormalised = anglesNormalised;
-        }
+        }*/
     }
 
     public void calculateAllenSigns() {
@@ -218,7 +218,7 @@ public class Alligator {
         return dist;
     }
 
-    private double angle3D(double x1, double y1, double z1, double x2, double y2, double z2) {
+    /*private double angle3D(double x1, double y1, double z1, double x2, double y2, double z2) {
         double alpha = 0.0;
         // Skalarprodukt a * b
         double zaehler = (x1 * x2) + (y1 * y2) + (z1 * z2);
@@ -240,7 +240,7 @@ public class Alligator {
             maxAlpha = alpha;
         }
         return alpha;
-    }
+    }*/
 
     private static String getHASHIDParams(int length) {
         UUID newUUID = UUID.randomUUID();

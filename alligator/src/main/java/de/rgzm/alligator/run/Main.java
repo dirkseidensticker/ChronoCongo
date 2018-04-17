@@ -46,14 +46,15 @@ public class Main {
             System.out.println("maxDist:" + alligator.maxDistance);
             System.out.println("minDistNorm:" + alligator.minDistanceNorm);
             System.out.println("maxDistNorm:" + alligator.maxDistanceNorm);
-            System.out.println("minAlpha:" + alligator.minAlpha);
+            /*System.out.println("minAlpha:" + alligator.minAlpha);
             System.out.println("maxAlpha:" + alligator.maxAlpha);
             System.out.println("minAlphaNorm:" + alligator.minAlphaNorm);
-            System.out.println("maxAlphaNorm:" + alligator.maxAlphaNorm);
+            System.out.println("maxAlphaNorm:" + alligator.maxAlphaNorm);*/
             // validate
             AlligatorEvent a = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent b = alligator.getEventByName("Pompeii-Hoard");
-            System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100] angle:" + a.angels.get(b.id) + "°");
+            //System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100] angle:" + a.angels.get(b.id) + "°");
+            System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100]");
             // write
             File file = new File("main.txt");
             String path = file.getCanonicalPath();
@@ -97,7 +98,7 @@ public class Main {
                 }
                 out.append("\r\n");
             }
-            out.append("\r\n").append("-- angles [" + alligator.minAlpha + ";" + alligator.maxAlpha + "]").append("\r\n").append("\r\n");
+            /*out.append("\r\n").append("-- angles [" + alligator.minAlpha + ";" + alligator.maxAlpha + "]").append("\r\n").append("\r\n");
             out.append("            ").append("\t");
             for (String id : alligator.eventIDs) {
                 out.append(id).append("\t");
@@ -128,7 +129,7 @@ public class Main {
                     out.append(String.valueOf(df.format(dm.get(id2)))).append("\t");
                 }
                 out.append("\r\n");
-            }
+            }*/
             // Allen Tests
             AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent t2 = alligator.getEventByName("Pompeii-Hoard");

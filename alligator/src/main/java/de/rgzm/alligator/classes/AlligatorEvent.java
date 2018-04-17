@@ -17,8 +17,8 @@ public class AlligatorEvent {
     public boolean endFixed = false;
     public HashMap distances;
     public HashMap distancesNormalised;
-    public HashMap angels;
-    public HashMap angelsNormalised;
+    //public HashMap angels;
+    //public HashMap angelsNormalised;
     public List<AllenObject> allenRelations;
     
     public String toString() {
