@@ -140,6 +140,12 @@ public class Main {
             System.out.println(t1.name + " " + AllenIA.getAllenRelationSigns(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
             System.out.println(t2.name + " " + AllenIA.getAllenRelationShortDescriptions(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
             System.out.println(t2.name + " " + AllenIA.getAllenRelationSigns(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
+            // output events
+            out.append("\r\n");
+            for (Object event : alligator.events) {
+                AlligatorEvent ae = (AlligatorEvent) event;
+                out.append(ae.name).append("\t").append(String.valueOf(ae.a)).append("\t").append(String.valueOf(ae.b)).append("\r\n");
+            }
             // NEO4J tests
             String nodes = alligator.getEventsAsCypherNodes();
             List<String> properties = AllenIA.getAllenRelationCypherProperties(t1.a, t1.b, t2.a, t2.b, t1, t2);
@@ -148,12 +154,12 @@ public class Main {
                 listString += s + "\r\n";
             }
             String ret = alligator.getEventsAsCypherReturn();
-            out.append("\r\n").append("-- cypher").append("\r\n\r\n").append(nodes + listString + ret).append("\r\n");
+            //out.append("\r\n").append("-- cypher").append("\r\n\r\n").append(nodes + listString + ret).append("\r\n");
             // more Allen
             alligator.calculateAllenSigns();
             // write output
             out.flush();
-            
+
             // AMT test
             AMT amt = new AMT("http://ls-dev.i3mainz.hs-mainz.de/rdf4j-server/repositories/amtcaa2018");
             System.out.println(amt.GRAPH.toJSONString());
