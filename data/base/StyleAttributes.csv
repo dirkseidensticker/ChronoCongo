@@ -1,2 +1,112 @@
 STYLE,ATTR,META
-IMB,Wiegeband,…
+IMB,Fabric1,"59: „Die Keramik des Imbonga-Stiles ist aus weiß-brennenden Tonen hergestellt, denen keinerlei Zuschläge beigemengt wurden.“"
+IMB,GefTyp1,60: „Als charakteristische Form der Imbonga-Gruppe ist Typ 1 anzusehen: knapp 80 % aller morphologisch zuweisbaren Stücke gehören diesem Typ an.“
+IMB,GefTyp2,"60 Tab. 5 = 4,3 %"
+IMB,RandTyp1,"62: „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp2,"62: „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp3,"62: „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp4,"62: „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp5,"62: „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp6,"62: „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp7,"62: „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,BodenTypB4,63: „Von den sechs unterschiedenen Typen sind vor allem der einfache Flachboden (B 4) und der abgesetzte Flachboden (B 11) von Bedeutung.“
+IMB,BodenTypB11,63: „Von den sechs unterschiedenen Typen sind vor allem der einfache Flachboden (B 4) und der abgesetzte Flachboden (B 11) von Bedeutung.“
+IMB,VerzTech02,63: „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Riefung
+IMB,VerzTech04-1,63: „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Wiegeband
+IMB,VerzTech01,63: „NachRiefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Ritzung
+IMB,VerzTech04,63: „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Stempel
+IMB,VerzTech09,"63: „Seltener, aber sehr charakteristisch für d iese Stilgruppe sind Applikationen.“"
+BON,Fabric1,69: „Die Keramik des Bonkake-Stiles entspricht technologisch der für die Imbonga-Gruppe beschriebenen Warenart.“
+BON,GefTyp5,"69 Tab. 11 = 68,8 %"
+BON,GefTyp3,"69 Tab. 11 = 12,5 %"
+BON,RandTyp1,"70 Tab. 12 = 63,6 %"
+BON,RandTyp2,"70 Tab. 12 = 19,5 %"
+BON,BodenTypB4,70 Tab. 13 = 60 %; „Auch hier sind einfache Flachböden (B 4) am häufigsten belegt“
+BON,BodenTypB11,"70 Tab. 13 = 26,7 %; „während abgesetzte Flachböden (B 11) etwas seltener auftreten“"
+BON,VerzTech01,"70: „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Ritzung"
+BON,VerzTech04,"70: „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Stempel"
+BON,VerzTech02,"70: „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Riefung"
+ING,Fabric1,73: „In technologischer Hinsicht entspricht die IngendeKeramik der im Zusammenhang mit der ImbongaGruppe beschriebenen Warenart“
+ING,GefTyp5,"73: Tab. 15 = 29,4 %"
+ING,GefTyp6,"73: Tab. 15 = 23,5 %"
+ING,GefTyp8,"73: Tab. 15 = 17,6 %"
+ING,GefTyp17,"73: Tab. 15 = 11,8 %"
+ING,RandTyp2,"75: Tab. 16 = 25,9 %"
+ING,RandTyp7,"75: Tab. 16 = 11,1 %"
+ING,RandTyp14,"75: Tab. 16 = 11,1 %"
+ING,RandTyp22,"75: Tab. 16 = 11,1 %"
+ING,RandTyp1,"75: Tab. 16 = 7,4 %"
+ING,RandTyp4,"75: Tab. 16 = 7,4 %"
+ING,BodenTypB4,75: „In der Ingende-Gruppe kommen ausschließlich einfache und abgesetzte Flachböden der Typen B 4 und B 11 vor“
+ING,BodenTypB11,75: „In der Ingende-Gruppe kommen ausschließlich einfache und abgesetzte Flachböden der Typen B 4 und B 11 vor“
+ING,VerzTech04-1,"75: „Charakteristisch für die Ornamentik der Ingende-Gruppe ist die Wiegebandtechnik, die sowohl mit dem Zahnstock als auch mit ungezähntem Gerät ausgeführt worden ist.“"
+ING,VerzTech02,75: „Häufiger belegt sind allerdings Riefenmotive“
+IGD,Fabric1,78: „Die Ware zeigt im wesentlichen die im Zusammenhang mit der Imbonga-Gruppe beschriebenen Merkmale.“
+IGD,GefTyp19,"78 Tab. 19 = 22,6 %"
+IGD,GefTyp2,"78 Tab. 19 = 12,9 %"
+IGD,GefTyp5,"78 Tab. 19 = 9,7 %"
+IGD,GefTyp8,"78 Tab. 19 = 9,7 %"
+IGD,GefTyp20,"78 Tab. 19 = 9,7 %"
+IGD,GefTyp21,"78 Tab. 19 = 9,7 %"
+IGD,GefTyp22,"78 Tab. 19 = 9,7 %"
+IGD,RandTyp24,"80 Tab. 20 = 43,8 %"
+IGD,RandTyp2,"80 Tab. 20 = 10,4 %"
+IGD,RandTyp9,"80 Tab. 20 = 6,3 %"
+IGD,RandTyp30,"80 Tab. 20 = 6,3 %"
+IGD,RandTyp7,"80 Tab. 20 = 4,2 %"
+IGD,RandTyp31,"80 Tab. 20 = 4,2 %"
+IGD,BodenTypB4,"80: „Für den Inganda-Stil sind ausschließlich flache
+Bodenformen überliefert, unter denen der einfache
+Flachboden(B 4) und der abgesetzte Flachboden(B 11)
+am häufigsten vertreten sind.“"
+IGD,BodenTypB11,"80: „Für den Inganda-Stil sind ausschließlich flache
+Bodenformen überliefert, unter denen der einfache
+Flachboden(B 4) und der abgesetzte Flachboden(B 11)
+am häufigsten vertreten sind.“"
+IGD,VerzTech01,80: „Neben eingeritzten oder aus Riefen zusammengesetzten Motiven ...“
+IGD,VerzTech02,80: „Neben eingeritzten oder aus Riefen zusammengesetzten Motiven ...“
+IGD,VerzTech04-1,"80f.: „trägt die Keramik der IngandaGruppe besonders häufig Zahnstockeindrücke, die sowohl in Wiegebandtechnik ausgeführt als auch einzeln gesetzt vorkommen."
+IGD,VerzTech05,"80f.: „trägt die Keramik der IngandaGruppe besonders häufig Zahnstockeindrücke, die sowohl in Wiegebandtechnik ausgeführt als auch einzeln gesetzt vorkommen."
+IGD,VerzTech04,81: „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
+IGD,VerzTech09,81: „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
+LOK,Fabric1,"85: „technologische Übereinstimmung mit der Ware der bislang beschriebenen Gruppen konstatieren … übliche weiße bis graue, bisweilen auch schwarze Farbe“"
+LOK,GefTyp27+28,"85 Tab. 24 = 90,4%; „Da der Bechertyp 28 aber lediglich eine kleine Variante des Typs 27 darstellt“"
+LOK,GefTyp20,"85 Tab. 24 = 9,7%"
+LOK,RandTyp23,"86 Tab. 25 = 41,8%"
+LOK,RandTyp19,"86 Tab. 25 = 34,5%"
+LOK,RandTyp10,"86 Tab. 25 = 18,2%"
+LOK,VerzTech01,"86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
+LOK,VerzTech02,"86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
+LOK,VerzTech04-1,"86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
+YET,Fabric1,90: „Die Yete-Keramik entspricht in der Ware den bislang vorgestellten Keramikgruppen.“
+YET,GefTyp29,"90 Tab. 27 = 46,2%; „kann strenggenommen nur Typ 29 als sicherer Vertreter dieser Stilgruppe gelten“"
+YET,RandTyp43,"91 Tab. 28 = 76,8%; „ allerdings nur Typ R 42 als sicher zu dieser Gruppe gehörig betrachtet“"
+YET,BodenTypB4,91: „Nur der einfache Flachboden ist sicher mit der Gefäßform 30 assoziiert“
+YET,VerzTech01,"92: „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
+YET,VerzTech02,"92: „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
+YET,VerzTech04,"92: „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
+MON,Fabric1,94: „Hinsichtlich der Warenart läßt sich die Monkoto-Keramik nicht von den bislang vorgestellten Gruppen unterscheiden.“
+MON,GefTyp33,94. „Die einzige bekannte Gefäßform der Monkoto-Gruppe stellt Typ 33 dar.“
+MON,RandTyp51,"95 Tab. 30 = 95,6%; „Die charakteristische Randform dieser Stilgruppe stellt der Typ 51 dar“"
+MON,VerzTech01,96: „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
+MON,VerzTech02,96: „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
+MON,VerzTech04,96: „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
+BKE,Fabric1,"100: „anhand technologischer Kriterien nicht von
+den bislang vorgestellten Gruppen zu unterscheiden.“"
+BKE,GefTyp34,"100 Tab. 34 = 71,4%"
+BKE,RandTyp57,"101 Tab. 35 = 62,5%"
+BKE,RandTyp51,101 Tab. 35 = 25%
+BKE,BodenTypB4,101 Tab. 36 = 75%
+BKE,BodenTypB6,101 Tab. 36 = 25%
+BKE,VerzTech11,"101: „Innerhalb der Bokele-Gruppeistdie Verzierungdurch ""Glättstriche"" am häufigsten belegt“"
+BKE,VerzTech01,101: „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
+BKE,VerzTech02,101: „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
+BKE,VerzTech04,101: „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
+LUS,Fabric1,104: „In technologischer Hinsicht entspricht die Lusako-Keramik dem Material der bislang vorgestellten Stilgruppen“
+LUS,GefTyp37,105: „Die einzige sicher belegte Gefäßform des Lusako-Stiles stellt der Typ 37 dar“
+LUS,RandTyp46,"105 Tab. 38 = 73,3 %"
+LUS,RandTyp37,"105 Tab. 38 = 26,7%"
+LUS,BodenTypB11,"105: „Die einzige für den Lusako-Stil belegte Bodenform ist d er mit Gefäßtyp 37 assoziierte, deutlich abgesetzte Flachboden des Typs B 11“"
+LUS,VerzTech01,105: „Die Ornamentik der Lusako-Gruppe ist vor allem durch eingeritzte Muster geprägt.“
+LUS,VerzTech02,105: „Neben eingeritztem Dekor sind in erster Linie einfache Riefenmuster belegt.“
+LUS,VerzTech09,105: „Pseudoapplikationen können als typisches Element der Lusako-Ornarnentik gelten.“
