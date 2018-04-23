@@ -2,21 +2,40 @@
 # - [ ] http://www.sthda.com/english/rpkgs/factoextra/
 # - [ ] http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/113-ca-correspondence-analysis-in-r-essentials/#export-plots-to-pdfpng-files
 
+library("data.table")
+library("dplyr")
 library("FactoMineR")
 library("factoextra")
+library("plyr")
 library("reshape2")
 
 # load data
 d <- read.csv("data/base/StyleAttributes.csv", encoding = 'UTF-8')
 
+# replace vessel shape typology with universal typology for diachronic question:
+k <- read.csv("data/base/Wotzka1995_GefFormenKonkordanz.csv")
+k$TypOrig <- paste("GefTyp", k$TypHPW, sep = "")
+k$TypNew <- paste("GefTyp", k$TypDS, sep = "")
+
+d$ATTR <- mapvalues(d$ATTR, 
+          from = k$TypOrig, 
+          to = k$TypNew)
+
+# filter out rims as there is no universal typolgy jet
+d <- filter(d, !grepl("Rand", ATTR))
+
+# filter out fabrics as no torough analysis has been performed jet
+d <- filter(d, !grepl("Fabric", ATTR))
+
 # build abundace table
-a <- dcast(d, STYLE ~ ATTR, 
+c <- dcast(d, STYLE ~ ATTR, 
            fun.aggregate = length)
-rownames(a) <- a[,1]
-a$STYLE <- NULL
+rownames(c) <- c[,1]
+c$STYLE <- NULL
+write.csv(c, "data/processed/crosstab.csv")
 
 # Correspondence Analysis
-res.ca <- CA(a, graph = FALSE)
+res.ca <- CA(c, graph = FALSE)
 
 fviz_ca_biplot(res.ca, repel = TRUE)
 ggsave("img/CA.png", width = 12, height = 12)
@@ -35,7 +54,7 @@ write.table(e[1]$coord[,1:2],
 # Determine the optimal number of clusters
 # fviz_nbclust(scale(a), kmeans, method = "gap_stat")
 
-res <- hcut(a, k = 4, stand = TRUE)
+res <- hcut(c, k = 4, stand = TRUE)
 fviz_dend(res, rect = TRUE, cex = 0.5,
           k_colors = c("#00AFBB","#2E9FDF", "#E7B800", "#FC4E07"))
 ggsave("img/Clust.png", width = 12, height = 6)

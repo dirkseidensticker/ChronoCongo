@@ -70,7 +70,7 @@ IGD,VerzTech05,"80f.: „trägt die Keramik der IngandaGruppe besonders häufig 
 IGD,VerzTech04,81: „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
 IGD,VerzTech09,81: „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
 LOK,Fabric1,"85: „technologische Übereinstimmung mit der Ware der bislang beschriebenen Gruppen konstatieren … übliche weiße bis graue, bisweilen auch schwarze Farbe“"
-LOK,GefTyp27+28,"85 Tab. 24 = 90,4%; „Da der Bechertyp 28 aber lediglich eine kleine Variante des Typs 27 darstellt“"
+LOK,GefTyp27,"85 Tab. 24 = 90,4%; „Da der Bechertyp 28 aber lediglich eine kleine Variante des Typs 27 darstellt“"
 LOK,GefTyp20,"85 Tab. 24 = 9,7%"
 LOK,RandTyp23,"86 Tab. 25 = 41,8%"
 LOK,RandTyp19,"86 Tab. 25 = 34,5%"
@@ -110,3 +110,62 @@ LUS,BodenTypB11,"105: „Die einzige für den Lusako-Stil belegte Bodenform ist 
 LUS,VerzTech01,105: „Die Ornamentik der Lusako-Gruppe ist vor allem durch eingeritzte Muster geprägt.“
 LUS,VerzTech02,105: „Neben eingeritztem Dekor sind in erster Linie einfache Riefenmuster belegt.“
 LUS,VerzTech09,105: „Pseudoapplikationen können als typisches Element der Lusako-Ornarnentik gelten.“
+LNG,Fabric1,108: „ In allen sonstigen technologischen Belangen entspricht die Lingonda Keramik dem Material der bisher beschriebenen Stilgruppen“
+LNG,GefTyp38,"108: „Diese beiden steilwandigen, pokalartigen Bechertypen, die unter anderem durch Exemplare beträchtlicher Größe vertreten sind, bilden somit die charakteristischen Gefäßformen des Lingonda-Stiles.“"
+LNG,GefTyp39,"108: „Diese beiden steilwandigen, pokalartigen Bechertypen, die unter anderem durch Exemplare beträchtlicher Größe vertreten sind, bilden somit die charakteristischen Gefäßformen des Lingonda-Stiles.“"
+LNG,RandTyp47,"109 Tab. 42 = 97,6%"
+LNG,BodenTypB4,109: „Die häufigste Form stellt der einfache Flachboden des Typs B 4 dar“
+LNG,BodenTypB10,109: „Daneben kommen leicht abgesetzte Flachböden des Typs B 10.“
+LNG,BodenTypB11,109: „ und riefenprofilierte Flachböden des Typs B 8 vor.“
+LNG,VerzTech08,109: „ImLingonda-Stil tritt erstmals eine Verzierungstechnik auf … im Lolinga als banfwa-nfwa bezeichnet“
+LNG,VerzTech01,111: „Nach dem banfwa-nfwa stellt die Ritztechnik die am häufigsten auf Stücken des Lingonda-Stiles belegte Verzierungsweise dar.“
+LNG,VerzTech04-1,111: „zahlreiche der für diese Stilgruppe charakteristischen Schraffuren ganz oder teilweise in Wiegebandtechnik ausgeführt“
+LNG,VerzTech05,112: „Relativ häufig fand im Lingonda-Stil der Zahnstock Verwendung“
+BOK,Fabric2,"116: „Die Scherbenoberflächen sind häufig
+von einer leicht rötlich-braunen Farbe, die auf eine intentionelle Färbung hindeutet.“"
+BOK,Fabric1,116: „In allen sonstigen technischen Belangen entspricht die Bokuma-Keramik den bisher beschriebenen Stilgruppen.“
+BOK,GefTyp41,116 Tab. 46 = 50%
+BOK,RandTyp49,"117 Tab. 47 = 66,7%"
+BOK,RandTyp48,"117 Tab. 47 = 22,2%"
+BOK,BodenTypB10,"117 Tab. 48 = 66,7%"
+BOK,BodenTypB4,"117 Tab. 48 = 16,6%"
+BOK,BodenTypB1,117: „Die Ähnlichkeit dieser kau m noch vom Gefäßkörper abgesetzten Bodenform mit dem im Bokuma-Stil erstmals auftretenden Rundboden (B 1) ist unverkennbar“
+BOK,BodenTypB13,117: „Eine weitere Neuheit d ieser Stilgruppe stellt der in einem Fall belegte Standring (B 13) dar“
+BOK,VerzTech01,117: „Die Ornamentik der Bokuma-Keramik ist in erster Linie durch Kombinationen aus eingeritzten Motiven mit Zahnstock-Wiegebandmustem geprägt“
+BOK,VerzTech04-1,117: „Die Ornamentik der Bokuma-Keramik ist in erster Linie durch Kombinationen aus eingeritzten Motiven mit Zahnstock-Wiegebandmustem geprägt“
+BOK,VerzTech04,117: „Hinter diesen beiden Verzierungstechniken treten Stempelzier und banfwa-nfwa deutlich zurück.“
+BOK,VerzTech08,117: „Hinter diesen beiden Verzierungstechniken treten Stempelzier und banfwa-nfwa deutlich zurück.“
+LON,Fabric2,121: „Nach Ausweis rotbrauner Farbreste ist zumindest die äußere Oberfläche zahlreicher Stücke dieser Stilgruppe intentioneil eingefärbt worden.“
+LON,Fabric1,121: „In allen sonstigen technischen Belangen entspricht die Longa-Keramik dem Material der bislang vorgestellten Stilgruppen.“
+LON,GefTyp44,121 Tab. 50 = 47%
+LON,GefTyp45,"121 Tab. 50 = 40,2%"
+LON,RandTyp59,123 Tab. 51 = 47.7%
+LON,RandTyp60,"123 Tab. 51 = 24,1%"
+LON,RandTyp61,"123 Tab. 51 = 20,9%"
+LON,BodenTypB1,123: „An Bodenformen sind für den Longa-Stil lediglich der Rundboden (B 1)“
+LON,VerzTech01,123: „Sieht man einmal von der besonders oft in Form einfacher horizontaler Rillen nachgewiesenen Ritztechnik ab“
+LON,VerzTech04,123: „gehört vor allem der einfache oder in Wiegebandtechnik erzeugte Zahnstockeindruck zu den am häufigsten belegten Verzierungsarten“
+LON,VerzTech04-1,123: „gehört vor allem der einfache oder in Wiegebandtechnik erzeugte Zahnstockeindruck zu den am häufigsten belegten Verzierungsarten“
+LON,VerzTech06,"123: „Besonders häufig zeigen die Gefäße der
+Longa-Gruppe komplexe, in einer Kombination aus Ritz-, Stempel- und Schnittechniken gearbeitete Muster."
+LON,VerzTech11,123: „Glättung“
+BDG,Fabric1,"128: „In ihren technologischen Eigenschaften entspricht die Bondongo-Keramik der im Zusammenhang mit dem Imbonga-Stil gegebenen und- mit jeweils nur geringen Abweichungen- für alle bislang erörterten
+Stilgruppen verbindlichen Warenbeschreibung.“"
+BDG,GefTyp53,"128 Tab. 55 = 66,4%"
+BDG,GefTyp54,"128 Tab. 55 = 14,7%"
+BDG,GefTyp55,"128 Tab. 55 = 4,7%"
+BDG,GefTyp56,"128 Tab. 55 = 3,1%"
+BDG,RandTyp65,"131 Tab. 56 = 48,1%"
+BDG,RandTyp64,"131 Tab. 56 = 19,6%"
+BDG,RandTyp70,"131 Tab. 56 = 13,6%"
+BDG,RandTyp71,"131 Tab. 56 = 6,5%"
+BDG,RandTyp72,131 Tab. 56 = 3%
+BDG,BodenTypB1,131: „Die häufigste Bodenform des Bondongo-Stiles stellt der Rundboden des Typs B 1 dar“
+BDG,VerzTech01,"131: „In der Häufigkeitsstatistikstehen Ritztechnik und banfwa-nfwa mit
+Abstand an erster Stelle."
+BDG,VerzTech08,"131: „In der Häufigkeitsstatistikstehen Ritztechnik und banfwa-nfwa mit
+Abstand an erster Stelle."
+BDG,VerzTech09,132: „In gleicher struktureller Funktion und somit ebenfalls sehr zahlreich kommen mehr oder minder stark plastisch hervortretende Wülste bzw. Leisten vor“
+BDG,VerzTech05,132: „Auch der Zahnstock fand im Bondongo-Stil sehr häufig Verwendung“
+MBA,Fabric1,139: „In technologischer Hinsicht entspricht die Mbandaka-Keramik dem Material der Bondongo-Gruppe.“
+MBA,,
