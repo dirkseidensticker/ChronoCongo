@@ -9,6 +9,10 @@ library("factoextra")
 library("plyr")
 library("reshape2")
 
+#library(devtools)
+#install_github('ISAAKiel/quantAAR')
+library(quantAAR)
+
 # load data
 d <- read.csv("data/base/StyleAttributes.csv", encoding = 'UTF-8')
 
@@ -24,14 +28,22 @@ d$ATTR <- mapvalues(d$ATTR,
 # filter out rims as there is no universal typolgy jet
 d <- filter(d, !grepl("Rand", ATTR))
 
-# filter out fabrics as no torough analysis has been performed jet
-d <- filter(d, !grepl("Fabric", ATTR))
+# filter out fabrics as no thorough analysis has been performed jet
+#d <- filter(d, !grepl("Fabric", ATTR))
 
 # build abundace table
 c <- dcast(d, STYLE ~ ATTR, 
            fun.aggregate = length)
 rownames(c) <- c[,1]
 c$STYLE <- NULL
+
+# convert all summed values to 0/1 abundance
+c[c != 0] <- 1
+
+# threshold >2 
+c <- quantAAR::itremove(c,2)
+
+# write out the abundance table
 write.csv(c, "data/processed/crosstab.csv")
 
 # Correspondence Analysis
@@ -54,8 +66,8 @@ write.table(e[1]$coord[,1:2],
 # Determine the optimal number of clusters
 # fviz_nbclust(scale(a), kmeans, method = "gap_stat")
 
-res <- hcut(c, k = 4, stand = TRUE)
-fviz_dend(res, rect = TRUE, cex = 0.5,
-          k_colors = c("#00AFBB","#2E9FDF", "#E7B800", "#FC4E07"))
+res <- hcut(c, k = 6, stand = TRUE)
+fviz_dend(res, rect = TRUE, cex = 0.5)
+#k_colors = c("#00AFBB","#2E9FDF", "#E7B800", "#FC4E07"))
 ggsave("img/Clust.png", width = 12, height = 6)
 
