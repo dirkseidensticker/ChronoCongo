@@ -35,7 +35,7 @@ public class Main {
                 inputfile.add(str);
             }
             in.close();
-            alligator.writeToAlligatorEventList(inputfile);
+            alligator.writeToAlligatorEventList(inputfile, 20.0, 130.0);
             alligator.calculateDistancesAndAngles();
             System.out.println("eventIDs:" + alligator.eventIDs.size());
             System.out.println("events_fixed_beginn:" + alligator.events_fixed_beginn.size());
@@ -57,7 +57,7 @@ public class Main {
             //System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100] angle:" + a.angels.get(b.id) + "°");
             System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100]");
             // write
-            File file = new File("main.txt");
+            File file = new File("mainTM.txt");
             String path = file.getCanonicalPath();
             File filePath = new File(path);
             filePath.delete();
@@ -142,8 +142,10 @@ public class Main {
             System.out.println(t2.name + " " + AllenIA.getAllenRelationSigns(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
             // output events
             out.append("\r\n");
+            System.out.println("virtuell: ===================================");
             for (Object event : alligator.events) {
                 AlligatorEvent ae = (AlligatorEvent) event;
+                System.out.println(ae.name + "\t" + String.valueOf(ae.a) + "\t" + String.valueOf(ae.b));
                 out.append(ae.name).append("\t").append(String.valueOf(ae.a)).append("\t").append(String.valueOf(ae.b)).append("\r\n");
             }
             // NEO4J tests
@@ -162,7 +164,7 @@ public class Main {
 
             // AMT test
             AMT amt = new AMT("http://ls-dev.i3mainz.hs-mainz.de/rdf4j-server/repositories/amtcaa2018");
-            System.out.println(amt.GRAPH.toJSONString());
+            //System.out.println(amt.GRAPH.toJSONString());
             amt.loadGraph();
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
