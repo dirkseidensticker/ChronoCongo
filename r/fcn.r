@@ -76,7 +76,7 @@ anlys <- function(d = data,
   colnames(CA_export) <- c("name", "x", "y", "z", "von", "bis", "fixed")
   
   CA_export$fixed[CA_export$fixed == 0 | is.na(CA_export$fixed)] <- "schwebend"
-  CA_export$fixed[CA_export$fixed == 1] <- ''
+  CA_export$fixed[CA_export$fixed == 1] <- 'fix'
   
   write.table(CA_export, 
               "data/processed/CA_export.tsv", 
