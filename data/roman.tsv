@@ -4,33 +4,33 @@ Baginton-fort	0.0849	0.1064	1.2410	20	130	Schwebend
 Bowes-fort	0.5153	0.2202	0.2530	20	130	Schwebend
 Brecon-fort	0.5352	0.1651	0.3233	20	130	Schwebend
 Burghöfe-Geschirrdepot	0.3723	5.7057	0.2715	20	130	Schwebend
-Butzbach-Degerfeld	0.5881	0.2155	0.2522	110	130	
+Butzbach-Degerfeld	0.5881	0.2155	0.2522	110	130	fixed
 Butzbach-fort	0.5270	0.2178	0.3127	20	130	Schwebend
 Butzbach-vicus	0.5639	0.2302	0.2139	20	130	Schwebend
-Caerleon-amphitheatre	0.5056	0.1843	0.3245	70	130	
-Caerleon-baths	0.5271	0.1677	0.0620	70	130	
-Caerleon-Bulmore	0.5860	0.2417	0.3291	70	130	
-Caerleon-canabae	0.5740	0.2419	0.4305	70	130	
-Caerleon-Civil Settlement	0.5340	0.2145	0.3499	70	130	
-Caerleon-fortress	0.5222	0.2057	0.2800	70	130	
-Caerleon-fortress baths	0.5463	0.2246	0.3224	70	130	
-Caerleon-Mill Street	0.5196	0.2036	0.2687	70	130	
-Caernarfon-Segontium fort	0.6168	0.2628	0.7933	70	130	
-Cannstatt-fort	0.5880	0.2434	0.3822	117	130	
+Caerleon-amphitheatre	0.5056	0.1843	0.3245	70	130	fixed
+Caerleon-baths	0.5271	0.1677	0.0620	70	130	fixed
+Caerleon-Bulmore	0.5860	0.2417	0.3291	70	130	fixed
+Caerleon-canabae	0.5740	0.2419	0.4305	70	130	fixed
+Caerleon-Civil Settlement	0.5340	0.2145	0.3499	70	130	fixed
+Caerleon-fortress	0.5222	0.2057	0.2800	70	130	fixed
+Caerleon-fortress baths	0.5463	0.2246	0.3224	70	130	fixed
+Caerleon-Mill Street	0.5196	0.2036	0.2687	70	130	fixed
+Caernarfon-Segontium fort	0.6168	0.2628	0.7933	70	130	fixed
+Cannstatt-fort	0.5880	0.2434	0.3822	117	130	fixed
 Cap de Creus-Cala Culip IV	0.7216	0.3233	1.9882	20	130	Schwebend
-Cardiff-fort	0.5095	0.2048	0.0232	70	130	
-Carlisle-fort	0.5287	0.2002	0.3392	70	130	
+Cardiff-fort	0.5095	0.2048	0.0232	70	130	fixed
+Carlisle-fort	0.5287	0.2002	0.3392	70	130	fixed
 Castleford-fort	0.4984	0.1901	0.3784	20	130	Schwebend
 Castleford-vicus	0.5113	0.1767	0.2233	20	130	Schwebend
-Chester-amphitheatre	0.5149	0.2025	0.3152	70	130	
-Chester-cemetery	0.5609	0.2338	0.0066	70	130	
-Chester-Civil Settlement	0.5060	0.1441	0.2305	70	130	
-Chester-Delamere St. Gorse Stacks	0.3960	0.1770	0.4322	70	130	
-Chester-extra-mural	0.5189	0.2139	0.3482	70	130	
-Chester-fortress	0.4947	0.1930	0.2709	70	130	
-Chester-outside fortress	0.5210	0.1990	0.3424	70	130	
-Chesterholm-Vindolanda-Per.1	0.5472	0.2300	0.4278	80	130	
-Chesterholm-Vindolanda-Per.1 Ditch	0.5375	0.2240	0.3589	80	130	
+Chester-amphitheatre	0.5149	0.2025	0.3152	70	130	fixed
+Chester-cemetery	0.5609	0.2338	0.0066	70	130	fixed
+Chester-Civil Settlement	0.5060	0.1441	0.2305	70	130	fixed
+Chester-Delamere St. Gorse Stacks	0.3960	0.1770	0.4322	70	130	fixed
+Chester-extra-mural	0.5189	0.2139	0.3482	70	130	fixed
+Chester-fortress	0.4947	0.1930	0.2709	70	130	fixed
+Chester-outside fortress	0.5210	0.1990	0.3424	70	130	fixed
+Chesterholm-Vindolanda-Per.1	0.5472	0.2300	0.4278	80	130	fixed
+Chesterholm-Vindolanda-Per.1 Ditch	0.5375	0.2240	0.3589	80	130	fixed
 Cirencester-fort ditch	0.0090	0.0886	1.3452	20	130	Schwebend
 Colchester-Pottery Shop I	0.0410	0.1146	1.1740	20	130	Schwebend
 Colchester-Pottery Shop II	0.1670	0.0874	1.1511	20	130	Schwebend
@@ -40,48 +40,48 @@ Fishbourne-Per.1	0.3645	0.1341	0.6388	20	130	Schwebend
 Fishbourne-Per.1b	0.0971	0.0807	0.8106	20	130	Schwebend
 Fishbourne-Per.2 construction	0.4406	0.2025	0.3116	20	130	Schwebend
 Geislingen-Häsenbühl	0.5378	0.2093	0.0376	20	130	Schwebend
-Gloucester-Kingsholm	0.0876	0.0822	0.8232	64	130	
-Hanau-Salisberg-Kesselstadt	0.5614	0.2224	0.3213	110	130	
+Gloucester-Kingsholm	0.0876	0.0822	0.8232	64	130	fixed
+Hanau-Salisberg-Kesselstadt	0.5614	0.2224	0.3213	110	130	fixed
 Hayton-fort	0.6016	0.1384	0.5744	20	130	Schwebend
-Heddernheim-cemetery	0.5453	0.2285	0.3414	70	130	
-Heddernheim-fort	0.2484	0.1783	0.2232	70	130	
-Heidelberg-Neuenheim cemetery	0.5237	0.2131	0.3291	74	130	
-Hofheim-I	0.5468	0.1504	0.7070	30	69	
-Hofheim-II	0.5193	0.2083	0.2334	74	110	
-Hofheim-II vicus	0.5508	0.2316	0.3041	74	110	
-Hofheim-vicus	0.5260	0.2199	0.2481	74	130	
+Heddernheim-cemetery	0.5453	0.2285	0.3414	70	130	fixed
+Heddernheim-fort	0.2484	0.1783	0.2232	70	130	fixed
+Heidelberg-Neuenheim cemetery	0.5237	0.2131	0.3291	74	130	fixed
+Hofheim-I	0.5468	0.1504	0.7070	30	69	fixed
+Hofheim-II	0.5193	0.2083	0.2334	74	110	fixed
+Hofheim-II vicus	0.5508	0.2316	0.3041	74	110	fixed
+Hofheim-vicus	0.5260	0.2199	0.2481	74	130	fixed
 Ilkley-fort	0.5513	0.2280	0.3834	20	130	Schwebend
-Inchtuthil-gutter	0.5106	0.2147	0.3676	83	86	
-Inchtuthil-Gutter	0.4904	0.2093	0.1089	83	86	
-La Graufesenque-Fosse Cluzel	0.5773	0.0196	4.4688	20	130	
-La Graufesenque-Fosse Malaval	2.1046	0.0660	0.4264	20	130	
-Malton-vicus	0.5432	0.2202	0.3355	20	130	
-Narbonne-les ports (La Nautique)	2.0159	0.0597	0.3000	20	70	
-Neuss-fortress	0.5449	0.2197	0.1869	20	130	
-Nijmegen-canabae	0.5086	0.2117	0.1167	70	130	
-Nijmegen-canabae east	0.5412	0.2010	0.1165	70	130	
-Nijmegen-fortress	0.4707	0.1933	0.2928	70	130	
-Nijmegen-fortress cemetery	0.4952	0.2166	0.3154	70	130	
-Nijmegen-fortress or canabae	0.5405	0.2058	0.0011	70	130	
-Nijmegen-Kops Plateau	0.4144	0.0562	2.5122	20	69	
+Inchtuthil-gutter	0.5106	0.2147	0.3676	83	86	fixed
+Inchtuthil-Gutter	0.4904	0.2093	0.1089	83	86	fixed
+La Graufesenque-Fosse Cluzel	0.5773	0.0196	4.4688	20	130	fixed
+La Graufesenque-Fosse Malaval	2.1046	0.0660	0.4264	20	130	fixed
+Malton-vicus	0.5432	0.2202	0.3355	20	130	fixed
+Narbonne-les ports (La Nautique)	2.0159	0.0597	0.3000	20	70	fixed
+Neuss-fortress	0.5449	0.2197	0.1869	20	130	fixed
+Nijmegen-canabae	0.5086	0.2117	0.1167	70	130	fixed
+Nijmegen-canabae east	0.5412	0.2010	0.1165	70	130	fixed
+Nijmegen-fortress	0.4707	0.1933	0.2928	70	130	fixed
+Nijmegen-fortress cemetery	0.4952	0.2166	0.3154	70	130	fixed
+Nijmegen-fortress or canabae	0.5405	0.2058	0.0011	70	130	fixed
+Nijmegen-Kops Plateau	0.4144	0.0562	2.5122	20	69	fixed
 Nijmegen-Ulpia Noviomagus	0.4407	0.2052	0.2004	20	130	Schwebend
 Nijmegen-Ulpia Noviomagus cemetery	0.4785	0.2025	0.3471	20	130	Schwebend
 Nijmegen-Ulpia Noviomagus cemetery Hees 2	0.5091	0.2006	0.2900	20	130	Schwebend
 Oberwinterthur-Keramiklager	0.7684	0.0502	1.1655	20	130	Schwebend
-Pompeii-Hoard	0.2280	0.0878	0.6368	20	79	
-Regensburg-Kumpfmühl	0.6055	0.1774	0.2096	70	130	
-Rottweil-Altstadt	0.5748	0.1984	0.3024	74	130	
-Rottweil-Hochmauren	0.5209	0.1046	0.1603	74	130	
-Rottweil-Hochmauren fort	0.5626	0.1957	0.2179	74	130	
-Rottweil-Nikolausfeld	0.5651	0.2034	0.3196	74	130	
-Saalburg-Erdkastell	0.5446	0.2156	0.3193	110	130	
+Pompeii-Hoard	0.2280	0.0878	0.6368	20	79	fixed
+Regensburg-Kumpfmühl	0.6055	0.1774	0.2096	70	130	fixed
+Rottweil-Altstadt	0.5748	0.1984	0.3024	74	130	fixed
+Rottweil-Hochmauren	0.5209	0.1046	0.1603	74	130	fixed
+Rottweil-Hochmauren fort	0.5626	0.1957	0.2179	74	130	fixed
+Rottweil-Nikolausfeld	0.5651	0.2034	0.3196	74	130	fixed
+Saalburg-Erdkastell	0.5446	0.2156	0.3193	110	130	fixed
 Verulamium-Boudiccan burning	0.3678	0.0864	1.5670	20	130	Schwebend
 Verulamium-Per.1	0.2733	0.1463	0.8438	20	130	Schwebend
 Verulamium-Per.2	0.5338	0.1762	0.2749	20	130	Schwebend
 Verulamium-Per.2A	0.2915	0.1715	0.3665	20	130	Schwebend
 Wimborne-Lake Farm fortress	0.1130	0.0756	1.3926	20	130	Schwebend
-Wroxeter-baths	0.2283	0.1342	1.0289	70	130	
-York-fortress	0.4545	0.1969	0.2602	70	130	
-York-outside fortress	0.5418	0.1914	0.1126	70	130	
-Zurzach-fort	0.5886	0.1660	0.9207	20	45	
-Zwammerdam-Per.1	0.3515	0.0403	0.4947	47	130	
+Wroxeter-baths	0.2283	0.1342	1.0289	70	130	fixed
+York-fortress	0.4545	0.1969	0.2602	70	130	fixed
+York-outside fortress	0.5418	0.1914	0.1126	70	130	fixed
+Zurzach-fort	0.5886	0.1660	0.9207	20	45	fixed
+Zwammerdam-Per.1	0.3515	0.0403	0.4947	47	130	fixed
