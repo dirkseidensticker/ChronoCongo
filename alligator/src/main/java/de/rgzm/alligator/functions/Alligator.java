@@ -30,10 +30,10 @@ public class Alligator {
     //public double minAlphaNorm = 361.0;
     //public double maxAlphaNorm = -1.0;
     public List<String> eventIDs = new ArrayList();
-    double yearCoefficientBeginn = 1;
-    double yearCoefficientEnd = 1; 
+    double yearCoefficientBeginn = 1.0;
+    double yearCoefficientEnd = 1.0;
 
-    public boolean writeToAlligatorEventList(List inputLines) {
+    public boolean writeToAlligatorEventList(List inputLines, Double startFixedValue, Double endFixedValue) {
         try {
             String header = (String) inputLines.get(0);
             String[] headersplit = header.split("\t");
@@ -53,16 +53,32 @@ public class Alligator {
                 ae.z = Double.parseDouble(linesplit[3]);
                 ae.a = Double.parseDouble(linesplit[4]);
                 ae.b = Double.parseDouble(linesplit[5]);
-                // check if beginn or end is fixed and populate id lists
-                if (ae.a == 20.0) {
-                    ae.startFixed = false;
-                } else {
-                    ae.startFixed = true;
+                ae.b = Double.parseDouble(linesplit[5]);
+                try {
+                    ae.schwebend = linesplit[6];
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    ae.schwebend = null;
                 }
-                if (ae.b == 130.0) {
-                    ae.endFixed = false;
+                // check if beginn or end is fixed and populate id lists
+                if (startFixedValue == null && endFixedValue == null) {
+                    if (ae.schwebend == "schwebend") {
+                        ae.startFixed = false;
+                        ae.endFixed = false;
+                    } else {
+                        ae.startFixed = true;
+                        ae.endFixed = true;
+                    }
                 } else {
-                    ae.endFixed = true;
+                    if (ae.a == startFixedValue) {
+                        ae.startFixed = false;
+                    } else {
+                        ae.startFixed = true;
+                    }
+                    if (ae.b == endFixedValue) {
+                        ae.endFixed = false;
+                    } else {
+                        ae.endFixed = true;
+                    }
                 }
                 if (!ae.startFixed) {
                     events_fuzzy_beginn.add(ae.id);
