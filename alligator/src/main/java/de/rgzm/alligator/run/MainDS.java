@@ -27,7 +27,7 @@ public class MainDS {
             // init Alligator
             Alligator alligator = new Alligator();
             // read
-            File fileDir = new File("../data/processed/CA_export_FT.tsv");
+            File fileDir = new File("../data/processed/CA_export.tsv");
             BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileDir), "UTF8"));
             String str;
             List inputfile = new ArrayList();
@@ -52,10 +52,10 @@ public class MainDS {
             System.out.println("maxAlphaNorm:" + alligator.maxAlphaNorm);*/
             alligator.getNextFixedNeighbours();
             // validate
-            AlligatorEvent a = alligator.getEventByName("Nijmegen-Kops Plateau");
-            AlligatorEvent b = alligator.getEventByName("Pompeii-Hoard");
+            AlligatorEvent a = alligator.getEventByName("LNG");
+            AlligatorEvent b = alligator.getEventByName("MON");
             //System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100] angle:" + a.angels.get(b.id) + "°");
-            System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100]");
+            System.out.println("LNG - MON:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100]");
             // write
             File file = new File("mainDS.txt");
             String path = file.getCanonicalPath();
@@ -132,8 +132,8 @@ public class MainDS {
                 out.append("\r\n");
             }*/
             // Allen Tests
-            AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
-            AlligatorEvent t2 = alligator.getEventByName("Pompeii-Hoard");
+            AlligatorEvent t1 = alligator.getEventByName("LNG");
+            AlligatorEvent t2 = alligator.getEventByName("MON");
             System.out.println(t1.name + " [" + t1.a + ";" + t1.b + "]");
             System.out.println(t2.name + " [" + t2.a + ";" + t2.b + "]");
             System.out.println(t1.name + " " + AllenIA.getAllenRelationShortDescriptions(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
