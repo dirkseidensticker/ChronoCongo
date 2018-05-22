@@ -27,7 +27,7 @@ public class MainDS {
             // init Alligator
             Alligator alligator = new Alligator();
             // read
-            File fileDir = new File("../data/processed/CA_export.tsv");
+            File fileDir = new File("../data/processed/CA_export_FT.tsv");
             BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileDir), "UTF8"));
             String str;
             List inputfile = new ArrayList();
