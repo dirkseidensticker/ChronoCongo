@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Main {
+public class MainTM {
 
     public static void main(String[] args) throws IOException, SQLException {
         try {
