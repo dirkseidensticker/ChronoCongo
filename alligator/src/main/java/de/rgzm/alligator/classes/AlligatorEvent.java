@@ -19,6 +19,7 @@ public class AlligatorEvent {
     public HashMap distances;
     public HashMap distancesNormalised;
     public JSONObject nextFixedEndNeighbour = new JSONObject();
+    public String schwebend = null;
     //public HashMap angels;
     //public HashMap angelsNormalised;
     public List<AllenObject> allenRelations;
