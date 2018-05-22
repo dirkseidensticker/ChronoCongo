@@ -53,15 +53,10 @@ public class Alligator {
                 ae.z = Double.parseDouble(linesplit[3]);
                 ae.a = Double.parseDouble(linesplit[4]);
                 ae.b = Double.parseDouble(linesplit[5]);
-                ae.b = Double.parseDouble(linesplit[5]);
-                try {
-                    ae.schwebend = linesplit[6];
-                } catch (ArrayIndexOutOfBoundsException e) {
-                    ae.schwebend = null;
-                }
+                ae.schwebend = linesplit[6];
                 // check if beginn or end is fixed and populate id lists
                 if (startFixedValue == null && endFixedValue == null) {
-                    if (ae.schwebend == "schwebend") {
+                    if (ae.schwebend.equals("schwebend")) {
                         ae.startFixed = false;
                         ae.endFixed = false;
                     } else {
