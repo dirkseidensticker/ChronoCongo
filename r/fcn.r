@@ -82,7 +82,7 @@ anlys <- function(d = data,
               "data/processed/CA_export.tsv", 
               quote=FALSE, 
               sep='\t', 
-              col.names = NA)
+              row.names = FALSE)
   
   # Build plot
   # ==========

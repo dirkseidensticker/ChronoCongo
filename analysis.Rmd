@@ -86,7 +86,6 @@ plt <- plot_grid(ca.plt,
                  labels = c("A", ""), 
                  rel_heights = c(2, 1))
 ggsave("img/Anlys2.png", width = 10, height = 10)
-
 ```
 
 
