@@ -38,18 +38,12 @@ public class MainTM2 {
             alligator.writeToAlligatorEventList(inputfile, null, null);
             alligator.calculateDistancesAndAngles();
             System.out.println("eventIDs:" + alligator.eventIDs.size());
-            System.out.println("events_fixed_beginn:" + alligator.events_fixed_beginn.size());
-            System.out.println("events_fuzzy_beginn:" + alligator.events_fuzzy_beginn.size());
-            System.out.println("events_fixed_end:" + alligator.events_fixed_end.size());
-            System.out.println("events_fuzzy_end:" + alligator.events_fuzzy_end.size());
-            System.out.println("minDist:" + alligator.minDistance);
-            System.out.println("maxDist:" + alligator.maxDistance);
-            System.out.println("minDistNorm:" + alligator.minDistanceNorm);
-            System.out.println("maxDistNorm:" + alligator.maxDistanceNorm);
-            /*System.out.println("minAlpha:" + alligator.minAlpha);
-            System.out.println("maxAlpha:" + alligator.maxAlpha);
-            System.out.println("minAlphaNorm:" + alligator.minAlphaNorm);
-            System.out.println("maxAlphaNorm:" + alligator.maxAlphaNorm);*/
+            System.out.print("events_fixed_beginn:" + alligator.events_fixed_beginn.size());
+            System.out.println(" events_fuzzy_beginn:" + alligator.events_fuzzy_beginn.size());
+            System.out.print("events_fixed_end:" + alligator.events_fixed_end.size());
+            System.out.println(" events_fuzzy_end:" + alligator.events_fuzzy_end.size());
+            System.out.print("minDist:" + alligator.minDistance);
+            System.out.println(" maxDist:" + alligator.maxDistance);
             alligator.getNextFixedNeighbours();
             // validate
             AlligatorEvent a = alligator.getEventByName("Nerva");
