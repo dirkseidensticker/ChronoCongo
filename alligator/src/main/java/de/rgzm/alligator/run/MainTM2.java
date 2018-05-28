@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainTM {
+public class MainTM2 {
 
     public static void main(String[] args) throws IOException, SQLException {
         try {
             // init Alligator
             Alligator alligator = new Alligator();
             // read
-            File fileDir = new File("../data/roman.tsv");
+            File fileDir = new File("../data/roman2.tsv");
             BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileDir), "UTF8"));
             String str;
             List inputfile = new ArrayList();
@@ -35,7 +35,7 @@ public class MainTM {
                 inputfile.add(str);
             }
             in.close();
-            alligator.writeToAlligatorEventList(inputfile, 20.0, 130.0);
+            alligator.writeToAlligatorEventList(inputfile, null, null);
             alligator.calculateDistancesAndAngles();
             System.out.println("eventIDs:" + alligator.eventIDs.size());
             System.out.println("events_fixed_beginn:" + alligator.events_fixed_beginn.size());
@@ -52,10 +52,10 @@ public class MainTM {
             System.out.println("maxAlphaNorm:" + alligator.maxAlphaNorm);*/
             alligator.getNextFixedNeighbours();
             // validate
-            AlligatorEvent a = alligator.getEventByName("Nijmegen-Kops Plateau");
-            AlligatorEvent b = alligator.getEventByName("Pompeii-Hoard");
-            //System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100] angle:" + a.angels.get(b.id) + "°");
-            System.out.println("Nijmegen-Kops Plateau - Pompeii-Hoard distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100]");
+            AlligatorEvent a = alligator.getEventByName("Nerva");
+            AlligatorEvent b = alligator.getEventByName("Trajan");
+            //System.out.println("Nerva - Trajan distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100] angle:" + a.angels.get(b.id) + "°");
+            System.out.println("Nerva - Trajan distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100]");
             // write
             File file = new File("mainTM.txt");
             String path = file.getCanonicalPath();
@@ -132,8 +132,8 @@ public class MainTM {
                 out.append("\r\n");
             }*/
             // Allen Tests
-            AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
-            AlligatorEvent t2 = alligator.getEventByName("Pompeii-Hoard");
+            AlligatorEvent t1 = alligator.getEventByName("Nerva");
+            AlligatorEvent t2 = alligator.getEventByName("Trajan");
             System.out.println(t1.name + " [" + t1.a + ";" + t1.b + "]");
             System.out.println(t2.name + " [" + t2.a + ";" + t2.b + "]");
             System.out.println(t1.name + " " + AllenIA.getAllenRelationShortDescriptions(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
