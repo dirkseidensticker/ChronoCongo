@@ -3,7 +3,7 @@ fruehkaiserzeitlich	Galba	1
 fruehkaiserzeitlich	Otho	1
 fruehkaiserzeitlich	Vespasian	10
 fruehkaiserzeitlich	Titus	2
-fruehkaiserzeitlich	Domitian	14
+fruehkaiserzeitlich	Domitian	15
 fruehkaiserzeitlich	Nerva	2
 fruehkaiserzeitlich	Trajan	19
 2ndHalfFirstCentury	Vitellius	1
@@ -18,5 +18,4 @@ Usurpator	Galba	1
 Usurpator	Otho	1
 Usurpator	Vitellius	1
 Usurpator	Vespasian	1
-fruehkaiserzeitlich	DomitianConsulate2	1
-2ndHalfFirstCentury	DomitianConsulate2	1
+DomitianConsulate2	Domitian	1
