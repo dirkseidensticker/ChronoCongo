@@ -86,16 +86,16 @@ anlys <- function(d = data,
   
   # Build plot
   # ==========
-  bottom_row <- plot_grid(clust.plt, 
+  cluster_col <- plot_grid(clust.plt, 
                           nbclust, 
-                          align = 'h', 
+                          ncol = 1,
                           labels = c("C", "D"))
   plt <- plot_grid(ca.plt.12,
                    ca.plt.23,
-                   bottom_row,
-                   ncol = 1, 
+                   cluster_col,
+                   ncol = 3, 
                    labels = c("A", "B", ""), 
-                   rel_heights = c(2, 2, 1))
+                   rel_heights = c(1, 1, 1))
   
   return(plt)
 }

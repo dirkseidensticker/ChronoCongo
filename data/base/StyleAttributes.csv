@@ -1,416 +1,421 @@
 STYLE,ATTR,META
-IMB,Fabric1,"59 „Die Keramik des Imbonga-Stiles ist aus weiß-brennenden Tonen hergestellt, denen keinerlei Zuschläge beigemengt wurden.“"
-IMB,GefTyp1,60 „Als charakteristische Form der Imbonga-Gruppe ist Typ 1 anzusehen knapp 80 % aller morphologisch zuweisbaren Stücke gehören diesem Typ an.“
-IMB,GefTyp2,"60 Tab. 5 = 4,3 %"
-IMB,RandTyp1,"62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
-IMB,RandTyp2,"62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
-IMB,RandTyp3,"62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
-IMB,RandTyp4,"62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
-IMB,RandTyp5,"62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
-IMB,RandTyp6,"62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
-IMB,RandTyp7,"62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
-IMB,BodenTypB4,63 „Von den sechs unterschiedenen Typen sind vor allem der einfache Flachboden (B 4) und der abgesetzte Flachboden (B 11) von Bedeutung.“
-IMB,BodenTypB11,63 „Von den sechs unterschiedenen Typen sind vor allem der einfache Flachboden (B 4) und der abgesetzte Flachboden (B 11) von Bedeutung.“
-IMB,VerzTech02,63 „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Riefung
-IMB,VerzTech04-1,63 „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Wiegeband
-IMB,VerzTech01,63 „NachRiefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Ritzung
-IMB,VerzTech04,63 „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Stempel
-IMB,VerzTech09,"63 „Seltener, aber sehr charakteristisch für d iese Stilgruppe sind Applikationen.“"
-BON,Fabric1,69 „Die Keramik des Bonkake-Stiles entspricht technologisch der für die Imbonga-Gruppe beschriebenen Warenart.“
-BON,GefTyp5,"69 Tab. 11 = 68,8 %"
-BON,GefTyp3,"69 Tab. 11 = 12,5 %"
-BON,RandTyp1,"70 Tab. 12 = 63,6 %"
-BON,RandTyp2,"70 Tab. 12 = 19,5 %"
-BON,BodenTypB4,70 Tab. 13 = 60 %; „Auch hier sind einfache Flachböden (B 4) am häufigsten belegt“
-BON,BodenTypB11,"70 Tab. 13 = 26,7 %; „während abgesetzte Flachböden (B 11) etwas seltener auftreten“"
-BON,VerzTech01,"70 „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Ritzung"
-BON,VerzTech04,"70 „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Stempel"
-BON,VerzTech02,"70 „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Riefung"
-ING,Fabric1,73 „In technologischer Hinsicht entspricht die IngendeKeramik der im Zusammenhang mit der ImbongaGruppe beschriebenen Warenart“
-ING,GefTyp5,"73 Tab. 15 = 29,4 %"
-ING,GefTyp6,"73 Tab. 15 = 23,5 %"
-ING,GefTyp8,"73 Tab. 15 = 17,6 %"
-ING,GefTyp17,"73 Tab. 15 = 11,8 %"
-ING,RandTyp2,"75 Tab. 16 = 25,9 %"
-ING,RandTyp7,"75 Tab. 16 = 11,1 %"
-ING,RandTyp14,"75 Tab. 16 = 11,1 %"
-ING,RandTyp22,"75 Tab. 16 = 11,1 %"
-ING,RandTyp1,"75 Tab. 16 = 7,4 %"
-ING,RandTyp4,"75 Tab. 16 = 7,4 %"
-ING,BodenTypB4,75 „In der Ingende-Gruppe kommen ausschließlich einfache und abgesetzte Flachböden der Typen B 4 und B 11 vor“
-ING,BodenTypB11,75 „In der Ingende-Gruppe kommen ausschließlich einfache und abgesetzte Flachböden der Typen B 4 und B 11 vor“
-ING,VerzTech04-1,"75 „Charakteristisch für die Ornamentik der Ingende-Gruppe ist die Wiegebandtechnik, die sowohl mit dem Zahnstock als auch mit ungezähntem Gerät ausgeführt worden ist.“"
-ING,VerzTech02,75 „Häufiger belegt sind allerdings Riefenmotive“
-IGD,Fabric1,78 „Die Ware zeigt im wesentlichen die im Zusammenhang mit der Imbonga-Gruppe beschriebenen Merkmale.“
-IGD,GefTyp19,"78 Tab. 19 = 22,6 %"
-IGD,GefTyp2,"78 Tab. 19 = 12,9 %"
-IGD,GefTyp5,"78 Tab. 19 = 9,7 %"
-IGD,GefTyp8,"78 Tab. 19 = 9,7 %"
-IGD,GefTyp20,"78 Tab. 19 = 9,7 %"
-IGD,GefTyp21,"78 Tab. 19 = 9,7 %"
-IGD,GefTyp22,"78 Tab. 19 = 9,7 %"
-IGD,RandTyp24,"80 Tab. 20 = 43,8 %"
-IGD,RandTyp2,"80 Tab. 20 = 10,4 %"
-IGD,RandTyp9,"80 Tab. 20 = 6,3 %"
-IGD,RandTyp30,"80 Tab. 20 = 6,3 %"
-IGD,RandTyp7,"80 Tab. 20 = 4,2 %"
-IGD,RandTyp31,"80 Tab. 20 = 4,2 %"
-IGD,BodenTypB4,"80 „Für den Inganda-Stil sind ausschließlich flache
-Bodenformen überliefert, unter denen der einfache
-Flachboden(B 4) und der abgesetzte Flachboden(B 11)
-am häufigsten vertreten sind.“"
-IGD,BodenTypB11,"80 „Für den Inganda-Stil sind ausschließlich flache
-Bodenformen überliefert, unter denen der einfache
-Flachboden(B 4) und der abgesetzte Flachboden(B 11)
-am häufigsten vertreten sind.“"
-IGD,VerzTech01,80 „Neben eingeritzten oder aus Riefen zusammengesetzten Motiven ...“
-IGD,VerzTech02,80 „Neben eingeritzten oder aus Riefen zusammengesetzten Motiven ...“
-IGD,VerzTech04-1,"80f. „trägt die Keramik der IngandaGruppe besonders häufig Zahnstockeindrücke, die sowohl in Wiegebandtechnik ausgeführt als auch einzeln gesetzt vorkommen."
-IGD,VerzTech05,"80f. „trägt die Keramik der IngandaGruppe besonders häufig Zahnstockeindrücke, die sowohl in Wiegebandtechnik ausgeführt als auch einzeln gesetzt vorkommen."
-IGD,VerzTech04,81 „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
-IGD,VerzTech09,81 „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
-LOK,Fabric1,"85 „technologische Übereinstimmung mit der Ware der bislang beschriebenen Gruppen konstatieren … übliche weiße bis graue, bisweilen auch schwarze Farbe“"
-LOK,GefTyp27,"85 Tab. 24 = 90,4%; „Da der Bechertyp 28 aber lediglich eine kleine Variante des Typs 27 darstellt“"
-LOK,GefTyp20,"85 Tab. 24 = 9,7%"
-LOK,RandTyp23,"86 Tab. 25 = 41,8%"
-LOK,RandTyp19,"86 Tab. 25 = 34,5%"
-LOK,RandTyp10,"86 Tab. 25 = 18,2%"
-LOK,VerzTech01,"86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
-LOK,VerzTech02,"86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
-LOK,VerzTech04-1,"86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
-YET,Fabric1,90 „Die Yete-Keramik entspricht in der Ware den bislang vorgestellten Keramikgruppen.“
-YET,GefTyp29,"90 Tab. 27 = 46,2%; „kann strenggenommen nur Typ 29 als sicherer Vertreter dieser Stilgruppe gelten“"
-YET,RandTyp43,"91 Tab. 28 = 76,8%; „ allerdings nur Typ R 42 als sicher zu dieser Gruppe gehörig betrachtet“"
-YET,BodenTypB4,91 „Nur der einfache Flachboden ist sicher mit der Gefäßform 30 assoziiert“
-YET,VerzTech01,"92 „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
-YET,VerzTech02,"92 „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
-YET,VerzTech04,"92 „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
-MON,Fabric1,94 „Hinsichtlich der Warenart läßt sich die Monkoto-Keramik nicht von den bislang vorgestellten Gruppen unterscheiden.“
-MON,GefTyp33,94. „Die einzige bekannte Gefäßform der Monkoto-Gruppe stellt Typ 33 dar.“
-MON,RandTyp51,"95 Tab. 30 = 95,6%; „Die charakteristische Randform dieser Stilgruppe stellt der Typ 51 dar“"
-MON,VerzTech01,96 „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
-MON,VerzTech02,96 „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
-MON,VerzTech04,96 „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
-BKE,Fabric1,"100 „anhand technologischer Kriterien nicht von
-den bislang vorgestellten Gruppen zu unterscheiden.“"
-BKE,GefTyp34,"100 Tab. 34 = 71,4%"
-BKE,RandTyp57,"101 Tab. 35 = 62,5%"
-BKE,RandTyp51,101 Tab. 35 = 25%
-BKE,BodenTypB4,101 Tab. 36 = 75%
-BKE,BodenTypB6,101 Tab. 36 = 25%
-BKE,VerzTech11,"101 „Innerhalb der Bokele-Gruppeistdie Verzierungdurch ""Glättstriche"" am häufigsten belegt“"
-BKE,VerzTech01,101 „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
-BKE,VerzTech02,101 „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
-BKE,VerzTech04,101 „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
-LUS,Fabric1,104 „In technologischer Hinsicht entspricht die Lusako-Keramik dem Material der bislang vorgestellten Stilgruppen“
-LUS,GefTyp37,105 „Die einzige sicher belegte Gefäßform des Lusako-Stiles stellt der Typ 37 dar“
-LUS,RandTyp46,"105 Tab. 38 = 73,3 %"
-LUS,RandTyp37,"105 Tab. 38 = 26,7%"
-LUS,BodenTypB11,"105 „Die einzige für den Lusako-Stil belegte Bodenform ist d er mit Gefäßtyp 37 assoziierte, deutlich abgesetzte Flachboden des Typs B 11“"
-LUS,VerzTech01,105 „Die Ornamentik der Lusako-Gruppe ist vor allem durch eingeritzte Muster geprägt.“
-LUS,VerzTech02,105 „Neben eingeritztem Dekor sind in erster Linie einfache Riefenmuster belegt.“
-LUS,VerzTech09,105 „Pseudoapplikationen können als typisches Element der Lusako-Ornarnentik gelten.“
-LNG,Fabric1,108 „ In allen sonstigen technologischen Belangen entspricht die Lingonda Keramik dem Material der bisher beschriebenen Stilgruppen“
-LNG,GefTyp38,"108 „Diese beiden steilwandigen, pokalartigen Bechertypen, die unter anderem durch Exemplare beträchtlicher Größe vertreten sind, bilden somit die charakteristischen Gefäßformen des Lingonda-Stiles.“"
-LNG,GefTyp39,"108 „Diese beiden steilwandigen, pokalartigen Bechertypen, die unter anderem durch Exemplare beträchtlicher Größe vertreten sind, bilden somit die charakteristischen Gefäßformen des Lingonda-Stiles.“"
-LNG,RandTyp47,"109 Tab. 42 = 97,6%"
-LNG,BodenTypB4,109 „Die häufigste Form stellt der einfache Flachboden des Typs B 4 dar“
-LNG,BodenTypB10,109 „Daneben kommen leicht abgesetzte Flachböden des Typs B 10.“
-LNG,BodenTypB11,109 „ und riefenprofilierte Flachböden des Typs B 8 vor.“
-LNG,VerzTech08,109 „ImLingonda-Stil tritt erstmals eine Verzierungstechnik auf … im Lolinga als banfwa-nfwa bezeichnet“
-LNG,VerzTech01,111 „Nach dem banfwa-nfwa stellt die Ritztechnik die am häufigsten auf Stücken des Lingonda-Stiles belegte Verzierungsweise dar.“
-LNG,VerzTech04-1,111 „zahlreiche der für diese Stilgruppe charakteristischen Schraffuren ganz oder teilweise in Wiegebandtechnik ausgeführt“
-LNG,VerzTech05,112 „Relativ häufig fand im Lingonda-Stil der Zahnstock Verwendung“
-BOK,Fabric2,"116 „Die Scherbenoberflächen sind häufig
-von einer leicht rötlich-braunen Farbe, die auf eine intentionelle Färbung hindeutet.“"
-BOK,Fabric1,116 „In allen sonstigen technischen Belangen entspricht die Bokuma-Keramik den bisher beschriebenen Stilgruppen.“
-BOK,GefTyp41,116 Tab. 46 = 50%
-BOK,RandTyp49,"117 Tab. 47 = 66,7%"
-BOK,RandTyp48,"117 Tab. 47 = 22,2%"
-BOK,BodenTypB10,"117 Tab. 48 = 66,7%"
-BOK,BodenTypB4,"117 Tab. 48 = 16,6%"
-BOK,BodenTypB1,117 „Die Ähnlichkeit dieser kau m noch vom Gefäßkörper abgesetzten Bodenform mit dem im Bokuma-Stil erstmals auftretenden Rundboden (B 1) ist unverkennbar“
-BOK,BodenTypB13,117 „Eine weitere Neuheit d ieser Stilgruppe stellt der in einem Fall belegte Standring (B 13) dar“
-BOK,VerzTech01,117 „Die Ornamentik der Bokuma-Keramik ist in erster Linie durch Kombinationen aus eingeritzten Motiven mit Zahnstock-Wiegebandmustem geprägt“
-BOK,VerzTech04-1,117 „Die Ornamentik der Bokuma-Keramik ist in erster Linie durch Kombinationen aus eingeritzten Motiven mit Zahnstock-Wiegebandmustem geprägt“
-BOK,VerzTech04,117 „Hinter diesen beiden Verzierungstechniken treten Stempelzier und banfwa-nfwa deutlich zurück.“
-BOK,VerzTech08,117 „Hinter diesen beiden Verzierungstechniken treten Stempelzier und banfwa-nfwa deutlich zurück.“
-LON,Fabric2,121 „Nach Ausweis rotbrauner Farbreste ist zumindest die äußere Oberfläche zahlreicher Stücke dieser Stilgruppe intentioneil eingefärbt worden.“
-LON,Fabric1,121 „In allen sonstigen technischen Belangen entspricht die Longa-Keramik dem Material der bislang vorgestellten Stilgruppen.“
-LON,GefTyp44,121 Tab. 50 = 47%
-LON,GefTyp45,"121 Tab. 50 = 40,2%"
-LON,RandTyp59,123 Tab. 51 = 47.7%
-LON,RandTyp60,"123 Tab. 51 = 24,1%"
-LON,RandTyp61,"123 Tab. 51 = 20,9%"
-LON,BodenTypB1,123 „An Bodenformen sind für den Longa-Stil lediglich der Rundboden (B 1)“
-LON,VerzTech01,123 „Sieht man einmal von der besonders oft in Form einfacher horizontaler Rillen nachgewiesenen Ritztechnik ab“
-LON,VerzTech04,123 „gehört vor allem der einfache oder in Wiegebandtechnik erzeugte Zahnstockeindruck zu den am häufigsten belegten Verzierungsarten“
-LON,VerzTech04-1,123 „gehört vor allem der einfache oder in Wiegebandtechnik erzeugte Zahnstockeindruck zu den am häufigsten belegten Verzierungsarten“
-LON,VerzTech06,"123 „Besonders häufig zeigen die Gefäße der
-Longa-Gruppe komplexe, in einer Kombination aus Ritz-, Stempel- und Schnittechniken gearbeitete Muster."
-LON,VerzTech11,123 „Glättung“
-BDG,Fabric1,"128 „In ihren technologischen Eigenschaften entspricht die Bondongo-Keramik der im Zusammenhang mit dem Imbonga-Stil gegebenen und- mit jeweils nur geringen Abweichungen- für alle bislang erörterten
-Stilgruppen verbindlichen Warenbeschreibung.“"
-BDG,GefTyp53,"128 Tab. 55 = 66,4%"
-BDG,GefTyp54,"128 Tab. 55 = 14,7%"
-BDG,GefTyp55,"128 Tab. 55 = 4,7%"
-BDG,GefTyp56,"128 Tab. 55 = 3,1%"
-BDG,RandTyp65,"131 Tab. 56 = 48,1%"
-BDG,RandTyp64,"131 Tab. 56 = 19,6%"
-BDG,RandTyp70,"131 Tab. 56 = 13,6%"
-BDG,RandTyp71,"131 Tab. 56 = 6,5%"
-BDG,RandTyp72,131 Tab. 56 = 3%
-BDG,BodenTypB1,131 „Die häufigste Bodenform des Bondongo-Stiles stellt der Rundboden des Typs B 1 dar“
-BDG,VerzTech01,"131 „In der Häufigkeitsstatistikstehen Ritztechnik und banfwa-nfwa mit
-Abstand an erster Stelle."
-BDG,VerzTech08,"131 „In der Häufigkeitsstatistikstehen Ritztechnik und banfwa-nfwa mit
-Abstand an erster Stelle."
-BDG,VerzTech09,132 „In gleicher struktureller Funktion und somit ebenfalls sehr zahlreich kommen mehr oder minder stark plastisch hervortretende Wülste bzw. Leisten vor“
-BDG,VerzTech05,132 „Auch der Zahnstock fand im Bondongo-Stil sehr häufig Verwendung“
-MBA,Fabric1,139 „In technologischer Hinsicht entspricht die Mbandaka-Keramik dem Material der Bondongo-Gruppe.“
-MBA,GefTyp67,"139 Tab. 60 = 77,6%"
-MBA,GefTyp68,"139 Tab. 60 = 12,2%"
-MBA,GefTyp54,"139 Tab. 60 = 10,2%"
-MBA,RandTyp65,"140 Tab. 61 = 75,3%"
-MBA,RandTyp72,"140 Tab. 61 = 7,8%"
-MBA,RandTyp73,"140 Tab. 61 = 6,5%"
-MBA,VerzTech01,140 „Die Ornamentik des Mbandaka-Stiles ist in erster Linie durch eingeritzte Motive und banfwa-nfwaVerzierung geprägt.“
-MBA,VerzTech08,140 „Die Ornamentik des Mbandaka-Stiles ist in erster Linie durch eingeritzte Motive und banfwa-nfwaVerzierung geprägt.“
-NKI,Fabric1,"144 ""Die Keramik des Nkile-Stiles entspricht in ihren technologischen Eigenschaften derjenigen der Bondongo-Gruppe“"
-NKI,GefTyp70,"144 Tab. 64 = 41,0%"
-NKI,GefTyp69,"144 Tab. 64 = 36,1%"
-NKI,GefTyp71,"144 Tab. 64 = 6,6%"
-NKI,GefTyp59,"144 Tab. 64 = 4,9%"
-NKI,GefTyp72,"144 Tab. 64 = 4,9%"
-NKI,GefTyp73,"144 Tab. 64 = 4,9%"
-NKI,RandTyp71,"145 Tab. 65 = 38,5%"
-NKI,RandTyp64,"145 Tab. 65 = 36,5%"
-NKI,RandTyp65,"145 Tab. 65 = 9,6%"
-NKI,RandTyp87,"145 Tab. 65 = 5,8%"
-NKI,BodenTypB1,"145 „ausschließlich um Rundböden des Typs B 1,“"
-NKI,VerzTech01,145 „Das Erscheinungsbild d er Nkile-Keramik wird in erster Linie durch eingeritzte Ornamente und banfwa-nfwa-Verzierung bestimmt.“
-NKI,VerzTech08,145 „Das Erscheinungsbild d er Nkile-Keramik wird in erster Linie durch eingeritzte Ornamente und banfwa-nfwa-Verzierung bestimmt.“
-NKI,VerzTech04,"145 „Stempel-, Kerbschnitt- und Riefenmotive sowie plastische Ornamentik treten quantitativ deutlich hinter diesen beiden Hauptverzierungsarten zurück.“"
-NKI,VerzTech06,"145 „Stempel-, Kerbschnitt- und Riefenmotive sowie plastische Ornamentik treten quantitativ deutlich hinter diesen beiden Hauptverzierungsarten zurück.“"
-NKI,VerzTech02,"145 „Stempel-, Kerbschnitt- und Riefenmotive sowie plastische Ornamentik treten quantitativ deutlich hinter diesen beiden Hauptverzierungsarten zurück.“"
-BOT,Fabric1,150 „Keramik des Botendo-Stiles keine technologischen Besonderheiten auf“
-BOT,GefTyp74,"151 Tab. 67 = 31,8%"
-BOT,GefTyp75,"151 Tab. 67 = 22,6%"
-BOT,GefTyp76,"151 Tab. 67 = 22,%"
-BOT,GefTyp77,"151 Tab. 67 = 5,9%"
-BOT,BodenTypB1,154 „Die häufigste Bodenform des Botendo-Stiles stellt der mit mehreren Gefäßtypen assoziierte Rundboden (Typ B 1) dar.“
-BOT,VerzTech08,"154 „Das bei weitem häufigste Element der Botendo-Ornamentik ist die flächige banfwa-nfwa-Verzierung, die auf kaum einem Stück dieser Stilgruppe fehlt.“"
-BOT,VerzTech01,154 „Erscheinungsbild der Botendo-Keramik vor allem durch Rillen- bzw. Riefenmuster geprägt
-BOT,VerzTech02,154 „Erscheinungsbild der Botendo-Keramik vor allem durch Rillen- bzw. Riefenmuster geprägt
-BOT,VerzTech04,"154 „Nimmt man noch die Stempelverzierung hinzu, so ist das technische Repertoire der Botendo-Ornamentik im wesentlichen vollständig aufgeführt“"
-BEK,Fabric2,"158 „Auffälligstes Merkmal
-dieser Bekongo-Ware ist die überwiegende
-Verwendung rotbrennender Tone.“"
-BEK,GefTyp86,"159 Tab. 72 = 65,4%"
-BEK,GefTyp53,"159 Tab. 72 = 11,5%"
-BEK,GefTyp44,"159 Tab. 72 = 15,4%"
-BEK,RandTyp66,"160 Tab. 73 = 55,0%"
-BEK,RandTyp59,"160 Tab. 73 = 20,0%"
-BEK,RandTyp129,"160 Tab. 73 = 15,0%"
-BEK,VerzTech01,160 „In der Häufigkeitsstatistik der für den Bekongo-Stil belegten Verzierungstechniken nehmen Rillen- und Riefenverzierung die beiden ersten Positionen ein.“
-BEK,VerzTech02,160 „In der Häufigkeitsstatistik der für den Bekongo-Stil belegten Verzierungstechniken nehmen Rillen- und Riefenverzierung die beiden ersten Positionen ein.“
-BEK,VerzTech05,"160 „Auf Platz drei folgt die Zahnstockomamentik, die in dieser Stilgruppe unter Verwendung besonders langer und zuweilen offensichtlich flexibler Geräte hergestellt wurde.“"
-BEK,VerzTech04-1,160 „in einigen Fällen auch die Wiegebandtechnik nachgewiesen.
-BEK,VerzTech04,160 „Bei den selten belegten Stempelmotiven handelt es sich zumeist um parallele Reihen feiner dreieckiger Eindrücke“
-WAF,Fabric1,163 „Die Keramik des Wafanya-Stiles ist aus ungemagerten weißbrennenden Tonen hergestellt.
-WAF,GefTyp88,"163 Tab. 76 = 52,3%"
-WAF,GefTyp53,"163 Tab. 76 = 31,8%"
-WAF,GefTyp59,"163 Tab. 76 = 6,8%"
-WAF,GefTyp87,"163 Tab. 76 = 6,8%"
-WAF,RandTyp130,"164 Tab. 77 = 55,5%"
-WAF,RandTyp95,"164 Tab. 77 = 33,8%"
-WAF,VerzTech01,164 „Die beiden häufigsten Dekorkategorien der Wafanya-Keramik stellen Rillen- bzw. Riefenornamentik und banfwa-nwfa-Verzierung dar.“
-WAF,VerzTech02,164 „Die beiden häufigsten Dekorkategorien der Wafanya-Keramik stellen Rillen- bzw. Riefenornamentik und banfwa-nwfa-Verzierung dar.“
-WAF,VerzTech08,164 „Die beiden häufigsten Dekorkategorien der Wafanya-Keramik stellen Rillen- bzw. Riefenornamentik und banfwa-nwfa-Verzierung dar.“
-WAF,VerzTech05,"164 „Auf der Häufigkeitsskala folgen Zahnstockornamente,“"
-WAF,VerzTech09,164 „Die in der Wafanya-Gruppe sehr zahlreich vorkommenden plastischen Zier- bzw. Schulterleisten dürften in aller Regel aus der Gefäßwandung herausgearbeitet worden sein.
-WAF,VerzTech06,"165 „Abgesehen von den zahlreichen Kerbverzierungen, ...“"
-WEM,Fabric1,"168 „aus weißbrennend en Tonen hergestellten
-Keramikgruppen“"
-WEM,Fabric2,"168 „Einige w~nige Scherben zeigen aber auf ansonsten weißer Oberfläche teils blaßrot, teils intensiv rot gefärbte, bisweilen auch im Bruch nachweisbare Bereiche.“"
-WEM,Fabric4,"168 „An vier Fragmenten der Werna-Gruppe fallen eingelagerte, deutlich sieht- und fühlbare feine Quarzkörner auf, die eine intentioneHe Magerung bzw. die Verwendung von Tonen mit für diese Stilgruppe ungewöhnlich grobkörnigem Sandanteil bezeugen.“"
-WEM,GefTyp89,"168 Tab. 79 = 98,7%"
-WEM,RandTyp75,"169 Tab. 80 = 58,8%"
-WEM,RandTyp75,"169 Tab. 80 = 11,8%"
-WEM,RandTyp75,"169 Tab. 80 = 11,8%"
-WEM,VerzTech08,169 „Wenngleich das auf nahezu keinem Stück fehlende banfwa -nfwa die bei weitem häufigste Verzierungsart der Werna-Keramik darstellt“
-WEM,VerzTech01,169 „ist die Ornamentik dieser Stilgruppe im wesentlichen durch eingeritzten Dekor charakterisiert.“
-WEM,VerzTech04,"169 „Stempelmuster begegnen ausschließlich in Form eingedrückter kurzer Bögen,“"
-BOS,Fabric1,"172 „Die Keramik des Bosanga-Stiles entspricht in technologischer Hinsicht weitgehend den bislang beschriebenen, aus weißbrennenden Tonen hergestellten Keramikgruppen. Der weitaus größte Teil
-des Materials ist ungemagert“"
-BOS,GefTyp59,"172 Tab. 83 = 80,0%"
-BOS,GefTyp71,"172 Tab. 83 = 8,9%"
-BOS,GefTyp89,"172 Tab. 83 = 6,7%"
-BOS,GefTyp70,"172 Tab. 83 = 4,4%"
-BOS,RandTyp75,"173 Tab. 84 = 46,4%"
-BOS,RandTyp130,"173 Tab. 84 = 26,7%"
-BOS,VerzTech01,173 „Die Bosanga-Keramik ist im wesentlichen durch Rillen- und banfwa-nfwa-Ornamentik geprägt.“
-BOS,VerzTech08,173 „Die Bosanga-Keramik ist im wesentlichen durch Rillen- und banfwa-nfwa-Ornamentik geprägt.“
-BOS,VerzTech04,"173 „Stempeldekor ist in der Bosanga-Gruppe zwar mehrfach belegt, tritt aber quantitativ deutlich hinter den genannten Verzierungstechniken zurück.“"
-BLD,Fabric1,"175 „Der größte Teil der Bolondo-Keramik wurde aus
-weißbrennenden Tonen hergestellt.“"
-BLD,Fabric2,175 „Für rund 10% des zugehörigen Materials ist hingegen eine rote Brennfarbe nachgewiesen.“
-BLD,Fabric4,175 „Eine intentioneile Magerung mit feinem Quarzsand weisen 14 % der zur Bolondo-Gruppe gehörigen Stücke auf.“
-BLD,GefTyp71,"175 Tab 86 = 66,3%"
-BLD,GefTyp70,"175 Tab 86 = 10,5%"
-BLD,GefTyp75,"175 Tab 86 = 7,0%"
-BLD,GefTyp59,"175 Tab 86 = 5,8%"
-BLD,RandTyp64,"177 Tab. 87 = 29,3%"
-BLD,RandTyp75,"177 Tab. 87 = 15,3%"
-BLD,RandTyp130,"177 Tab. 87 = 11,2%"
-BLD,RandTyp89,"177 Tab. 87 = 7,8%"
-BLD,RandTyp71,"177 Tab. 87 = 6,9%"
-BLD,RandTyp133,"177 Tab. 87 = 6,9%"
-BLD,RandTyp134,177 Tab. 87 = 6%
-BLD,RandTyp82,"177 Tab. 87 = 4,3%"
-BLD,RandTyp135,"177 Tab. 87 = 4,3%"
-BLD,VerzTech01,177 „An der Spitze der Häufigkeitsskala der für die Bolondo-Gruppe nachgewiesenen Verzierungsarten stehen die Ritztechnik
-BLD,VerzTech08,117 „und das in der Regel als Dekor des Innenrandes verwendete banfwa-nfwa“
-BLD,VerzTech06,177 „Das Erscheinungsbild der Bolondo-Keramik wird jedoch in erster Linie durch Kerbschnitt-und Zahnstockornamentik ...“
-BLD,VerzTech05,177 „Das Erscheinungsbild der Bolondo-Keramik wird jedoch in erster Linie durch Kerbschnitt-und Zahnstockornamentik ...“
-BLD,VerzTech12,"177 „eine neue Art der Flächenzier
-bestimmt: Im Bolondo-Stil tritt erstmals eine
-Ornamentierung der unteren Gefäßpartie durch flächigen Textil- bzw. Mattengeflechteindruck auf“"
-BLD,VerzTech16,"177 „eine neue Art der Flächenzier
-bestimmt: Im Bolondo-Stil tritt erstmals eine
-Ornamentierung der unteren Gefäßpartie durch flächigen Textil- bzw. Mattengeflechteindruck auf“"
-BKN,Fabric1,181 „Die Keramik der Bokone-Gruppe ist überwiegend aus weißbrennenden Tonen hergestellt.“
-BKN,Fabric2,"181 „Acht Stücke (4,5 %) weisen aber eine rote Brennfarbe auf“"
-BKN,Fabric4,181 „Für 97 dem Bokone-Stil zugewiesene Stücke (56 %) wurde eine feine Sandmagerung festgestellt“
-BKN,GefTyp95,"181 Tab. 90 = 46,9%"
-BKN,GefTyp96,"181 Tab. 90 = 34,4%"
-BKN,GefTyp94,"181 Tab. 90 = 18,8%"
-BKN,RandTyp140,"182 Tab. 91 = 33,9%"
-BKN,RandTyp141,"182 Tab. 91 = 13,6%"
-BKN,RandTyp142,"182 Tab. 91 = 8,5%"
-BKN,RandTyp143,"182 Tab. 91 = 8,5%"
-BKN,RandTyp144,"182 Tab. 91 = 6,8%"
-BKN,RandTyp145,"182 Tab. 91 = 6,8%"
-BKN,RandTyp146,"182 Tab. 91 = 5,1%"
-BKN,RandTyp147,"182 Tab. 91 = 5,1%"
-BKN,RandTyp148,"182 Tab. 91 = 5,1%"
-BKN,VerzTech01,183 „Die häufigsten Verzierungsarten des Bokone-Stiles stellen die Ritztechnik und der flächige Textilabdruck dar.“
-BKN,VerzTech16,183 „Die häufigsten Verzierungsarten des Bokone-Stiles stellen die Ritztechnik und der flächige Textilabdruck dar.“
-BKN,VerzTech02,"183 „Als charakteristisch haben vor allem tief eingedrückte, häufig wie gestempelt anmutende Rillenverzierungen zu gelten,“"
-BKN,VerzTech04,183 „Die etwas seltener belegten Stempelverzierungen sind durchweg sehr tief und ohne große Sorgfalt ausgeführt.“
-BKN,VerzTech08,"183 „Echtes banfwa-nfwa ist für die Bokone-Gruppe zwar belegt, tritt aber quantitativ hinter verschiedenen, unzweifelhaft aus dieser Technik hervorgegangenen Verzierungsarten zurück.“"
-BKN,VerzTech12,"183 „Neben dem Textilabdruck tritt als zweite, wesentlich seltenere Flächenzier auch der Matten- bzw. Korbgeflechtabdruck auf.“"
-BLM,Fabric1,186 „Die Keramik der Bolombi-Gruppe ist aus weißbrennenden Tonen hergestellt.
-BLM,Fabric4,"186 „Für 13 Stücke (36 %)
-ließ sich eine feine Sandmagerung nachweisen.“"
-BLM,RandTyp151,"186 Tab. 93 = 28,6%"
-BLM,RandTyp152,"186 Tab. 93 = 17,1%"
-BLM,RandTyp153,"186 Tab. 93 = 11,4%"
-BLM,RandTyp154,"186 Tab. 93 = 11,4%"
-BLM,VerzTech01,187 „Die Verzierung der zur Bolombi-Gruppe gerechneten Randfragmente ist ausschließlich auf einfache Rillenmuster beschränkt“
-ILB,Fabric4,"188 „geben die Töpferinnen dem Rohmaterial
-einen Zuschlag sehr feinen Flußsandes bei.“"
-ILB,GefTyp97,"190 Tab. 95 = 33,3%"
-ILB,GefTyp98,"190 Tab. 95 = 33,3%"
-ILB,GefTyp99,"190 Tab. 95 = 12,5%"
-ILB,RandTyp155,"191 Tab. 96 = 19,1%"
-ILB,RandTyp153,"191 Tab. 96 = 17,6%"
-ILB,RandTyp157,"191 Tab. 96 = 7,4%"
-ILB,RandTyp164,"191 Tab. 96 = 7,4%"
-ILB,RandTyp165,"191 Tab. 96 = 7,4%"
-ILB,RandTyp154,"191 Tab. 96 = 5,9%"
-ILB,RandTyp163,"191 Tab. 96 = 5,9%"
-ILB,RandTyp166,"191 Tab. 96 = 5,9%"
-ILB,BodenTypB1,191 „Die meisten Gefäße der Ilemba-Bokonda-Gruppe haben Rundböden des Typs B 1.“
-ILB,BodenTypB2,191 „Daneben sind lediglich der Linsenboden (Typ B 2) und der Omphalosboden (Typ B 7) belegt.“
-ILB,BodenTypB7,191 „Daneben sind lediglich der Linsenboden (Typ B 2) und der Omphalosboden (Typ B 7) belegt.“
-ILB,VerzTech16,188 „plaziert die Töpferin den Formling auf den am Boden liegenden Rest eines Maschenstoffes und erzeugt ein die Außenwandunggroßteils bedeckendes flächiges Textilmuster.“
-ILB,VerzTech01,189 „lediglich einfache Ritz- oder Eindruckverzierungen angebracht.“
-ILB,VerzTech04,189 „lediglich einfache Ritz- oder Eindruckverzierungen angebracht.“
-IKK,Fabric1,193 „Die Keramik der Inkaka-Gruppe ist aus weißbrennenden Tonen hergestellt.“
-IKK,GefTyp105,"194 Tab. 99 = 70,0%"
-IKK,GefTyp106,"194 Tab. 99 = 30,0%"
-IKK,RandTyp171,"194 Tab. 100 = 61,4%"
-IKK,RandTyp172,"194 Tab. 100 = 14,0%"
-IKK,RandTyp173,"194 Tab. 100 = 6,1%"
-IKK,RandTyp174,"194 Tab. 100 = 6,1%"
-IKK,RandTyp175,"194 Tab. 100 = 5,3%"
-IKK,VerzTech02,"195 „Die häufigste Verzierungsart stellen umlaufende, zumeist sehr grob und  unregelmäßig ausgeführte Rillen- und Riefenbündel dar.“"
-IKK,VerzTech12,195 „Als Flächendekore sind in erster Linie Matten- oder Korbabdrücke belegt“
-IKK,VerzTech04,"195 „Stempelverzierungen sind vor allem in Form umlaufender Reihen grober, umegelmäßig ovaler bis tropfenförmiger tiefer Eindrücke belegt“"
-YOP,Fabric4,197 „Der Rohton wird mit Sand gemagert“
-YOP,VerzTech16,197 „der Rest eines traditionellen Maschenstoffes als Arbeitsunterlage verwendet … bis ein flächendeckender Textilabdruck erzeugt ist.“
-YOP,GefTyp98,"197f. „Mit Ausnahme der Randgestalt entspricht diese Gefäßform dem in der rezenten Ilemba-Bokonda-Keramik des Tshuapa-Gebietes geläufigen, ebenfalls in einer großen und einer kleinen Variante hergestellten Typ 98.“"
-YOP,RandTyp180,"198 Tab. 102 = 33,3%"
-YOP,RandTyp181,"198 Tab. 102 = 22,2%"
-YOP,RandTyp182,"198 Tab. 102 = 22,2%"
-YOP,RandTyp183,"198 Tab. 102 = 16,7%"
-YOP,BodenTypB1,198 „Die Gefäße der Yopoko-Gruppe besitzen ausschließlich runde Böden des Typs B 1.“
-YOP,VerzTech02,"198 „lediglich einfache umlaufende Riefen und
-Rillen“"
-YOP,VerzTech04,"198 „sowie grobe, tief eingedrückte Stempelverzierungen.“"
-LKG,Fabric1,"198 „Die Keramik der Lokonge-Gruppe ist aus weißbrennenden, in der Regel ungemagerten Tonen hergestellt.“"
-LKG,Fabric4,"198f. „In zwei Fällen wurden allerdings in den Scherben eingelagerte feine Quarzpartikel festgestellt, die von einer intentionellen Magerung herrühren könnten.“"
-LKG,Fabric6,199 „Ein Stück der Lokonge-Gruppe enthält sehr feine Glimrneranteile.“
-LKG,GefTyp75,"199 Tab. 104 = 60,0%"
-LKG,GefTyp108,"199 Tab. 104 = 40,0%"
-LKG,RandTyp178,"199 Tab. 105 = 45,8%"
-LKG,RandTyp116,"199 Tab. 105 = 33,3%"
-LKG,RandTyp124,"199 Tab. 105 = 16,7%"
-LKG,VerzTech02,"199 „Das technische Repertoire der Lokonge-Ornamentik ist auf einfache Rillen-, Stempel- und banfwa-nfwa Verzierungen beschränkt.“"
-LKG,VerzTech04,"199 „Das technische Repertoire der Lokonge-Ornamentik ist auf einfache Rillen-, Stempel- und banfwa-nfwa Verzierungen beschränkt.“"
-LKG,VerzTech08,"199 „Das technische Repertoire der Lokonge-Ornamentik ist auf einfache Rillen-, Stempel- und banfwa-nfwa Verzierungen beschränkt.“"
-LIK,Fabric1,"200 „aus weißbrennenden Tonen gefertigter, in der Mehrzahl ungemagerter Wandscherben“"
-LIK,Fabric4,"200 „Zwei Stücke weisen allerdings Quarzeinschlüsse auf, die möglicherweise einen intentionellen Sandzuschlag bezeugen.“"
-LIK,VerzTech01,201 „Die Ornamentik der Likuku-Keramik ist im wesentlichen auf eingeritzte oder eingestempelte stehende Bögen beschränkt“
-LIK,VerzTech04,201 „Die Ornamentik der Likuku-Keramik ist im wesentlichen auf eingeritzte oder eingestempelte stehende Bögen beschränkt“
-LIK,VerzTech08,201 „Während auf mehreren Stücken eindeutige banfwa-nfwa-Verzierungen nachzuweisen sind“
-MAL,Fabric1,"201 „ausnahmslos um ungemage rtes, aus
-weißbre nnendem Ton hergestelltes Material“"
-MAL,GefTyp70,"201 „Die einzige für diese Gruppe belegte Gefäßform stellt
-der halslose Kugeltopf des Typs 70 dar“"
-MAL,RandTyp71,201 „der mit RändemderTypen R71 und R64 vorkommt“
-MAL,RandTyp64,201 „der mit RändemderTypen R71 und R64 vorkommt“
-MAL,VerzTech01,201 „Die Ornamentik der Malelernbe-Keramik wird vor allem durch feine Dreieckstempel und eingeritzte Schraffurmotive bestimmt“
-MAL,VerzTech04,201 „Die Ornamentik der Malelernbe-Keramik wird vor allem durch feine Dreieckstempel und eingeritzte Schraffurmotive bestimmt“
-MAL,VerzTech08,201 „In mehreren Fällen überlagert die Stempel- und Rillenverzierung einen zuvor angeb rachten flächigen Banfwa-nfwa-Dekor“
-MPO,Fabric1,202 „Es handelt sich um fünf aus rotbrennendem und zwei aus weißbrennendem Ton hergestellte Stücke.“
-MPO,Fabric2,202 „Es handelt sich um fünf aus rotbrennendem und zwei aus weißbrennendem Ton hergestellte Stücke.“
-MPO,Fabric4,"202 „Vier dieser Fragmente enthalten feine, auf eine intentioneHe Sandmagerung hindeutende Quarzeinschlüsse.“"
-MPO,GefTyp59,202 „ Eine Scherbe … lässt sich … Typ 59 zuweisen“
-MPO,VerzTech16,"202 „im wesentlichen auf flächige, im Schulterbereich ansetzende Gewebedekore“"
-MPO,VerzTech02,202 „im obersten Abschnitt der Schulter angebrachte stehende Rillenbögen“
-MPO,VerzTech04,"202 „Darüber hinaus sind lediglich umlaufende
-Reihen feiner Stempeldreiecke belegt.“"
-BSG,Fabric1,203 „Die Keramik der Besango-Gruppe ist aus weißbrennenden ungemagerten Tonen gefertigt.“
-BSG,GefTyp53,"203 Tab. 107 = 83,3%"
-BSG,GefTyp88,"203 Tab. 107 = 6,7%"
-BSG,GefTyp89,"203 Tab. 107 = 6,7%"
-BSG,RandTyp64,"203 Tab. 108 = 66,7%"
-BSG,VerzTech02,203 „Die beiden häufigsten Verzierungsweisen des Besongo-Stiles stellen der flächige banfwa-nfwa Dekor und einfache Horizontalrillen dar.
-BSG,VerzTech08,203 „Die beiden häufigsten Verzierungsweisen des Besongo-Stiles stellen der flächige banfwa-nfwa Dekor und einfache Horizontalrillen dar.
-BSG,VerzTech09,"203 „Das Erscheinungsbild der Besango-Keramik wird aber in erster Linie durch Rillen-, Applique- und Stempelornamentik bestimmt.“"
-BSG,VerzTech04,"203 „Das Erscheinungsbild der Besango-Keramik wird aber in erster Linie durch Rillen-, Applique- und Stempelornamentik bestimmt.“"
-LSL,Fabric5,"206 „Die Usala-Keramik ist aus rotbrennendem, mit Quarzsand gemagertem Ton hergestellt.“"
-LSL,Fabric6,"207 „Zwei Fragmente weisen zusätzlich
-deutliche Anteile feiner Glimmerpartikel auf.“"
-LSL,GefTyp109,207 „Die einzige für die Usala-Gruppe belegte Gefäßform stellt der in drei Stücken repräsentierte Typ 109 dar.“
-LSL,RandTyp193,207 „ausbiegendem Rand des Typs R 193“
-LSL,VerzTech01,"207 „Die Verzierungen beschränken sich auf umlaufende, teils mit einer leichten Treppung des Profils einhergehende Riefen- oder Rillengruppen“"
-LSL,VerzTech02,"207 „Die Verzierungen beschränken sich auf umlaufende, teils mit einer leichten Treppung des Profils einhergehende Riefen- oder Rillengruppen“"
-NKB,Fabric4,"207 „Die Keramik der Nkomba-Gruppe ist teils aus weißbrennenden, teils aus rotbrennenden Tonen hergestellt. Sämtliche Stücke enthalten einen hohen Anteil an Quarzeinschlüssen, die eine intentioneile Magerung bezeugen.“"
-NKB,Fabric5,"207 „Die Keramik der Nkomba-Gruppe ist teils aus weißbrennenden, teils aus rotbrennenden Tonen hergestellt. Sämtliche Stücke enthalten einen hohen Anteil an Quarzeinschlüssen, die eine intentioneile Magerung bezeugen.“"
-NKB,Fabric6,207 „bei zehn Stücken zusätzliche Anteile feiner Glimmerpartikel festzustellen“
-NKB,GefTyp110,"208 Tab. 110 = 28,6%"
-NKB,GefTyp111,"208 Tab. 110 = 21,4%"
-NKB,GefTyp112,"208 Tab. 110 = 21,4%"
-NKB,GefTyp113,"208 Tab. 110 = 14,3%"
-NKB,RandTyp185,"209 Tab. 111 = 21,7%"
-NKB,RandTyp186,"209 Tab. 111 = 20,3%"
-NKB,RandTyp187,"209 Tab. 111 = 18,8%"
-NKB,RandTyp188,"209 Tab. 111 = 17,4%"
-NKB,RandTyp189,"209 Tab. 111 = 11,6%"
-NKB,RandTyp169,"209 Tab. 111 = 5,8%"
-NKB,VerzTech14,209 „Das auffälligste ornamentale Kennzeichen der Nkomba-Gruppe stellt die rote Streifenbemalung der meisten zugehörigen Stücke dar.“
-NKB,VerzTech02,209 „Daneben … mit Rillen- oder Riefenverzierungen … kombiniert“
-NKB,VerzTech05,209 „Mehrere Stücke zeigen Zahnstockverzierungen“
+IMB,Fabric1,"Wotzka 1995:59 „Die Keramik des Imbonga-Stiles ist aus weiß-brennenden Tonen hergestellt, denen keinerlei Zuschläge beigemengt wurden.“"
+IMB,GefTyp1,Wotzka 1995:60 „Als charakteristische Form der Imbonga-Gruppe ist Typ 1 anzusehen knapp 80 % aller morphologisch zuweisbaren Stücke gehören diesem Typ an.“
+IMB,GefTyp2,"Wotzka 1995:60 Tab. 5 = 4,3 %"
+IMB,RandTyp1,"Wotzka 1995:62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp2,"Wotzka 1995:62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp3,"Wotzka 1995:62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp4,"Wotzka 1995:62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp5,"Wotzka 1995:62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp6,"Wotzka 1995:62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,RandTyp7,"Wotzka 1995:62 „Wichtig für die Charakterisierung dieser Stilgruppe sind aber nur die häufigsten sieben Typen, die zusammen rund 91 % des zugewiesenen Materials repräsentieren.“"
+IMB,BodenTypB4,Wotzka 1995:63 „Von den sechs unterschiedenen Typen sind vor allem der einfache Flachboden (B 4) und der abgesetzte Flachboden (B 11) von Bedeutung.“
+IMB,BodenTypB11,Wotzka 1995:63 „Von den sechs unterschiedenen Typen sind vor allem der einfache Flachboden (B 4) und der abgesetzte Flachboden (B 11) von Bedeutung.“
+IMB,VerzTech02,Wotzka 1995:63 „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Riefung
+IMB,VerzTech04-1,Wotzka 1995:63 „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Wiegeband
+IMB,VerzTech01,Wotzka 1995:63 „NachRiefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Ritzung
+IMB,VerzTech04,Wotzka 1995:63 „Nach Riefung und Wiegebandverzierung treten vor allem Ritz- und Stempeltechnik auf.“ = Stempel
+IMB,VerzTech09,"Wotzka 1995:63 „Seltener, aber sehr charakteristisch für d iese Stilgruppe sind Applikationen.“"
+BON,Fabric1,Wotzka 1995:69 „Die Keramik des Bonkake-Stiles entspricht technologisch der für die Imbonga-Gruppe beschriebenen Warenart.“
+BON,GefTyp5,"Wotzka 1995:69 Tab. 11 = 68,8 %"
+BON,GefTyp3,"Wotzka 1995:69 Tab. 11 = 12,5 %"
+BON,RandTyp1,"Wotzka 1995:70 Tab. 12 = 63,6 %"
+BON,RandTyp2,"Wotzka 1995:70 Tab. 12 = 19,5 %"
+BON,BodenTypB4,Wotzka 1995:70 Tab. 13 = 60 %; „Auch hier sind einfache Flachböden (B 4) am häufigsten belegt“
+BON,BodenTypB11,"Wotzka 1995:70 Tab. 13 = 26,7 %; „während abgesetzte Flachböden (B 11) etwas seltener auftreten“"
+BON,VerzTech01,"Wotzka 1995:70 „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Ritzung"
+BON,VerzTech04,"Wotzka 1995:70 „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Stempel"
+BON,VerzTech02,"Wotzka 1995:70 „Der Bonkake-Stil ist vor allem durch Ritz-, Stempelund Riefenverzierung gekennzeichnet“ = Riefung"
+ING,Fabric1,Wotzka 1995:73 „In technologischer Hinsicht entspricht die IngendeKeramik der im Zusammenhang mit der ImbongaGruppe beschriebenen Warenart“
+ING,GefTyp5,"Wotzka 1995:73 Tab. 15 = 29,4 %"
+ING,GefTyp6,"Wotzka 1995:73 Tab. 15 = 23,5 %"
+ING,GefTyp8,"Wotzka 1995:73 Tab. 15 = 17,6 %"
+ING,GefTyp17,"Wotzka 1995:73 Tab. 15 = 11,8 %"
+ING,RandTyp2,"Wotzka 1995:75 Tab. 16 = 25,9 %"
+ING,RandTyp7,"Wotzka 1995:75 Tab. 16 = 11,1 %"
+ING,RandTyp14,"Wotzka 1995:75 Tab. 16 = 11,1 %"
+ING,RandTyp22,"Wotzka 1995:75 Tab. 16 = 11,1 %"
+ING,RandTyp1,"Wotzka 1995:75 Tab. 16 = 7,4 %"
+ING,RandTyp4,"Wotzka 1995:75 Tab. 16 = 7,4 %"
+ING,BodenTypB4,Wotzka 1995:75 „In der Ingende-Gruppe kommen ausschließlich einfache und abgesetzte Flachböden der Typen B 4 und B 11 vor“
+ING,BodenTypB11,Wotzka 1995:75 „In der Ingende-Gruppe kommen ausschließlich einfache und abgesetzte Flachböden der Typen B 4 und B 11 vor“
+ING,VerzTech04-1,"Wotzka 1995:75 „Charakteristisch für die Ornamentik der Ingende-Gruppe ist die Wiegebandtechnik, die sowohl mit dem Zahnstock als auch mit ungezähntem Gerät ausgeführt worden ist.“"
+ING,VerzTech02,Wotzka 1995:75 „Häufiger belegt sind allerdings Riefenmotive“
+IGD,Fabric1,Wotzka 1995:78 „Die Ware zeigt im wesentlichen die im Zusammenhang mit der Imbonga-Gruppe beschriebenen Merkmale.“
+IGD,GefTyp19,"Wotzka 1995:78 Tab. 19 = 22,6 %"
+IGD,GefTyp2,"Wotzka 1995:78 Tab. 19 = 12,9 %"
+IGD,GefTyp5,"Wotzka 1995:78 Tab. 19 = 9,7 %"
+IGD,GefTyp8,"Wotzka 1995:78 Tab. 19 = 9,7 %"
+IGD,GefTyp20,"Wotzka 1995:78 Tab. 19 = 9,7 %"
+IGD,GefTyp21,"Wotzka 1995:78 Tab. 19 = 9,7 %"
+IGD,GefTyp22,"Wotzka 1995:78 Tab. 19 = 9,7 %"
+IGD,RandTyp24,"Wotzka 1995:80 Tab. 20 = 43,8 %"
+IGD,RandTyp2,"Wotzka 1995:80 Tab. 20 = 10,4 %"
+IGD,RandTyp9,"Wotzka 1995:80 Tab. 20 = 6,3 %"
+IGD,RandTyp30,"Wotzka 1995:80 Tab. 20 = 6,3 %"
+IGD,RandTyp7,"Wotzka 1995:80 Tab. 20 = 4,2 %"
+IGD,RandTyp31,"Wotzka 1995:80 Tab. 20 = 4,2 %"
+IGD,BodenTypB4,"Wotzka 1995:80 „Für den Inganda-Stil sind ausschließlich flache Bodenformen überliefert, unter denen der einfache Flachboden(B 4) und der abgesetzte Flachboden(B 11) am häufigsten vertreten sind.“"
+IGD,BodenTypB11,"Wotzka 1995:80 „Für den Inganda-Stil sind ausschließlich flache Bodenformen überliefert, unter denen der einfache Flachboden(B 4) und der abgesetzte Flachboden(B 11) am häufigsten vertreten sind.“"
+IGD,VerzTech01,Wotzka 1995:80 „Neben eingeritzten oder aus Riefen zusammengesetzten Motiven ...“
+IGD,VerzTech02,Wotzka 1995:80 „Neben eingeritzten oder aus Riefen zusammengesetzten Motiven ...“
+IGD,VerzTech04-1,"Wotzka 1995:80f. „trägt die Keramik der IngandaGruppe besonders häufig Zahnstockeindrücke, die sowohl in Wiegebandtechnik ausgeführt als auch einzeln gesetzt vorkommen."
+IGD,VerzTech05,"Wotzka 1995:80f. „trägt die Keramik der IngandaGruppe besonders häufig Zahnstockeindrücke, die sowohl in Wiegebandtechnik ausgeführt als auch einzeln gesetzt vorkommen."
+IGD,VerzTech04,Wotzka 1995:81 „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
+IGD,VerzTech09,Wotzka 1995:81 „Daneben treten vor allem Stempelverzierungen und Applikationen auf.“
+LOK,Fabric1,"Wotzka 1995:85 „technologische Übereinstimmung mit der Ware der bislang beschriebenen Gruppen konstatieren … übliche weiße bis graue, bisweilen auch schwarze Farbe“"
+LOK,GefTyp27,"Wotzka 1995:85 Tab. 24 = 90,4%; „Da der Bechertyp 28 aber lediglich eine kleine Variante des Typs 27 darstellt“"
+LOK,GefTyp20,"Wotzka 1995:85 Tab. 24 = 9,7%"
+LOK,RandTyp23,"Wotzka 1995:86 Tab. 25 = 41,8%"
+LOK,RandTyp19,"Wotzka 1995:86 Tab. 25 = 34,5%"
+LOK,RandTyp10,"Wotzka 1995:86 Tab. 25 = 18,2%"
+LOK,VerzTech01,"Wotzka 1995:86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
+LOK,VerzTech02,"Wotzka 1995:86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
+LOK,VerzTech04-1,"Wotzka 1995:86 „Der Lokondola-Stil ist vor allem durch Riefen-, Rillen und Wiegebandornamentik geprägt“"
+YET,Fabric1,Wotzka 1995:90 „Die Yete-Keramik entspricht in der Ware den bislang vorgestellten Keramikgruppen.“
+YET,GefTyp29,"Wotzka 1995:90 Tab. 27 = 46,2%; „kann strenggenommen nur Typ 29 als sicherer Vertreter dieser Stilgruppe gelten“"
+YET,RandTyp43,"Wotzka 1995:91 Tab. 28 = 76,8%; „ allerdings nur Typ R 42 als sicher zu dieser Gruppe gehörig betrachtet“"
+YET,BodenTypB4,Wotzka 1995:91 „Nur der einfache Flachboden ist sicher mit der Gefäßform 30 assoziiert“
+YET,VerzTech01,"Wotzka 1995:92 „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
+YET,VerzTech02,"Wotzka 1995:92 „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
+YET,VerzTech04,"Wotzka 1995:92 „Die Ornamentik des Yete-Stiles ist im wesentlichen durch Riefen-, Rillen- und Stempelverzierung geprägt.“"
+MON,Fabric1,Wotzka 1995:94 „Hinsichtlich der Warenart läßt sich die Monkoto-Keramik nicht von den bislang vorgestellten Gruppen unterscheiden.“
+MON,GefTyp33,Wotzka 1995:94. „Die einzige bekannte Gefäßform der Monkoto-Gruppe stellt Typ 33 dar.“
+MON,RandTyp51,"Wotzka 1995:95 Tab. 30 = 95,6%; „Die charakteristische Randform dieser Stilgruppe stellt der Typ 51 dar“"
+MON,VerzTech01,Wotzka 1995:96 „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
+MON,VerzTech02,Wotzka 1995:96 „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
+MON,VerzTech04,Wotzka 1995:96 „Die Ornamentik der Monkoto-Gruppe ist vor allem durch Riefenmotive sowie eingeritzte und gestempelte Verzierungen geprägt.“
+BKE,Fabric1,Wotzka 1995:100 „anhand technologischer Kriterien nicht von den bislang vorgestellten Gruppen zu unterscheiden.“
+BKE,GefTyp34,"Wotzka 1995:100 Tab. 34 = 71,4%"
+BKE,RandTyp57,"Wotzka 1995:101 Tab. 35 = 62,5%"
+BKE,RandTyp51,Wotzka 1995:101 Tab. 35 = 25%
+BKE,BodenTypB4,Wotzka 1995:101 Tab. 36 = 75%
+BKE,BodenTypB6,Wotzka 1995:101 Tab. 36 = 25%
+BKE,VerzTech11,"Wotzka 1995:101 „Innerhalb der Bokele-Gruppeistdie Verzierungdurch ""Glättstriche"" am häufigsten belegt“"
+BKE,VerzTech01,Wotzka 1995:101 „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
+BKE,VerzTech02,Wotzka 1995:101 „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
+BKE,VerzTech04,Wotzka 1995:101 „Neben den Glättmustern kommt Stempel-sowie Riefen- und Rillenornamentik vor“
+LUS,Fabric1,Wotzka 1995:104 „In technologischer Hinsicht entspricht die Lusako-Keramik dem Material der bislang vorgestellten Stilgruppen“
+LUS,GefTyp37,Wotzka 1995:105 „Die einzige sicher belegte Gefäßform des Lusako-Stiles stellt der Typ 37 dar“
+LUS,RandTyp46,"Wotzka 1995:105 Tab. 38 = 73,3 %"
+LUS,RandTyp37,"Wotzka 1995:105 Tab. 38 = 26,7%"
+LUS,BodenTypB11,"Wotzka 1995:105 „Die einzige für den Lusako-Stil belegte Bodenform ist d er mit Gefäßtyp 37 assoziierte, deutlich abgesetzte Flachboden des Typs B 11“"
+LUS,VerzTech01,Wotzka 1995:105 „Die Ornamentik der Lusako-Gruppe ist vor allem durch eingeritzte Muster geprägt.“
+LUS,VerzTech02,Wotzka 1995:105 „Neben eingeritztem Dekor sind in erster Linie einfache Riefenmuster belegt.“
+LUS,VerzTech09,Wotzka 1995:105 „Pseudoapplikationen können als typisches Element der Lusako-Ornarnentik gelten.“
+LNG,Fabric1,Wotzka 1995:108 „ In allen sonstigen technologischen Belangen entspricht die Lingonda Keramik dem Material der bisher beschriebenen Stilgruppen“
+LNG,GefTyp38,"Wotzka 1995:108 „Diese beiden steilwandigen, pokalartigen Bechertypen, die unter anderem durch Exemplare beträchtlicher Größe vertreten sind, bilden somit die charakteristischen Gefäßformen des Lingonda-Stiles.“"
+LNG,GefTyp39,"Wotzka 1995:108 „Diese beiden steilwandigen, pokalartigen Bechertypen, die unter anderem durch Exemplare beträchtlicher Größe vertreten sind, bilden somit die charakteristischen Gefäßformen des Lingonda-Stiles.“"
+LNG,RandTyp47,"Wotzka 1995:109 Tab. 42 = 97,6%"
+LNG,BodenTypB4,Wotzka 1995:109 „Die häufigste Form stellt der einfache Flachboden des Typs B 4 dar“
+LNG,BodenTypB10,Wotzka 1995:109 „Daneben kommen leicht abgesetzte Flachböden des Typs B 10.“
+LNG,BodenTypB11,Wotzka 1995:109 „ und riefenprofilierte Flachböden des Typs B 8 vor.“
+LNG,VerzTech08,Wotzka 1995:109 „ImLingonda-Stil tritt erstmals eine Verzierungstechnik auf … im Lolinga als banfwa-nfwa bezeichnet“
+LNG,VerzTech01,Wotzka 1995:111 „Nach dem banfwa-nfwa stellt die Ritztechnik die am häufigsten auf Stücken des Lingonda-Stiles belegte Verzierungsweise dar.“
+LNG,VerzTech04-1,Wotzka 1995:111 „zahlreiche der für diese Stilgruppe charakteristischen Schraffuren ganz oder teilweise in Wiegebandtechnik ausgeführt“
+LNG,VerzTech05,Wotzka 1995:112 „Relativ häufig fand im Lingonda-Stil der Zahnstock Verwendung“
+BOK,Fabric2,"Wotzka 1995:116 „Die Scherbenoberflächen sind häufig von einer leicht rötlich-braunen Farbe, die auf eine intentionelle Färbung hindeutet.“"
+BOK,Fabric1,Wotzka 1995:116 „In allen sonstigen technischen Belangen entspricht die Bokuma-Keramik den bisher beschriebenen Stilgruppen.“
+BOK,GefTyp41,Wotzka 1995:116 Tab. 46 = 50%
+BOK,RandTyp49,"Wotzka 1995:117 Tab. 47 = 66,7%"
+BOK,RandTyp48,"Wotzka 1995:117 Tab. 47 = 22,2%"
+BOK,BodenTypB10,"Wotzka 1995:117 Tab. 48 = 66,7%"
+BOK,BodenTypB4,"Wotzka 1995:117 Tab. 48 = 16,6%"
+BOK,BodenTypB1,Wotzka 1995:117 „Die Ähnlichkeit dieser kau m noch vom Gefäßkörper abgesetzten Bodenform mit dem im Bokuma-Stil erstmals auftretenden Rundboden (B 1) ist unverkennbar“
+BOK,BodenTypB13,Wotzka 1995:117 „Eine weitere Neuheit d ieser Stilgruppe stellt der in einem Fall belegte Standring (B 13) dar“
+BOK,VerzTech01,Wotzka 1995:117 „Die Ornamentik der Bokuma-Keramik ist in erster Linie durch Kombinationen aus eingeritzten Motiven mit Zahnstock-Wiegebandmustem geprägt“
+BOK,VerzTech04-1,Wotzka 1995:117 „Die Ornamentik der Bokuma-Keramik ist in erster Linie durch Kombinationen aus eingeritzten Motiven mit Zahnstock-Wiegebandmustem geprägt“
+BOK,VerzTech04,Wotzka 1995:117 „Hinter diesen beiden Verzierungstechniken treten Stempelzier und banfwa-nfwa deutlich zurück.“
+BOK,VerzTech08,Wotzka 1995:117 „Hinter diesen beiden Verzierungstechniken treten Stempelzier und banfwa-nfwa deutlich zurück.“
+LON,Fabric2,Wotzka 1995:121 „Nach Ausweis rotbrauner Farbreste ist zumindest die äußere Oberfläche zahlreicher Stücke dieser Stilgruppe intentioneil eingefärbt worden.“
+LON,Fabric1,Wotzka 1995:121 „In allen sonstigen technischen Belangen entspricht die Longa-Keramik dem Material der bislang vorgestellten Stilgruppen.“
+LON,GefTyp44,Wotzka 1995:121 Tab. 50 = 47%
+LON,GefTyp45,"Wotzka 1995:121 Tab. 50 = 40,2%"
+LON,RandTyp59,Wotzka 1995:123 Tab. 51 = 47.7%
+LON,RandTyp60,"Wotzka 1995:123 Tab. 51 = 24,1%"
+LON,RandTyp61,"Wotzka 1995:123 Tab. 51 = 20,9%"
+LON,BodenTypB1,Wotzka 1995:123 „An Bodenformen sind für den Longa-Stil lediglich der Rundboden (B 1)“
+LON,VerzTech01,Wotzka 1995:123 „Sieht man einmal von der besonders oft in Form einfacher horizontaler Rillen nachgewiesenen Ritztechnik ab“
+LON,VerzTech04,Wotzka 1995:123 „gehört vor allem der einfache oder in Wiegebandtechnik erzeugte Zahnstockeindruck zu den am häufigsten belegten Verzierungsarten“
+LON,VerzTech04-1,Wotzka 1995:123 „gehört vor allem der einfache oder in Wiegebandtechnik erzeugte Zahnstockeindruck zu den am häufigsten belegten Verzierungsarten“
+LON,VerzTech06,"Wotzka 1995:123 „Besonders häufig zeigen die Gefäße der Longa-Gruppe komplexe, in einer Kombination aus Ritz-, Stempel- und Schnittechniken gearbeitete Muster."
+LON,VerzTech11,Wotzka 1995:123 „Glättung“
+BDG,Fabric1,Wotzka 1995:128 „In ihren technologischen Eigenschaften entspricht die Bondongo-Keramik der im Zusammenhang mit dem Imbonga-Stil gegebenen und- mit jeweils nur geringen Abweichungen- für alle bislang erörterten Stilgruppen verbindlichen Warenbeschreibung.“
+BDG,GefTyp53,"Wotzka 1995:128 Tab. 55 = 66,4%"
+BDG,GefTyp54,"Wotzka 1995:128 Tab. 55 = 14,7%"
+BDG,GefTyp55,"Wotzka 1995:128 Tab. 55 = 4,7%"
+BDG,GefTyp56,"Wotzka 1995:128 Tab. 55 = 3,1%"
+BDG,RandTyp65,"Wotzka 1995:131 Tab. 56 = 48,1%"
+BDG,RandTyp64,"Wotzka 1995:131 Tab. 56 = 19,6%"
+BDG,RandTyp70,"Wotzka 1995:131 Tab. 56 = 13,6%"
+BDG,RandTyp71,"Wotzka 1995:131 Tab. 56 = 6,5%"
+BDG,RandTyp72,Wotzka 1995:131 Tab. 56 = 3%
+BDG,BodenTypB1,Wotzka 1995:131 „Die häufigste Bodenform des Bondongo-Stiles stellt der Rundboden des Typs B 1 dar“
+BDG,VerzTech01,Wotzka 1995:131 „In der Häufigkeitsstatistikstehen Ritztechnik und banfwa-nfwa mit Abstand an erster Stelle.
+BDG,VerzTech08,Wotzka 1995:131 „In der Häufigkeitsstatistikstehen Ritztechnik und banfwa-nfwa mit Abstand an erster Stelle.
+BDG,VerzTech09,Wotzka 1995:132 „In gleicher struktureller Funktion und somit ebenfalls sehr zahlreich kommen mehr oder minder stark plastisch hervortretende Wülste bzw. Leisten vor“
+BDG,VerzTech05,Wotzka 1995:132 „Auch der Zahnstock fand im Bondongo-Stil sehr häufig Verwendung“
+MBA,Fabric1,Wotzka 1995:139 „In technologischer Hinsicht entspricht die Mbandaka-Keramik dem Material der Bondongo-Gruppe.“
+MBA,GefTyp67,"Wotzka 1995:139 Tab. 60 = 77,6%"
+MBA,GefTyp68,"Wotzka 1995:139 Tab. 60 = 12,2%"
+MBA,GefTyp54,"Wotzka 1995:139 Tab. 60 = 10,2%"
+MBA,RandTyp65,"Wotzka 1995:140 Tab. 61 = 75,3%"
+MBA,RandTyp72,"Wotzka 1995:140 Tab. 61 = 7,8%"
+MBA,RandTyp73,"Wotzka 1995:140 Tab. 61 = 6,5%"
+MBA,VerzTech01,Wotzka 1995:140 „Die Ornamentik des Mbandaka-Stiles ist in erster Linie durch eingeritzte Motive und banfwa-nfwaVerzierung geprägt.“
+MBA,VerzTech08,Wotzka 1995:140 „Die Ornamentik des Mbandaka-Stiles ist in erster Linie durch eingeritzte Motive und banfwa-nfwaVerzierung geprägt.“
+NKI,Fabric1,"Wotzka 1995:144 ""Die Keramik des Nkile-Stiles entspricht in ihren technologischen Eigenschaften derjenigen der Bondongo-Gruppe“"
+NKI,GefTyp70,"Wotzka 1995:144 Tab. 64 = 41,0%"
+NKI,GefTyp69,"Wotzka 1995:144 Tab. 64 = 36,1%"
+NKI,GefTyp71,"Wotzka 1995:144 Tab. 64 = 6,6%"
+NKI,GefTyp59,"Wotzka 1995:144 Tab. 64 = 4,9%"
+NKI,GefTyp72,"Wotzka 1995:144 Tab. 64 = 4,9%"
+NKI,GefTyp73,"Wotzka 1995:144 Tab. 64 = 4,9%"
+NKI,RandTyp71,"Wotzka 1995:145 Tab. 65 = 38,5%"
+NKI,RandTyp64,"Wotzka 1995:145 Tab. 65 = 36,5%"
+NKI,RandTyp65,"Wotzka 1995:145 Tab. 65 = 9,6%"
+NKI,RandTyp87,"Wotzka 1995:145 Tab. 65 = 5,8%"
+NKI,BodenTypB1,"Wotzka 1995:145 „ausschließlich um Rundböden des Typs B 1,“"
+NKI,VerzTech01,Wotzka 1995:145 „Das Erscheinungsbild d er Nkile-Keramik wird in erster Linie durch eingeritzte Ornamente und banfwa-nfwa-Verzierung bestimmt.“
+NKI,VerzTech08,Wotzka 1995:145 „Das Erscheinungsbild d er Nkile-Keramik wird in erster Linie durch eingeritzte Ornamente und banfwa-nfwa-Verzierung bestimmt.“
+NKI,VerzTech04,"Wotzka 1995:145 „Stempel-, Kerbschnitt- und Riefenmotive sowie plastische Ornamentik treten quantitativ deutlich hinter diesen beiden Hauptverzierungsarten zurück.“"
+NKI,VerzTech06,"Wotzka 1995:145 „Stempel-, Kerbschnitt- und Riefenmotive sowie plastische Ornamentik treten quantitativ deutlich hinter diesen beiden Hauptverzierungsarten zurück.“"
+NKI,VerzTech02,"Wotzka 1995:145 „Stempel-, Kerbschnitt- und Riefenmotive sowie plastische Ornamentik treten quantitativ deutlich hinter diesen beiden Hauptverzierungsarten zurück.“"
+BOT,Fabric1,Wotzka 1995:150 „Keramik des Botendo-Stiles keine technologischen Besonderheiten auf“
+BOT,GefTyp74,"Wotzka 1995:151 Tab. 67 = 31,8%"
+BOT,GefTyp75,"Wotzka 1995:151 Tab. 67 = 22,6%"
+BOT,GefTyp76,"Wotzka 1995:151 Tab. 67 = 22,%"
+BOT,GefTyp77,"Wotzka 1995:151 Tab. 67 = 5,9%"
+BOT,BodenTypB1,Wotzka 1995:154 „Die häufigste Bodenform des Botendo-Stiles stellt der mit mehreren Gefäßtypen assoziierte Rundboden (Typ B 1) dar.“
+BOT,VerzTech08,"Wotzka 1995:154 „Das bei weitem häufigste Element der Botendo-Ornamentik ist die flächige banfwa-nfwa-Verzierung, die auf kaum einem Stück dieser Stilgruppe fehlt.“"
+BOT,VerzTech01,Wotzka 1995:154 „Erscheinungsbild der Botendo-Keramik vor allem durch Rillen- bzw. Riefenmuster geprägt
+BOT,VerzTech02,Wotzka 1995:154 „Erscheinungsbild der Botendo-Keramik vor allem durch Rillen- bzw. Riefenmuster geprägt
+BOT,VerzTech04,"Wotzka 1995:154 „Nimmt man noch die Stempelverzierung hinzu, so ist das technische Repertoire der Botendo-Ornamentik im wesentlichen vollständig aufgeführt“"
+BEK,Fabric2,Wotzka 1995:158 „Auffälligstes Merkmal dieser Bekongo-Ware ist die überwiegende Verwendung rotbrennender Tone.“
+BEK,GefTyp86,"Wotzka 1995:159 Tab. 72 = 65,4%"
+BEK,GefTyp53,"Wotzka 1995:159 Tab. 72 = 11,5%"
+BEK,GefTyp44,"Wotzka 1995:159 Tab. 72 = 15,4%"
+BEK,RandTyp66,"Wotzka 1995:160 Tab. 73 = 55,0%"
+BEK,RandTyp59,"Wotzka 1995:160 Tab. 73 = 20,0%"
+BEK,RandTyp129,"Wotzka 1995:160 Tab. 73 = 15,0%"
+BEK,VerzTech01,Wotzka 1995:160 „In der Häufigkeitsstatistik der für den Bekongo-Stil belegten Verzierungstechniken nehmen Rillen- und Riefenverzierung die beiden ersten Positionen ein.“
+BEK,VerzTech02,Wotzka 1995:160 „In der Häufigkeitsstatistik der für den Bekongo-Stil belegten Verzierungstechniken nehmen Rillen- und Riefenverzierung die beiden ersten Positionen ein.“
+BEK,VerzTech05,"Wotzka 1995:160 „Auf Platz drei folgt die Zahnstockomamentik, die in dieser Stilgruppe unter Verwendung besonders langer und zuweilen offensichtlich flexibler Geräte hergestellt wurde.“"
+BEK,VerzTech04-1,Wotzka 1995:160 „in einigen Fällen auch die Wiegebandtechnik nachgewiesen.
+BEK,VerzTech04,Wotzka 1995:160 „Bei den selten belegten Stempelmotiven handelt es sich zumeist um parallele Reihen feiner dreieckiger Eindrücke“
+WAF,Fabric1,Wotzka 1995:163 „Die Keramik des Wafanya-Stiles ist aus ungemagerten weißbrennenden Tonen hergestellt.
+WAF,GefTyp88,"Wotzka 1995:163 Tab. 76 = 52,3%"
+WAF,GefTyp53,"Wotzka 1995:163 Tab. 76 = 31,8%"
+WAF,GefTyp59,"Wotzka 1995:163 Tab. 76 = 6,8%"
+WAF,GefTyp87,"Wotzka 1995:163 Tab. 76 = 6,8%"
+WAF,RandTyp130,"Wotzka 1995:164 Tab. 77 = 55,5%"
+WAF,RandTyp95,"Wotzka 1995:164 Tab. 77 = 33,8%"
+WAF,VerzTech01,Wotzka 1995:164 „Die beiden häufigsten Dekorkategorien der Wafanya-Keramik stellen Rillen- bzw. Riefenornamentik und banfwa-nwfa-Verzierung dar.“
+WAF,VerzTech02,Wotzka 1995:164 „Die beiden häufigsten Dekorkategorien der Wafanya-Keramik stellen Rillen- bzw. Riefenornamentik und banfwa-nwfa-Verzierung dar.“
+WAF,VerzTech08,Wotzka 1995:164 „Die beiden häufigsten Dekorkategorien der Wafanya-Keramik stellen Rillen- bzw. Riefenornamentik und banfwa-nwfa-Verzierung dar.“
+WAF,VerzTech05,"Wotzka 1995:164 „Auf der Häufigkeitsskala folgen Zahnstockornamente,“"
+WAF,VerzTech09,Wotzka 1995:164 „Die in der Wafanya-Gruppe sehr zahlreich vorkommenden plastischen Zier- bzw. Schulterleisten dürften in aller Regel aus der Gefäßwandung herausgearbeitet worden sein.
+WAF,VerzTech06,"Wotzka 1995:165 „Abgesehen von den zahlreichen Kerbverzierungen, ...“"
+WEM,Fabric1,Wotzka 1995:168 „aus weißbrennend en Tonen hergestellten Keramikgruppen“
+WEM,Fabric2,"Wotzka 1995:168 „Einige w~nige Scherben zeigen aber auf ansonsten weißer Oberfläche teils blaßrot, teils intensiv rot gefärbte, bisweilen auch im Bruch nachweisbare Bereiche.“"
+WEM,Fabric4,"Wotzka 1995:168 „An vier Fragmenten der Werna-Gruppe fallen eingelagerte, deutlich sieht- und fühlbare feine Quarzkörner auf, die eine intentioneHe Magerung bzw. die Verwendung von Tonen mit für diese Stilgruppe ungewöhnlich grobkörnigem Sandanteil bezeugen.“"
+WEM,GefTyp89,"Wotzka 1995:168 Tab. 79 = 98,7%"
+WEM,RandTyp75,"Wotzka 1995:169 Tab. 80 = 58,8%"
+WEM,RandTyp75,"Wotzka 1995:169 Tab. 80 = 11,8%"
+WEM,RandTyp75,"Wotzka 1995:169 Tab. 80 = 11,8%"
+WEM,VerzTech08,Wotzka 1995:169 „Wenngleich das auf nahezu keinem Stück fehlende banfwa -nfwa die bei weitem häufigste Verzierungsart der Werna-Keramik darstellt“
+WEM,VerzTech01,Wotzka 1995:169 „ist die Ornamentik dieser Stilgruppe im wesentlichen durch eingeritzten Dekor charakterisiert.“
+WEM,VerzTech04,"Wotzka 1995:169 „Stempelmuster begegnen ausschließlich in Form eingedrückter kurzer Bögen,“"
+BOS,Fabric1,"Wotzka 1995:172 „Die Keramik des Bosanga-Stiles entspricht in technologischer Hinsicht weitgehend den bislang beschriebenen, aus weißbrennenden Tonen hergestellten Keramikgruppen. Der weitaus größte Teil des Materials ist ungemagert“"
+BOS,GefTyp59,"Wotzka 1995:172 Tab. 83 = 80,0%"
+BOS,GefTyp71,"Wotzka 1995:172 Tab. 83 = 8,9%"
+BOS,GefTyp89,"Wotzka 1995:172 Tab. 83 = 6,7%"
+BOS,GefTyp70,"Wotzka 1995:172 Tab. 83 = 4,4%"
+BOS,RandTyp75,"Wotzka 1995:173 Tab. 84 = 46,4%"
+BOS,RandTyp130,"Wotzka 1995:173 Tab. 84 = 26,7%"
+BOS,VerzTech01,Wotzka 1995:173 „Die Bosanga-Keramik ist im wesentlichen durch Rillen- und banfwa-nfwa-Ornamentik geprägt.“
+BOS,VerzTech08,Wotzka 1995:173 „Die Bosanga-Keramik ist im wesentlichen durch Rillen- und banfwa-nfwa-Ornamentik geprägt.“
+BOS,VerzTech04,"Wotzka 1995:173 „Stempeldekor ist in der Bosanga-Gruppe zwar mehrfach belegt, tritt aber quantitativ deutlich hinter den genannten Verzierungstechniken zurück.“"
+BLD,Fabric1,Wotzka 1995:175 „Der größte Teil der Bolondo-Keramik wurde aus weißbrennenden Tonen hergestellt.“
+BLD,Fabric2,Wotzka 1995:175 „Für rund 10% des zugehörigen Materials ist hingegen eine rote Brennfarbe nachgewiesen.“
+BLD,Fabric4,Wotzka 1995:175 „Eine intentioneile Magerung mit feinem Quarzsand weisen 14 % der zur Bolondo-Gruppe gehörigen Stücke auf.“
+BLD,GefTyp71,"Wotzka 1995:175 Tab 86 = 66,3%"
+BLD,GefTyp70,"Wotzka 1995:175 Tab 86 = 10,5%"
+BLD,GefTyp75,"Wotzka 1995:175 Tab 86 = 7,0%"
+BLD,GefTyp59,"Wotzka 1995:175 Tab 86 = 5,8%"
+BLD,RandTyp64,"Wotzka 1995:177 Tab. 87 = 29,3%"
+BLD,RandTyp75,"Wotzka 1995:177 Tab. 87 = 15,3%"
+BLD,RandTyp130,"Wotzka 1995:177 Tab. 87 = 11,2%"
+BLD,RandTyp89,"Wotzka 1995:177 Tab. 87 = 7,8%"
+BLD,RandTyp71,"Wotzka 1995:177 Tab. 87 = 6,9%"
+BLD,RandTyp133,"Wotzka 1995:177 Tab. 87 = 6,9%"
+BLD,RandTyp134,Wotzka 1995:177 Tab. 87 = 6%
+BLD,RandTyp82,"Wotzka 1995:177 Tab. 87 = 4,3%"
+BLD,RandTyp135,"Wotzka 1995:177 Tab. 87 = 4,3%"
+BLD,VerzTech01,Wotzka 1995:177 „An der Spitze der Häufigkeitsskala der für die Bolondo-Gruppe nachgewiesenen Verzierungsarten stehen die Ritztechnik
+BLD,VerzTech08,Wotzka 1995:117 „und das in der Regel als Dekor des Innenrandes verwendete banfwa-nfwa“
+BLD,VerzTech06,Wotzka 1995:177 „Das Erscheinungsbild der Bolondo-Keramik wird jedoch in erster Linie durch Kerbschnitt-und Zahnstockornamentik ...“
+BLD,VerzTech05,Wotzka 1995:177 „Das Erscheinungsbild der Bolondo-Keramik wird jedoch in erster Linie durch Kerbschnitt-und Zahnstockornamentik ...“
+BLD,VerzTech12,Wotzka 1995:177 „eine neue Art der Flächenzier bestimmt: Im Bolondo-Stil tritt erstmals eine Ornamentierung der unteren Gefäßpartie durch flächigen Textil- bzw. Mattengeflechteindruck auf“
+BLD,VerzTech16,Wotzka 1995:177 „eine neue Art der Flächenzier bestimmt: Im Bolondo-Stil tritt erstmals eine Ornamentierung der unteren Gefäßpartie durch flächigen Textil- bzw. Mattengeflechteindruck auf“
+BKN,Fabric1,Wotzka 1995:181 „Die Keramik der Bokone-Gruppe ist überwiegend aus weißbrennenden Tonen hergestellt.“
+BKN,Fabric2,"Wotzka 1995:181 „Acht Stücke (4,5 %) weisen aber eine rote Brennfarbe auf“"
+BKN,Fabric4,Wotzka 1995:181 „Für 97 dem Bokone-Stil zugewiesene Stücke (56 %) wurde eine feine Sandmagerung festgestellt“
+BKN,GefTyp95,"Wotzka 1995:181 Tab. 90 = 46,9%"
+BKN,GefTyp96,"Wotzka 1995:181 Tab. 90 = 34,4%"
+BKN,GefTyp94,"Wotzka 1995:181 Tab. 90 = 18,8%"
+BKN,RandTyp140,"Wotzka 1995:182 Tab. 91 = 33,9%"
+BKN,RandTyp141,"Wotzka 1995:182 Tab. 91 = 13,6%"
+BKN,RandTyp142,"Wotzka 1995:182 Tab. 91 = 8,5%"
+BKN,RandTyp143,"Wotzka 1995:182 Tab. 91 = 8,5%"
+BKN,RandTyp144,"Wotzka 1995:182 Tab. 91 = 6,8%"
+BKN,RandTyp145,"Wotzka 1995:182 Tab. 91 = 6,8%"
+BKN,RandTyp146,"Wotzka 1995:182 Tab. 91 = 5,1%"
+BKN,RandTyp147,"Wotzka 1995:182 Tab. 91 = 5,1%"
+BKN,RandTyp148,"Wotzka 1995:182 Tab. 91 = 5,1%"
+BKN,VerzTech01,Wotzka 1995:183 „Die häufigsten Verzierungsarten des Bokone-Stiles stellen die Ritztechnik und der flächige Textilabdruck dar.“
+BKN,VerzTech16,Wotzka 1995:183 „Die häufigsten Verzierungsarten des Bokone-Stiles stellen die Ritztechnik und der flächige Textilabdruck dar.“
+BKN,VerzTech02,"Wotzka 1995:183 „Als charakteristisch haben vor allem tief eingedrückte, häufig wie gestempelt anmutende Rillenverzierungen zu gelten,“"
+BKN,VerzTech04,Wotzka 1995:183 „Die etwas seltener belegten Stempelverzierungen sind durchweg sehr tief und ohne große Sorgfalt ausgeführt.“
+BKN,VerzTech08,"Wotzka 1995:183 „Echtes banfwa-nfwa ist für die Bokone-Gruppe zwar belegt, tritt aber quantitativ hinter verschiedenen, unzweifelhaft aus dieser Technik hervorgegangenen Verzierungsarten zurück.“"
+BKN,VerzTech12,"Wotzka 1995:183 „Neben dem Textilabdruck tritt als zweite, wesentlich seltenere Flächenzier auch der Matten- bzw. Korbgeflechtabdruck auf.“"
+BLM,Fabric1,Wotzka 1995:186 „Die Keramik der Bolombi-Gruppe ist aus weißbrennenden Tonen hergestellt.
+BLM,Fabric4,Wotzka 1995:186 „Für 13 Stücke (36 %) ließ sich eine feine Sandmagerung nachweisen.“
+BLM,RandTyp151,"Wotzka 1995:186 Tab. 93 = 28,6%"
+BLM,RandTyp152,"Wotzka 1995:186 Tab. 93 = 17,1%"
+BLM,RandTyp153,"Wotzka 1995:186 Tab. 93 = 11,4%"
+BLM,RandTyp154,"Wotzka 1995:186 Tab. 93 = 11,4%"
+BLM,VerzTech01,Wotzka 1995:187 „Die Verzierung der zur Bolombi-Gruppe gerechneten Randfragmente ist ausschließlich auf einfache Rillenmuster beschränkt“
+ILB,Fabric4,Wotzka 1995:188 „geben die Töpferinnen dem Rohmaterial einen Zuschlag sehr feinen Flußsandes bei.“
+ILB,GefTyp97,"Wotzka 1995:190 Tab. 95 = 33,3%"
+ILB,GefTyp98,"Wotzka 1995:190 Tab. 95 = 33,3%"
+ILB,GefTyp99,"Wotzka 1995:190 Tab. 95 = 12,5%"
+ILB,RandTyp155,"Wotzka 1995:191 Tab. 96 = 19,1%"
+ILB,RandTyp153,"Wotzka 1995:191 Tab. 96 = 17,6%"
+ILB,RandTyp157,"Wotzka 1995:191 Tab. 96 = 7,4%"
+ILB,RandTyp164,"Wotzka 1995:191 Tab. 96 = 7,4%"
+ILB,RandTyp165,"Wotzka 1995:191 Tab. 96 = 7,4%"
+ILB,RandTyp154,"Wotzka 1995:191 Tab. 96 = 5,9%"
+ILB,RandTyp163,"Wotzka 1995:191 Tab. 96 = 5,9%"
+ILB,RandTyp166,"Wotzka 1995:191 Tab. 96 = 5,9%"
+ILB,BodenTypB1,Wotzka 1995:191 „Die meisten Gefäße der Ilemba-Bokonda-Gruppe haben Rundböden des Typs B 1.“
+ILB,BodenTypB2,Wotzka 1995:191 „Daneben sind lediglich der Linsenboden (Typ B 2) und der Omphalosboden (Typ B 7) belegt.“
+ILB,BodenTypB7,Wotzka 1995:191 „Daneben sind lediglich der Linsenboden (Typ B 2) und der Omphalosboden (Typ B 7) belegt.“
+ILB,VerzTech16,Wotzka 1995:188 „plaziert die Töpferin den Formling auf den am Boden liegenden Rest eines Maschenstoffes und erzeugt ein die Außenwandunggroßteils bedeckendes flächiges Textilmuster.“
+ILB,VerzTech01,Wotzka 1995:189 „lediglich einfache Ritz- oder Eindruckverzierungen angebracht.“
+ILB,VerzTech04,Wotzka 1995:189 „lediglich einfache Ritz- oder Eindruckverzierungen angebracht.“
+IKK,Fabric1,Wotzka 1995:193 „Die Keramik der Inkaka-Gruppe ist aus weißbrennenden Tonen hergestellt.“
+IKK,GefTyp105,"Wotzka 1995:194 Tab. 99 = 70,0%"
+IKK,GefTyp106,"Wotzka 1995:194 Tab. 99 = 30,0%"
+IKK,RandTyp171,"Wotzka 1995:194 Tab. 100 = 61,4%"
+IKK,RandTyp172,"Wotzka 1995:194 Tab. 100 = 14,0%"
+IKK,RandTyp173,"Wotzka 1995:194 Tab. 100 = 6,1%"
+IKK,RandTyp174,"Wotzka 1995:194 Tab. 100 = 6,1%"
+IKK,RandTyp175,"Wotzka 1995:194 Tab. 100 = 5,3%"
+IKK,VerzTech02,"Wotzka 1995:195 „Die häufigste Verzierungsart stellen umlaufende, zumeist sehr grob und  unregelmäßig ausgeführte Rillen- und Riefenbündel dar.“"
+IKK,VerzTech12,Wotzka 1995:195 „Als Flächendekore sind in erster Linie Matten- oder Korbabdrücke belegt“
+IKK,VerzTech04,"Wotzka 1995:195 „Stempelverzierungen sind vor allem in Form umlaufender Reihen grober, umegelmäßig ovaler bis tropfenförmiger tiefer Eindrücke belegt“"
+YOP,Fabric4,Wotzka 1995:197 „Der Rohton wird mit Sand gemagert“
+YOP,VerzTech16,Wotzka 1995:197 „der Rest eines traditionellen Maschenstoffes als Arbeitsunterlage verwendet … bis ein flächendeckender Textilabdruck erzeugt ist.“
+YOP,GefTyp98,"Wotzka 1995:197f. „Mit Ausnahme der Randgestalt entspricht diese Gefäßform dem in der rezenten Ilemba-Bokonda-Keramik des Tshuapa-Gebietes geläufigen, ebenfalls in einer großen und einer kleinen Variante hergestellten Typ 98.“"
+YOP,RandTyp180,"Wotzka 1995:198 Tab. 102 = 33,3%"
+YOP,RandTyp181,"Wotzka 1995:198 Tab. 102 = 22,2%"
+YOP,RandTyp182,"Wotzka 1995:198 Tab. 102 = 22,2%"
+YOP,RandTyp183,"Wotzka 1995:198 Tab. 102 = 16,7%"
+YOP,BodenTypB1,Wotzka 1995:198 „Die Gefäße der Yopoko-Gruppe besitzen ausschließlich runde Böden des Typs B 1.“
+YOP,VerzTech02,Wotzka 1995:198 „lediglich einfache umlaufende Riefen und Rillen“
+YOP,VerzTech04,"Wotzka 1995:198 „sowie grobe, tief eingedrückte Stempelverzierungen.“"
+LKG,Fabric1,"Wotzka 1995:198 „Die Keramik der Lokonge-Gruppe ist aus weißbrennenden, in der Regel ungemagerten Tonen hergestellt.“"
+LKG,Fabric4,"Wotzka 1995:198f. „In zwei Fällen wurden allerdings in den Scherben eingelagerte feine Quarzpartikel festgestellt, die von einer intentionellen Magerung herrühren könnten.“"
+LKG,Fabric6,Wotzka 1995:199 „Ein Stück der Lokonge-Gruppe enthält sehr feine Glimrneranteile.“
+LKG,GefTyp75,"Wotzka 1995:199 Tab. 104 = 60,0%"
+LKG,GefTyp108,"Wotzka 1995:199 Tab. 104 = 40,0%"
+LKG,RandTyp178,"Wotzka 1995:199 Tab. 105 = 45,8%"
+LKG,RandTyp116,"Wotzka 1995:199 Tab. 105 = 33,3%"
+LKG,RandTyp124,"Wotzka 1995:199 Tab. 105 = 16,7%"
+LKG,VerzTech02,"Wotzka 1995:199 „Das technische Repertoire der Lokonge-Ornamentik ist auf einfache Rillen-, Stempel- und banfwa-nfwa Verzierungen beschränkt.“"
+LKG,VerzTech04,"Wotzka 1995:199 „Das technische Repertoire der Lokonge-Ornamentik ist auf einfache Rillen-, Stempel- und banfwa-nfwa Verzierungen beschränkt.“"
+LKG,VerzTech08,"Wotzka 1995:199 „Das technische Repertoire der Lokonge-Ornamentik ist auf einfache Rillen-, Stempel- und banfwa-nfwa Verzierungen beschränkt.“"
+LIK,Fabric1,"Wotzka 1995:200 „aus weißbrennenden Tonen gefertigter, in der Mehrzahl ungemagerter Wandscherben“"
+LIK,Fabric4,"Wotzka 1995:200 „Zwei Stücke weisen allerdings Quarzeinschlüsse auf, die möglicherweise einen intentionellen Sandzuschlag bezeugen.“"
+LIK,VerzTech01,Wotzka 1995:201 „Die Ornamentik der Likuku-Keramik ist im wesentlichen auf eingeritzte oder eingestempelte stehende Bögen beschränkt“
+LIK,VerzTech04,Wotzka 1995:201 „Die Ornamentik der Likuku-Keramik ist im wesentlichen auf eingeritzte oder eingestempelte stehende Bögen beschränkt“
+LIK,VerzTech08,Wotzka 1995:201 „Während auf mehreren Stücken eindeutige banfwa-nfwa-Verzierungen nachzuweisen sind“
+MAL,Fabric1,"Wotzka 1995:201 „ausnahmslos um ungemage rtes, aus weißbre nnendem Ton hergestelltes Material“"
+MAL,GefTyp70,Wotzka 1995:201 „Die einzige für diese Gruppe belegte Gefäßform stellt der halslose Kugeltopf des Typs 70 dar“
+MAL,RandTyp71,Wotzka 1995:201 „der mit RändemderTypen R71 und R64 vorkommt“
+MAL,RandTyp64,Wotzka 1995:201 „der mit RändemderTypen R71 und R64 vorkommt“
+MAL,VerzTech01,Wotzka 1995:201 „Die Ornamentik der Malelernbe-Keramik wird vor allem durch feine Dreieckstempel und eingeritzte Schraffurmotive bestimmt“
+MAL,VerzTech04,Wotzka 1995:201 „Die Ornamentik der Malelernbe-Keramik wird vor allem durch feine Dreieckstempel und eingeritzte Schraffurmotive bestimmt“
+MAL,VerzTech08,Wotzka 1995:201 „In mehreren Fällen überlagert die Stempel- und Rillenverzierung einen zuvor angeb rachten flächigen Banfwa-nfwa-Dekor“
+MPO,Fabric1,Wotzka 1995:202 „Es handelt sich um fünf aus rotbrennendem und zwei aus weißbrennendem Ton hergestellte Stücke.“
+MPO,Fabric2,Wotzka 1995:202 „Es handelt sich um fünf aus rotbrennendem und zwei aus weißbrennendem Ton hergestellte Stücke.“
+MPO,Fabric4,"Wotzka 1995:202 „Vier dieser Fragmente enthalten feine, auf eine intentioneHe Sandmagerung hindeutende Quarzeinschlüsse.“"
+MPO,GefTyp59,Wotzka 1995:202 „ Eine Scherbe … lässt sich … Typ 59 zuweisen“
+MPO,VerzTech16,"Wotzka 1995:202 „im wesentlichen auf flächige, im Schulterbereich ansetzende Gewebedekore“"
+MPO,VerzTech02,Wotzka 1995:202 „im obersten Abschnitt der Schulter angebrachte stehende Rillenbögen“
+MPO,VerzTech04,Wotzka 1995:202 „Darüber hinaus sind lediglich umlaufende Reihen feiner Stempeldreiecke belegt.“
+BSG,Fabric1,Wotzka 1995:203 „Die Keramik der Besango-Gruppe ist aus weißbrennenden ungemagerten Tonen gefertigt.“
+BSG,GefTyp53,"Wotzka 1995:203 Tab. 107 = 83,3%"
+BSG,GefTyp88,"Wotzka 1995:203 Tab. 107 = 6,7%"
+BSG,GefTyp89,"Wotzka 1995:203 Tab. 107 = 6,7%"
+BSG,RandTyp64,"Wotzka 1995:203 Tab. 108 = 66,7%"
+BSG,VerzTech02,Wotzka 1995:203 „Die beiden häufigsten Verzierungsweisen des Besongo-Stiles stellen der flächige banfwa-nfwa Dekor und einfache Horizontalrillen dar.
+BSG,VerzTech08,Wotzka 1995:203 „Die beiden häufigsten Verzierungsweisen des Besongo-Stiles stellen der flächige banfwa-nfwa Dekor und einfache Horizontalrillen dar.
+BSG,VerzTech09,"Wotzka 1995:203 „Das Erscheinungsbild der Besango-Keramik wird aber in erster Linie durch Rillen-, Applique- und Stempelornamentik bestimmt.“"
+BSG,VerzTech04,"Wotzka 1995:203 „Das Erscheinungsbild der Besango-Keramik wird aber in erster Linie durch Rillen-, Applique- und Stempelornamentik bestimmt.“"
+LSL,Fabric5,"Wotzka 1995:206 „Die Usala-Keramik ist aus rotbrennendem, mit Quarzsand gemagertem Ton hergestellt.“"
+LSL,Fabric6,Wotzka 1995:207 „Zwei Fragmente weisen zusätzlich deutliche Anteile feiner Glimmerpartikel auf.“
+LSL,GefTyp109,Wotzka 1995:207 „Die einzige für die Usala-Gruppe belegte Gefäßform stellt der in drei Stücken repräsentierte Typ 109 dar.“
+LSL,RandTyp193,Wotzka 1995:207 „ausbiegendem Rand des Typs R 193“
+LSL,VerzTech01,"Wotzka 1995:207 „Die Verzierungen beschränken sich auf umlaufende, teils mit einer leichten Treppung des Profils einhergehende Riefen- oder Rillengruppen“"
+LSL,VerzTech02,"Wotzka 1995:207 „Die Verzierungen beschränken sich auf umlaufende, teils mit einer leichten Treppung des Profils einhergehende Riefen- oder Rillengruppen“"
+NKB,Fabric4,"Wotzka 1995:207 „Die Keramik der Nkomba-Gruppe ist teils aus weißbrennenden, teils aus rotbrennenden Tonen hergestellt. Sämtliche Stücke enthalten einen hohen Anteil an Quarzeinschlüssen, die eine intentioneile Magerung bezeugen.“"
+NKB,Fabric5,"Wotzka 1995:207 „Die Keramik der Nkomba-Gruppe ist teils aus weißbrennenden, teils aus rotbrennenden Tonen hergestellt. Sämtliche Stücke enthalten einen hohen Anteil an Quarzeinschlüssen, die eine intentioneile Magerung bezeugen.“"
+NKB,Fabric6,Wotzka 1995:207 „bei zehn Stücken zusätzliche Anteile feiner Glimmerpartikel festzustellen“
+NKB,GefTyp110,"Wotzka 1995:208 Tab. 110 = 28,6%"
+NKB,GefTyp111,"Wotzka 1995:208 Tab. 110 = 21,4%"
+NKB,GefTyp112,"Wotzka 1995:208 Tab. 110 = 21,4%"
+NKB,GefTyp113,"Wotzka 1995:208 Tab. 110 = 14,3%"
+NKB,RandTyp185,"Wotzka 1995:209 Tab. 111 = 21,7%"
+NKB,RandTyp186,"Wotzka 1995:209 Tab. 111 = 20,3%"
+NKB,RandTyp187,"Wotzka 1995:209 Tab. 111 = 18,8%"
+NKB,RandTyp188,"Wotzka 1995:209 Tab. 111 = 17,4%"
+NKB,RandTyp189,"Wotzka 1995:209 Tab. 111 = 11,6%"
+NKB,RandTyp169,"Wotzka 1995:209 Tab. 111 = 5,8%"
+NKB,VerzTech14,Wotzka 1995:209 „Das auffälligste ornamentale Kennzeichen der Nkomba-Gruppe stellt die rote Streifenbemalung der meisten zugehörigen Stücke dar.“
+NKB,VerzTech02,Wotzka 1995:209 „Daneben … mit Rillen- oder Riefenverzierungen … kombiniert“
+NKB,VerzTech05,Wotzka 1995:209 „Mehrere Stücke zeigen Zahnstockverzierungen“
+EarlyPotteryPhase,Fabric4,Livingstone Smith et al. 2017
+EarlyPotteryPhase,Fabric5,Livingstone Smith et al. 2017
+EarlyPotteryPhase,GefTypC1,Livingstone Smith et al. 2017
+EarlyPotteryPhase,BodenTypB4,Livingstone Smith et al. 2017
+EarlyPotteryPhase,BodenTypB11,Livingstone Smith et al. 2017
+EarlyPotteryPhase,VerzTech01,Livingstone Smith et al. 2017
+EarlyPotteryPhase,VerzTech02,Livingstone Smith et al. 2017
+EarlyPotteryPhase,VerzTech04-1,Livingstone Smith et al. 2017
+BTM,Fabric4,Seidensticker 2017: 117
+BTM,Fabric5,Seidensticker 2017: 117
+BTM,GefTypC2,Seidensticker 2017: 117
+BTM,GefTypE5,Seidensticker 2017: 117
+BTM,GefTypI2,Seidensticker 2017: 117
+BTM,BodenTypB4,Seidensticker 2017: 119
+BTM,BodenTypB2,Seidensticker 2017: 119
+BTM,BodenTypB5,Seidensticker 2017: 119
+BTM,VerzTech01,Seidensticker 2017: 120; 522 Anlage 4.A
+BTM,VerzTech02,Seidensticker 2017: 120; 522 Anlage 4.A
+BTM,VerzTech04,Seidensticker 2017: 120; 522 Anlage 4.A
+NGB,Fabric4,Seidensticker 2017: 125
+NGB,Fabric5,Seidensticker 2017: 125
+NGB,GefTypC1,Seidensticker 2017: 126
+NGB,BodenTypB1,Seidensticker 2017: 126
+NGB,BodenTypB4,Seidensticker 2017: 126-127
+NGB,VerzTech01,Seidensticker 2017: 127; 522 Anlage 4.B
+NGB,VerzTech02,Seidensticker 2017: 127; 522 Anlage 4.B
+NGB,VerzTech04,Seidensticker 2017: 127; 522 Anlage 4.B
+DON,Fabric4,Seidensticker 2017: 131
+DON,Fabric7,Seidensticker 2017: 131
+DON,Fabric3,Seidensticker 2017: 131
+DON,Fabric8,Seidensticker 2017: 131
+,GefTypE,
+,GefTypI,

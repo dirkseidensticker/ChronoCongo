@@ -54,7 +54,7 @@ d <- filter(d, !grepl("Rand", ATTR))
 ```{r}
 plt <- anlys(d, 2)
 plt
-ggsave("img/Anlys.png", width = 10, height = 15)
+ggsave("img/Anlys.png", width = 20, height = 10)
 ```
 
 
@@ -99,7 +99,7 @@ d <- subset(d, STYLE != "NKB" &
                STYLE != "LSL")
 plt <- anlys(d, 2)
 plt
-ggsave("img/Anlys1.png", width = 10, height = 15)
+ggsave("img/Anlys1.png", width = 20, height = 10)
 ```
 
 
