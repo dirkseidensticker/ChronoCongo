@@ -5,6 +5,7 @@ import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
 import de.rgzm.alligator.allen.AllenIA;
 import de.rgzm.alligator.amt.AMT;
+import de.rgzm.alligator.functions.Timeline;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -146,45 +147,7 @@ public class MainTM2 {
                 out.append(ae.name).append("\t").append(String.valueOf(ae.a)).append("\t").append(String.valueOf(ae.b)).append("\r\n");
             }
             // write timeline json
-            int id_t = 0;
-            JSONArray timelinejson = new JSONArray();
-            for (Object event : alligator.events) {
-                id_t++;
-                JSONObject t = new JSONObject();
-                AlligatorEvent ae = (AlligatorEvent) event;
-                t.put("id", id_t);
-                t.put("content", ae.name);
-                boolean error = false;
-                if (ae.b < ae.a) {
-                    error = true;
-                    double atmp = ae.a;
-                    double btmp = ae.b;
-                    ae.a = btmp;
-                    ae.b = atmp;
-                }
-                if (!ae.startFixed && !ae.endFixed && !error) {
-                    t.put("className", "orange");
-                } else if (!ae.startFixed && ae.endFixed && !error) {
-                    t.put("className", "green");
-                } else if (ae.startFixed && !ae.endFixed && !error) {
-                    t.put("className", "magenta");
-                } else if (error) {
-                    t.put("className", "red");
-                } else if (!error) {
-                    t.put("className", "blue");
-                }
-                t.put("start", ae.a);
-                t.put("end", ae.b);
-                if (ae.a == ae.b) {
-                    t.put("type", "point");
-                }
-                timelinejson.add(t);
-            }
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("../timeline/output_TM2.json"))) {
-                bw.write(timelinejson.toJSONString());
-            } catch (IOException e) {
-                e.toString();
-            }
+            Timeline.writeTimeline("output_TM2.json", alligator);
             // NEO4J tests
             String nodes = alligator.getEventsAsCypherNodes();
             List<String> properties = AllenIA.getAllenRelationCypherProperties(t1.a, t1.b, t2.a, t2.b, t1, t2);

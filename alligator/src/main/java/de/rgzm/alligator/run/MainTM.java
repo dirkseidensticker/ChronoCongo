@@ -5,11 +5,13 @@ import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
 import de.rgzm.alligator.allen.AllenIA;
 import de.rgzm.alligator.amt.AMT;
+import de.rgzm.alligator.functions.Timeline;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -19,6 +21,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 public class MainTM {
 
@@ -148,6 +152,8 @@ public class MainTM {
                 System.out.println(ae.name + "\t" + String.valueOf(ae.a) + "\t" + String.valueOf(ae.b) + " " + ae.startFixed + " " + ae.endFixed);
                 out.append(ae.name).append("\t").append(String.valueOf(ae.a)).append("\t").append(String.valueOf(ae.b)).append("\r\n");
             }
+            // write timeline json
+            Timeline.writeTimeline("output_TM.json", alligator);
             // NEO4J tests
             String nodes = alligator.getEventsAsCypherNodes();
             List<String> properties = AllenIA.getAllenRelationCypherProperties(t1.a, t1.b, t2.a, t2.b, t1, t2);
