@@ -1,0 +1,116 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Timeline | External data</title>
+
+  <style type="text/css">
+    body, html {
+      font-family: sans-serif;
+    }
+    /* custom styles for individual items, load this after vis.css/vis-timeline-graph2d.min.css */
+
+    .vis-item.blue {
+      background-color: #d5ddf6;
+      border-color: #97b0f8;
+    }
+
+    .vis-item.green {
+      background-color: greenyellow;
+      border-color: green;
+    }
+
+    /* create a custom sized dot at the bottom of the red item */
+    .vis-item.red {
+      background-color: red;
+      border-color: darkred;
+      color: white;
+      font-family: monospace;
+      box-shadow: 0 0 10px gray;
+    }
+    .vis-item.vis-dot.red {
+      border-radius: 10px;
+      border-width: 10px;
+    }
+    .vis-item.vis-line.red {
+      border-width: 5px;
+    }
+    .vis-item.vis-box.red {
+      border-radius: 0;
+      border-width: 2px;
+      font-size: 24pt;
+      font-weight: bold;
+    }
+    .vis-item.orange {
+      background-color: gold;
+      border-color: orange;
+    }
+    .vis-item.vis-selected.orange {
+      /* custom colors for selected orange items */
+      background-color: orange;
+      border-color: orangered;
+    }
+
+    .vis-item.magenta {
+      background-color: magenta;
+      border-color: purple;
+      color: white;
+    }
+
+    /* our custom classes overrule the styles for selected events,
+       so lets define a new style for the selected events */
+    .vis-item.vis-selected {
+      background-color: white;
+      border-color: black;
+      color: black;
+      box-shadow: 0 0 10px gray;
+    }
+  </style>
+
+  <!-- Load jquery for ajax support -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <script src="http://visjs.org/dist/vis.js"></script>
+  <link href="http://visjs.org/dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="visualization"></div>
+<div id="loading">loading...</div>
+
+<script type="text/javascript">
+  // load data via an ajax request. When the data is in, load the timeline
+  $.ajax({
+    url: 'output_DS.json',
+    type : 'GET',
+    dataType : 'json',
+    success: function (data) {
+      // hide the "loading..." message
+      document.getElementById('loading').style.display = 'none';
+
+      // DOM element where the Timeline will be attached
+      var container = document.getElementById('visualization');
+
+      // Create a DataSet (allows two way data-binding)
+      var items = new vis.DataSet(data);
+
+      // Configuration for the Timeline
+      var options = {};
+
+      // Create a Timeline
+      var timeline = new vis.Timeline(container, items, options);
+      $('.vis-time-axis.vis-foreground').hide();
+    },
+    error: function (err) {
+      console.log('Error', err);
+      if (err.status === 0) {
+        alert('Failed to load data.\nPlease run this example on a server.');
+      }
+      else {
+        alert('Failed to load data.');
+      }
+    }
+  });
+</script>
+</body>
+</html>
