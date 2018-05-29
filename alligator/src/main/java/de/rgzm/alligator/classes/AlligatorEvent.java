@@ -18,7 +18,10 @@ public class AlligatorEvent {
     public boolean endFixed = false;
     public HashMap distances;
     public HashMap distancesNormalised;
+    public JSONObject nextFixedStartNeighbour = new JSONObject();
     public JSONObject nextFixedEndNeighbour = new JSONObject();
+    public String nn_start_name = null;
+    public String nn_end_name = null;
     public String schwebend = "foo";
     //public HashMap angels;
     //public HashMap angelsNormalised;

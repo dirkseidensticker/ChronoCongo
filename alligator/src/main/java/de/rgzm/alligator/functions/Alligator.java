@@ -192,8 +192,11 @@ public class Alligator {
             //double virtualAnno = getEventById(NFBN_ID).a + ((NFBN_DIST * yearCoefficientBeginn) * NFBN_SIGN);
             double virtualAnno = getEventById(NFBN_ID).a;
             System.out.println(i++ + ": " + getEventById(fuzzyBeginnEventID).name + " --> " + getEventById(NFBN_ID).name + " " + NFBN_JSON_KV.toJSONString() + " a: " + getEventById(NFBN_ID).a + " sign: " + NFBN_SIGN + " vAnno: " + virtualAnno);
-            getEventById(fuzzyBeginnEventID).nextFixedEndNeighbour = NFBN_JSON_KV;
+            getEventById(fuzzyBeginnEventID).nextFixedStartNeighbour = NFBN_JSON_KV;
             getEventById(fuzzyBeginnEventID).a = virtualAnno;
+            //
+            AlligatorEvent ae = getEventById(fuzzyBeginnEventID);
+            ae.nn_start_name = getEventById(NFBN_ID).name;
         }
         // end
         System.out.println("end: ===================================");
@@ -230,6 +233,9 @@ public class Alligator {
             System.out.println(j++ + ": " + getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_JSON_KV.toJSONString() + " b: " + getEventById(NFEN_ID).b + " sign: " + NFEN_SIGN + " vAnno: " + virtualAnno);
             getEventById(fuzzyEndEventID).nextFixedEndNeighbour = NFEN_JSON_KV;
             getEventById(fuzzyEndEventID).b = virtualAnno;
+            //
+            AlligatorEvent ae = getEventById(fuzzyEndEventID);
+            ae.nn_end_name = getEventById(NFEN_ID).name;
         }
         System.out.println("=============== END ===============");
     }
