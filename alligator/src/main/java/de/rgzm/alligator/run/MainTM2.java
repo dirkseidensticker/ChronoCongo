@@ -154,6 +154,25 @@ public class MainTM2 {
                 AlligatorEvent ae = (AlligatorEvent) event;
                 t.put("id", id_t);
                 t.put("content", ae.name);
+                boolean error = false;
+                if (ae.b < ae.a) {
+                    error = true;
+                    double atmp = ae.a;
+                    double btmp = ae.b;
+                    ae.a = btmp;
+                    ae.b = atmp;
+                }
+                if (!ae.startFixed && !ae.endFixed && !error) {
+                    t.put("className", "orange");
+                } else if (!ae.startFixed && ae.endFixed && !error) {
+                    t.put("className", "green");
+                } else if (ae.startFixed && !ae.endFixed && !error) {
+                    t.put("className", "magenta");
+                } else if (error) {
+                    t.put("className", "red");
+                } else if (!error) {
+                    t.put("className", "blue");
+                }
                 t.put("start", ae.a);
                 t.put("end", ae.b);
                 if (ae.a == ae.b) {
@@ -161,7 +180,7 @@ public class MainTM2 {
                 }
                 timelinejson.add(t);
             }
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("output.json"))) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter("../timeline/output_TM2.json"))) {
                 bw.write(timelinejson.toJSONString());
             } catch (IOException e) {
                 e.toString();
