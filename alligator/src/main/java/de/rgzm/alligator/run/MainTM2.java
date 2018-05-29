@@ -10,6 +10,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -19,6 +20,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 public class MainTM2 {
 
@@ -141,6 +144,27 @@ public class MainTM2 {
                 AlligatorEvent ae = (AlligatorEvent) event;
                 System.out.println(ae.name + "\t" + String.valueOf(ae.a) + "\t" + String.valueOf(ae.b) + " " + ae.startFixed + " " + ae.endFixed);
                 out.append(ae.name).append("\t").append(String.valueOf(ae.a)).append("\t").append(String.valueOf(ae.b)).append("\r\n");
+            }
+            // write timeline json
+            int id_t = 0;
+            JSONArray timelinejson = new JSONArray();
+            for (Object event : alligator.events) {
+                id_t++;
+                JSONObject t = new JSONObject();
+                AlligatorEvent ae = (AlligatorEvent) event;
+                t.put("id", id_t);
+                t.put("content", ae.name);
+                t.put("start", ae.a);
+                t.put("end", ae.b);
+                if (ae.a == ae.b) {
+                    t.put("type", "point");
+                }
+                timelinejson.add(t);
+            }
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter("output.json"))) {
+                bw.write(timelinejson.toJSONString());
+            } catch (IOException e) {
+                e.toString();
             }
             // NEO4J tests
             String nodes = alligator.getEventsAsCypherNodes();
