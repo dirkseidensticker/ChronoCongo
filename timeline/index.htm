@@ -27,7 +27,11 @@
 <script type="text/javascript">
   // load data via an ajax request. When the data is in, load the timeline
   $.ajax({
-    url: 'output.json',
+    url: 'https://raw.githubusercontent.com/dirkseidensticker/ChronoCongo/master/timeline/output.json',
+    type : 'GET',
+    dataType : 'json',
+    async: false,
+    crossDomain: true,
     success: function (data) {
       // hide the "loading..." message
       document.getElementById('loading').style.display = 'none';
