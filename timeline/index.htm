@@ -18,9 +18,7 @@
 
 </head>
 <body>
-<p>
-  This demo shows how to load external data via an ajax call.
-</p>
+<p>load data...</p>
 <div id="visualization"></div>
 <div id="loading">loading...</div>
 
@@ -47,6 +45,7 @@
 
       // Create a Timeline
       var timeline = new vis.Timeline(container, items, options);
+      $('.vis-time-axis.vis-foreground').hide();
     },
     error: function (err) {
       console.log('Error', err);
