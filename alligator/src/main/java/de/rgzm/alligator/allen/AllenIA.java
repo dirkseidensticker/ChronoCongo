@@ -10,111 +10,111 @@ public class AllenIA {
      * get Allen relation as short sign following Freksa's "Temporal Reasoning
      * Based on Semi-Intervals" '92
      *
-     * @param a1 start event 1
-     * @param b1 end event 1
-     * @param a2 start event 2
-     * @param b2 end event 2
+     * @param anfang1 start event 1
+     * @param ende1 end event 1
+     * @param anfang2 start event 2
+     * @param ende2 end event 2
      * @return list of short Allen relation signs
      */
-    public static List<String> getAllenRelationSigns(double a1, double b1, double a2, double b2) {
+    public static List<String> getAllenRelationSigns(double anfang1, double ende1, double anfang2, double ende2) {
         List<String> relations = new ArrayList();
-        if (b1 < a2 && b1 < b2) {
+        if (ende1 < anfang2) {
             relations.add("<"); // 1 before 2
         }
-        if (a1 < b2 && a1 < a2) {
+        if (anfang1 > ende2) {
             relations.add(">"); // 1 after 2
         }
-        if (b1 == a2 && b1 < b2) {
+        if (anfang2 == ende1 && anfang1 < anfang2) {
             relations.add("m"); // 1 meets 2
         }
-        if (a1 == b2 && a1 < a2) {
+        if (anfang1 == ende2 && ende1 > ende2) {
             relations.add("mi"); // 1 met-by 2
         }
-        if (b1 > a2 && b1 < b2) {
+        if (anfang1 < anfang2 && anfang2 < ende1) {
             relations.add("o"); // 1 overlaps 2
         }
-        if (a1 < b2 && a1 > a2) {
+        if (anfang1 > anfang2 && ende2 > anfang1) {
             relations.add("oi"); // 1 overlapped-by 2
         }
-        if (a1 == a2 && b1 < b2) {
+        if (anfang1 == anfang2 && ende1 < ende2) {
             relations.add("s"); // 1 starts 2
         }
-        if (a1 == a2 && b1 > b2) {
+        if (anfang1 == anfang2 && ende1 > ende2) {
             relations.add("si"); // 1 started-by 2
         }
-        if (b1 == b2 && a1 > a2) {
+        if (ende1 == ende2 && anfang1 > anfang2) {
             relations.add("f"); // 1 finishes 2
         }
-        if (b1 == b2 && a1 < a2) {
+        if (ende1 == ende2 && anfang1 < anfang2) {
             relations.add("fi"); // 1 finished-by 2
         }
-        if (a1 < b2 && b1 > a2) {
+        if (anfang1 > anfang2 && ende1 < ende2) {
             relations.add("d"); // 1 during 2
         }
-        if (b1 > b2 && a1 < a2) {
+        if (anfang1 < anfang2 && ende1 > ende2) {
             relations.add("di"); // 1 contains 
         }
-        if (b1 == b2 && a1 == a2) {
+        if (ende1 == ende2 && anfang1 == anfang2) {
             relations.add("="); // 1 equals 2
         }
         // Freksa (1992) "Temporal Reasoning Based on Semi-Intervals" p.21
-        // F1
-        if (a1 < a2) {
+        /*// F1
+        if (anfang1 < anfang2) {
             relations.add("ol"); // 1 older 2
         }
-        if (a1 == a2) {
+        if (anfang1 == anfang2) {
             relations.add("hh"); // 1 head to head with 2
         }
-        if (a1 > a2) {
+        if (anfang1 > anfang2) {
             relations.add("yo"); // 1 younger 2
         }
         // F2
-        if (b1 < b2) {
+        if (ende1 < ende2) {
             relations.add("sb"); // 1 survived by 2
         }
-        if (b1 == b2) {
+        if (ende1 == ende2) {
             relations.add("tt"); // 1 tail to tail with 2
         }
-        if (b1 > b2) {
+        if (ende1 > ende2) {
             relations.add("sv"); // 1 survives 2
         }
         // F3
-        if (a1 < b2) {
+        if (anfang1 < ende2) {
             relations.add("bd"); // 1 born before death of 2
         }
-        if (b1 > a2) {
+        if (ende1 > anfang2) {
             relations.add("db"); // 1 died after birth of 2
         }
         // F4
-        if (b1 <= a2) {
+        if (ende1 <= anfang2) {
             relations.add("pr"); // 1 precedes 2
         }
-        if (a2 >= b2) {
+        if (anfang2 >= ende2) {
             relations.add("sd"); // 1 succeeds 2
         }
         // F5
-        if (a1 < b2 && b1 > a2) {
+        if (anfang1 < ende2 && ende1 > anfang2) {
             relations.add("ct"); // 1 contemporary of 2
         }
         // F6
-        if (a1 < a2 && b1 < b2) {
+        if (anfang1 < anfang2 && ende1 < ende2) {
             relations.add("ob"); // 1 older and survived by 2
         }
-        if (a1 > a2 && b1 > b2) {
+        if (anfang1 > anfang2 && ende1 > ende2) {
             relations.add("ys"); // 1 younger and survives 2
         }
-        if (a1 < a2 && b1 > a2) {
+        if (anfang1 < anfang2 && ende1 > anfang2) {
             relations.add("oc"); // 1 older contemporary of 2
         }
-        if (a1 > a2 && a1 > b2) {
+        if (anfang1 > anfang2 && anfang1 > ende2) {
             relations.add("yc"); // 1 younger contemporary of 2
         }
-        if (a1 < b2 && b1 > b2) {
+        if (anfang1 < ende2 && ende1 > ende2) {
             relations.add("sc"); // 1 surviving contemporary of 2
         }
-        if (b1 > a2 && b1 < b2) {
+        if (ende1 > anfang2 && ende1 < ende2) {
             relations.add("bc"); // 1 survived by contemporary of 2
-        }
+        }*/
         return relations;
     }
 

@@ -134,12 +134,22 @@ public class MainTM2 {
             AlligatorEvent t2 = alligator.getEventByName("Trajan");
             System.out.println(t1.name + " [" + t1.a + ";" + t1.b + "]");
             System.out.println(t2.name + " [" + t2.a + ";" + t2.b + "]");
-            //System.out.println(t1.name + " " + AllenIA.getAllenRelationShortDescriptions(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
             System.out.println(t1.a + " " + t1.b + " " + t2.a + " " + t2.b);
             System.out.println(t1.name + " " + AllenIA.getAllenRelationSigns(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
-            //System.out.println(t2.name + " " + AllenIA.getAllenRelationShortDescriptions(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
             System.out.println(t2.a + " " + t2.b + " " + t1.a + " " + t1.b);
             System.out.println(t2.name + " " + AllenIA.getAllenRelationSigns(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
+            AlligatorEvent t3 = alligator.getEventByName("2ndHalfFirstCentury");
+            AlligatorEvent t4 = alligator.getEventByName("fruehkaiserzeitlich");
+            System.out.println(t3.name + " " + AllenIA.getAllenRelationSigns(t3.a, t3.b, t4.a, t4.b) + " " + t4.name);
+            System.out.println(t4.name + " " + AllenIA.getAllenRelationSigns(t4.a, t4.b, t3.a, t3.b) + " " + t3.name);
+            AlligatorEvent t5 = alligator.getEventByName("Otho");
+            AlligatorEvent t6 = alligator.getEventByName("Galba");
+            System.out.println(t5.name + " " + AllenIA.getAllenRelationSigns(t5.a, t5.b, t6.a, t6.b) + " " + t6.name);
+            System.out.println(t6.name + " " + AllenIA.getAllenRelationSigns(t6.a, t6.b, t5.a, t5.b) + " " + t5.name);
+            AlligatorEvent t7 = alligator.getEventByName("Vespasian");
+            AlligatorEvent t8 = alligator.getEventByName("Domitian");
+            System.out.println(t7.name + " " + AllenIA.getAllenRelationSigns(t7.a, t7.b, t8.a, t8.b) + " " + t8.name);
+            System.out.println(t8.name + " " + AllenIA.getAllenRelationSigns(t8.a, t8.b, t7.a, t7.b) + " " + t7.name);
             // output events
             out.append("\r\n");
             System.out.println("virtuell: ===================================");
