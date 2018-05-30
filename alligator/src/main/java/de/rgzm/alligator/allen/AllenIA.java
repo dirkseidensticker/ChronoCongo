@@ -18,40 +18,40 @@ public class AllenIA {
      */
     public static List<String> getAllenRelationSigns(double anfang1, double ende1, double anfang2, double ende2) {
         List<String> relations = new ArrayList();
-        if (ende1 < anfang2) {
+        if (anfang1 < ende1 && ende1 < anfang2 && anfang2 < ende2) {
             relations.add("<"); // 1 before 2
         }
-        if (anfang1 > ende2) {
+        if (anfang2 < ende2 && ende2 < anfang1 && anfang1 < ende1) {
             relations.add(">"); // 1 after 2
         }
-        if (anfang2 == ende1 && anfang1 < anfang2) {
+        if (anfang1 < ende1 && ende1 == anfang2 && anfang2 < ende2) {
             relations.add("m"); // 1 meets 2
         }
-        if (anfang1 == ende2 && ende1 > ende2) {
+        if (anfang2 < ende2 && ende2 == anfang1 && anfang1 < ende1) {
             relations.add("mi"); // 1 met-by 2
         }
-        if (anfang1 < anfang2 && anfang2 < ende1) {
+        if (anfang1 < anfang2 && anfang2 < ende1 && ende1 < ende2) {
             relations.add("o"); // 1 overlaps 2
         }
-        if (anfang1 > anfang2 && ende2 > anfang1) {
+        if (anfang2 < anfang1 && anfang1 < ende2 && ende2 < ende1) {
             relations.add("oi"); // 1 overlapped-by 2
         }
-        if (anfang1 == anfang2 && ende1 < ende2) {
+        if (anfang1 == anfang2 && anfang2 < ende1 && ende1 < ende2) {
             relations.add("s"); // 1 starts 2
         }
-        if (anfang1 == anfang2 && ende1 > ende2) {
+        if (anfang1 == anfang2 && anfang2 < ende2 && ende2 < ende1) {
             relations.add("si"); // 1 started-by 2
         }
-        if (ende1 == ende2 && anfang1 > anfang2) {
+        if (anfang2 < anfang1 && anfang1 < ende2 && ende2 == ende1) {
             relations.add("f"); // 1 finishes 2
         }
-        if (ende1 == ende2 && anfang1 < anfang2) {
+        if (anfang1 < anfang2 && anfang2 < ende2 && ende2 == ende1) {
             relations.add("fi"); // 1 finished-by 2
         }
-        if (anfang1 > anfang2 && ende1 < ende2) {
+        if (anfang2 < anfang1 && anfang1 < ende1 && ende1 < ende2) {
             relations.add("d"); // 1 during 2
         }
-        if (anfang1 < anfang2 && ende1 > ende2) {
+        if (anfang1 < anfang2 && anfang2 < ende2 && ende2 < ende1) {
             relations.add("di"); // 1 contains 
         }
         if (ende1 == ende2 && anfang1 == anfang2) {
