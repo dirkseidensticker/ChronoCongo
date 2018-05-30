@@ -5,13 +5,13 @@ import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
 import de.rgzm.alligator.allen.AllenIA;
 import de.rgzm.alligator.amt.AMT;
+import de.rgzm.alligator.functions.Graph;
 import de.rgzm.alligator.functions.Timeline;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -21,8 +21,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 public class MainTM2 {
 
@@ -30,7 +28,7 @@ public class MainTM2 {
         try {
             // init Alligator
             Alligator alligator = new Alligator();
-            // read
+            // read file
             File fileDir = new File("../data/roman2.tsv");
             BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileDir), "UTF8"));
             String str;
@@ -39,8 +37,11 @@ public class MainTM2 {
                 inputfile.add(str);
             }
             in.close();
+            // create alligator events
             alligator.writeToAlligatorEventList(inputfile, null, null);
-            alligator.calculateDistancesAndAngles();
+            // calculate distances
+            alligator.calculateDistances();
+            // log metadata
             System.out.println("eventIDs:" + alligator.eventIDs.size());
             System.out.print("events_fixed_beginn:" + alligator.events_fixed_beginn.size());
             System.out.println(" events_fuzzy_beginn:" + alligator.events_fuzzy_beginn.size());
@@ -48,14 +49,22 @@ public class MainTM2 {
             System.out.println(" events_fuzzy_end:" + alligator.events_fuzzy_end.size());
             System.out.print("minDist:" + alligator.minDistance);
             System.out.println(" maxDist:" + alligator.maxDistance);
+            // calculate next fixed neighbours
             alligator.getNextFixedNeighbours();
-            // validate
-            AlligatorEvent a = alligator.getEventByName("Nerva");
-            AlligatorEvent b = alligator.getEventByName("Trajan");
-            //System.out.println("Nerva - Trajan distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100] angle:" + a.angels.get(b.id) + "°");
-            System.out.println("Nerva - Trajan distance:" + a.distances.get(b.id) + " normDist: " + a.distancesNormalised.get(b.id) + "[/100]");
-            // write
-            File file = new File("mainTM.txt");
+            // output virtual years
+            System.out.println("\r\n===== virtual years =====");
+            for (Object event : alligator.events) {
+                AlligatorEvent ae = (AlligatorEvent) event;
+                System.out.println(ae.name + "\t" + String.valueOf(ae.a) + "\t" + String.valueOf(ae.b) + " " + ae.startFixed + " " + ae.endFixed);
+            }
+            // write timeline json
+            Timeline.writeTimeline("output_TM2.json", alligator);
+            // allen
+            alligator.calculateAllenSigns();
+            Graph.writeGraph("nodesedges_TM2.json", alligator);
+
+            // write distance matrix
+            File file = new File("mainTM2_distanceMatrix.txt");
             String path = file.getCanonicalPath();
             File filePath = new File(path);
             filePath.delete();
@@ -65,7 +74,7 @@ public class MainTM2 {
                 out.append(id).append("\t").append(alligator.getEventById(id).name).append("\r\n");
             }
             out.append("\r\n").append("-- distances [" + alligator.minDistance + ";" + alligator.maxDistance + "]").append("\r\n").append("\r\n");
-            out.append("            ").append("\t");
+            out.append("      ").append("\t");
             for (String id : alligator.eventIDs) {
                 out.append(id).append("\t");
             }
@@ -75,109 +84,48 @@ public class MainTM2 {
                 AlligatorEvent thisEvent = alligator.getEventById(id);
                 HashMap dm = thisEvent.distances;
                 for (String id2 : alligator.eventIDs) {
-                    //out.append(id2).append(":").append(String.valueOf(dm.get(id2))).append("\t");
-                    DecimalFormat df = new DecimalFormat("00.000000000");
+                    DecimalFormat df = new DecimalFormat("0.0000");
                     out.append(String.valueOf(df.format(dm.get(id2)))).append("\t");
                 }
                 out.append("\r\n");
             }
-            out.append("\r\n").append("-- normalised distances [" + alligator.minDistanceNorm + ";" + alligator.maxDistanceNorm + "]").append("\r\n").append("\r\n");
-            out.append("            ").append("\t");
-            for (String id : alligator.eventIDs) {
-                out.append(id).append("\t");
-            }
             out.append("\r\n");
-            for (String id : alligator.eventIDs) {
-                out.append(id).append("\t");
-                AlligatorEvent thisEvent = alligator.getEventById(id);
-                HashMap dm = thisEvent.distancesNormalised;
-                for (String id2 : alligator.eventIDs) {
-                    DecimalFormat df = new DecimalFormat("#00.000000000");
-                    out.append(String.valueOf(df.format(dm.get(id2)))).append("\t");
-                }
-                out.append("\r\n");
-            }
-            /*out.append("\r\n").append("-- angles [" + alligator.minAlpha + ";" + alligator.maxAlpha + "]").append("\r\n").append("\r\n");
-            out.append("            ").append("\t");
-            for (String id : alligator.eventIDs) {
-                out.append(id).append("\t");
-            }
-            out.append("\r\n");
-            for (String id : alligator.eventIDs) {
-                out.append(id).append("\t");
-                AlligatorEvent thisEvent = alligator.getEventById(id);
-                HashMap dm = thisEvent.angels;
-                for (String id2 : alligator.eventIDs) {
-                    DecimalFormat df = new DecimalFormat("#00.000000000");
-                    out.append(String.valueOf(df.format(dm.get(id2)))).append("\t");
-                }
-                out.append("\r\n");
-            }
-            out.append("\r\n").append("-- normalised angles [" + alligator.minAlphaNorm + ";" + alligator.maxAlphaNorm + "]").append("\r\n").append("\r\n");
-            out.append("            ").append("\t");
-            for (String id : alligator.eventIDs) {
-                out.append(id).append("\t");
-            }
-            out.append("\r\n");
-            for (String id : alligator.eventIDs) {
-                out.append(id).append("\t");
-                AlligatorEvent thisEvent = alligator.getEventById(id);
-                HashMap dm = thisEvent.angelsNormalised;
-                for (String id2 : alligator.eventIDs) {
-                    DecimalFormat df = new DecimalFormat("#00.000000000");
-                    out.append(String.valueOf(df.format(dm.get(id2)))).append("\t");
-                }
-                out.append("\r\n");
-            }*/
-            // Allen Tests
-            AlligatorEvent t1 = alligator.getEventByName("Nerva");
-            AlligatorEvent t2 = alligator.getEventByName("Trajan");
-            System.out.println(t1.name + " [" + t1.a + ";" + t1.b + "]");
-            System.out.println(t2.name + " [" + t2.a + ";" + t2.b + "]");
-            System.out.println(t1.a + " " + t1.b + " " + t2.a + " " + t2.b);
-            System.out.println(t1.name + " " + AllenIA.getAllenRelationSigns(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
-            System.out.println(t2.a + " " + t2.b + " " + t1.a + " " + t1.b);
-            System.out.println(t2.name + " " + AllenIA.getAllenRelationSigns(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
-            AlligatorEvent t3 = alligator.getEventByName("2ndHalfFirstCentury");
-            AlligatorEvent t4 = alligator.getEventByName("fruehkaiserzeitlich");
-            System.out.println(t3.name + " " + AllenIA.getAllenRelationSigns(t3.a, t3.b, t4.a, t4.b) + " " + t4.name);
-            System.out.println(t4.name + " " + AllenIA.getAllenRelationSigns(t4.a, t4.b, t3.a, t3.b) + " " + t3.name);
-            AlligatorEvent t5 = alligator.getEventByName("Otho");
-            AlligatorEvent t6 = alligator.getEventByName("Galba");
-            System.out.println(t5.name + " " + AllenIA.getAllenRelationSigns(t5.a, t5.b, t6.a, t6.b) + " " + t6.name);
-            System.out.println(t6.name + " " + AllenIA.getAllenRelationSigns(t6.a, t6.b, t5.a, t5.b) + " " + t5.name);
-            AlligatorEvent t7 = alligator.getEventByName("Vespasian");
-            AlligatorEvent t8 = alligator.getEventByName("Domitian");
-            System.out.println(t7.name + " " + AllenIA.getAllenRelationSigns(t7.a, t7.b, t8.a, t8.b) + " " + t8.name);
-            System.out.println(t8.name + " " + AllenIA.getAllenRelationSigns(t8.a, t8.b, t7.a, t7.b) + " " + t7.name);
-            // output events
-            out.append("\r\n");
-            System.out.println("virtuell: ===================================");
-            for (Object event : alligator.events) {
-                AlligatorEvent ae = (AlligatorEvent) event;
-                System.out.println(ae.name + "\t" + String.valueOf(ae.a) + "\t" + String.valueOf(ae.b) + " " + ae.startFixed + " " + ae.endFixed);
-                out.append(ae.name).append("\t").append(String.valueOf(ae.a)).append("\t").append(String.valueOf(ae.b)).append("\r\n");
-            }
-            // write timeline json
-            Timeline.writeTimeline("output_TM2.json", alligator);
-            // NEO4J tests
-            String nodes = alligator.getEventsAsCypherNodes();
-            List<String> properties = AllenIA.getAllenRelationCypherProperties(t1.a, t1.b, t2.a, t2.b, t1, t2);
-            String listString = "";
-            for (String s : properties) {
-                listString += s + "\r\n";
-            }
-            String ret = alligator.getEventsAsCypherReturn();
-            //out.append("\r\n").append("-- cypher").append("\r\n\r\n").append(nodes + listString + ret).append("\r\n");
-            // more Allen
-            alligator.calculateAllenSigns();
-            // write output
             out.flush();
+            out.close();
 
-            // AMT test
-            AMT amt = new AMT("http://ls-dev.i3mainz.hs-mainz.de/rdf4j-server/repositories/amtcaa2018");
-            //System.out.println(amt.GRAPH.toJSONString());
-            amt.loadGraph();
+            // write allen matrix
+            file = new File("mainTM2_allenMatrix.txt");
+            path = file.getCanonicalPath();
+            filePath = new File(path);
+            filePath.delete();
+            out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF8"));
+            // list with ids and names
+            for (String id : alligator.eventIDs) {
+                out.append(id).append("\t").append(alligator.getEventById(id).name).append("\r\n");
+            }
+            out.append("\r\n").append("-- allen relations").append("\r\n").append("\r\n");
+            out.append("      ").append("\t");
+            for (String id : alligator.eventIDs) {
+                out.append(id).append("\t");
+            }
+            out.append("\r\n");
+            for (String id : alligator.eventIDs) {
+                out.append(id).append("\t");
+                AlligatorEvent thisEvent = alligator.getEventById(id);
+                HashMap dm = thisEvent.allenRelations;
+                for (String id2 : alligator.eventIDs) {
+                    out.append(String.valueOf(dm.get(id2)));
+                    if (String.valueOf(dm.get(id2)) == "null") {
+                        out.append("\t");
+                    } else {
+                        out.append("\t").append("\t");
+                    }
+                }
+                out.append("\r\n");
+            }
+            out.append("\r\n");
+            out.flush();
+            out.close();
         } catch (Exception e) {
             System.out.println(Logging.getMessageJSON(e, "de.rgzm.alligator.run.Main"));
         }

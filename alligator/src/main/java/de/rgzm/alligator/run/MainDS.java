@@ -39,7 +39,7 @@ public class MainDS {
             }
             in.close();
             alligator.writeToAlligatorEventList(inputfile, null, null);
-            alligator.calculateDistancesAndAngles();
+            alligator.calculateDistances();
             System.out.println("eventIDs:" + alligator.eventIDs.size());
             System.out.println("events_fixed_beginn:" + alligator.events_fixed_beginn.size());
             System.out.println("events_fuzzy_beginn:" + alligator.events_fuzzy_beginn.size());

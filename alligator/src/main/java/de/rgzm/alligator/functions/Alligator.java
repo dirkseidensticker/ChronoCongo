@@ -1,14 +1,11 @@
 package de.rgzm.alligator.functions;
 
-import de.rgzm.alligator.classes.AllenObject;
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.log.Logging;
 import de.rgzm.alligator.allen.AllenIA;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 import org.hashids.Hashids;
 import org.json.simple.JSONObject;
@@ -25,10 +22,6 @@ public class Alligator {
     public double maxDistance = -1000000.0;
     public double minDistanceNorm = 1000000.0;
     public double maxDistanceNorm = -1000000.0;
-    //public double minAlpha = 361.0;
-    //public double maxAlpha = -1.0;
-    //public double minAlphaNorm = 361.0;
-    //public double maxAlphaNorm = -1.0;
     public List<String> eventIDs = new ArrayList();
     double yearCoefficientBeginn = 1.0;
     double yearCoefficientEnd = 1.0;
@@ -46,7 +39,7 @@ public class Alligator {
                 String[] linesplit = tmp.split("\t");
                 // populate AlligatorEvent
                 AlligatorEvent ae = new AlligatorEvent();
-                ae.id = getHASHIDParams(12);
+                ae.id = getHASHIDParams(6);
                 ae.name = linesplit[0];
                 ae.x = Double.parseDouble(linesplit[1]);
                 ae.y = Double.parseDouble(linesplit[2]);
@@ -96,71 +89,21 @@ public class Alligator {
         }
     }
 
-    public void calculateDistancesAndAngles() {
+    public void calculateDistances() {
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
             HashMap distances = new HashMap();
-            HashMap angels = new HashMap();
             for (Object event2 : events) {
                 AlligatorEvent loopEvent = (AlligatorEvent) event2;
                 distances.put(loopEvent.id, distance3D(thisEvent.x, thisEvent.y, thisEvent.z, loopEvent.x, loopEvent.y, loopEvent.z));
-                //angels.put(loopEvent.id, angle3D(thisEvent.x, thisEvent.y, thisEvent.z, loopEvent.x, loopEvent.y, loopEvent.z));
             }
-            // set distances (origin) and angels in degree
             thisEvent.distances = distances;
-            //thisEvent.angels = angels;
         }
-        // calculate normed distance
-        for (Object event : events) {
-            AlligatorEvent thisEvent = (AlligatorEvent) event;
-            HashMap distancesNormalised = new HashMap();
-            HashMap distances = thisEvent.distances;
-            Iterator iter = distances.entrySet().iterator();
-            while (iter.hasNext()) {
-                Map.Entry mEntry = (Map.Entry) iter.next();
-                String key = (String) mEntry.getKey();
-                double value = (double) mEntry.getValue();
-                double abstand = (maxDistance - minDistance);
-                double norm = Math.abs((value - minDistance) / abstand);
-                norm = norm * 100;
-                distancesNormalised.put(key, norm);
-                if (norm < minDistanceNorm) {
-                    minDistanceNorm = norm;
-                }
-                if (norm > maxDistanceNorm) {
-                    maxDistanceNorm = norm;
-                }
-            }
-            thisEvent.distancesNormalised = distancesNormalised;
-        }
-        /*// calculate normed angle
-        for (Object event : events) {
-            AlligatorEvent thisEvent = (AlligatorEvent) event;
-            HashMap anglesNormalised = new HashMap();
-            HashMap angles = thisEvent.angels;
-            Iterator iter = angles.entrySet().iterator();
-            while (iter.hasNext()) {
-                Map.Entry mEntry = (Map.Entry) iter.next();
-                String key = (String) mEntry.getKey();
-                double value = (double) mEntry.getValue();
-                double abstand = (maxAlpha - minAlpha);
-                double norm = Math.abs((value - minAlpha) / abstand);
-                norm = norm * 100;
-                anglesNormalised.put(key, norm);
-                if (norm < minAlphaNorm) {
-                    minAlphaNorm = norm;
-                }
-                if (norm > maxAlphaNorm) {
-                    maxAlphaNorm = norm;
-                }
-            }
-            thisEvent.angelsNormalised = anglesNormalised;
-        }*/
     }
 
     public void getNextFixedNeighbours() {
         // begin
-        System.out.println("beginn: ===================================");
+        System.out.println("\r\n===== Next Neighbours for fuzzy begin =====");
         int i = 1;
         for (Object event : events_fuzzy_beginn) {
             String NFBN_ID = null;
@@ -170,15 +113,6 @@ public class Alligator {
             for (Object event2 : events_fixed_beginn) {
                 String fixedBeginnEventID = (String) event2;
                 AlligatorEvent ae = getEventById(fuzzyBeginnEventID);
-                AlligatorEvent ae2 = getEventById(fixedBeginnEventID);
-                // distance to origin
-                /*double fuzzyDO = Math.sqrt(Math.pow(ae.x, 2) + Math.pow(ae.y, 2) + Math.pow(ae.z, 2));
-                double fixedDO = Math.sqrt(Math.pow(ae2.x, 2) + Math.pow(ae2.y, 2) + Math.pow(ae2.z, 2));
-                if (fuzzyDO < fixedDO) {
-                    NFBN_SIGN = -1;
-                } else {
-                    NFBN_SIGN = 1;
-                }*/
                 HashMap dn = ae.distances;
                 String NFBN_ID_THIS = fixedBeginnEventID;
                 double NFBN_DIST_THIS = (double) dn.get(fixedBeginnEventID);
@@ -189,17 +123,15 @@ public class Alligator {
             }
             JSONObject NFBN_JSON_KV = new JSONObject();
             NFBN_JSON_KV.put(NFBN_ID, NFBN_DIST);
-            //double virtualAnno = getEventById(NFBN_ID).a + ((NFBN_DIST * yearCoefficientBeginn) * NFBN_SIGN);
             double virtualAnno = getEventById(NFBN_ID).a;
-            System.out.println(i++ + ": " + getEventById(fuzzyBeginnEventID).name + " --> " + getEventById(NFBN_ID).name + " " + NFBN_JSON_KV.toJSONString() + " a: " + getEventById(NFBN_ID).a + " sign: " + NFBN_SIGN + " vAnno: " + virtualAnno);
             getEventById(fuzzyBeginnEventID).nextFixedStartNeighbour = NFBN_JSON_KV;
             getEventById(fuzzyBeginnEventID).a = virtualAnno;
-            //
             AlligatorEvent ae = getEventById(fuzzyBeginnEventID);
             ae.nn_start_name = getEventById(NFBN_ID).name;
+            System.out.println(getEventById(fuzzyBeginnEventID).name + " --> " + getEventById(NFBN_ID).name + " " + NFBN_DIST + " a: " + getEventById(NFBN_ID).a + " sign: " + NFBN_SIGN + " vAnno: " + virtualAnno);
         }
         // end
-        System.out.println("end: ===================================");
+        System.out.println("\r\n===== Next Neighbours for fuzzy end =====");
         int j = 1;
         for (Object event : events_fuzzy_end) {
             String NFEN_ID = null;
@@ -209,15 +141,6 @@ public class Alligator {
             for (Object event2 : events_fixed_end) {
                 String fixedEndEventID = (String) event2;
                 AlligatorEvent ae = getEventById(fuzzyEndEventID);
-                AlligatorEvent ae2 = getEventById(fixedEndEventID);
-                // distance to origin
-                /*double fuzzyDO = Math.sqrt(Math.pow(ae.x, 2) + Math.pow(ae.y, 2) + Math.pow(ae.z, 2));
-                double fixedDO = Math.sqrt(Math.pow(ae2.x, 2) + Math.pow(ae2.y, 2) + Math.pow(ae2.z, 2));
-                if (fuzzyDO < fixedDO) {
-                    NFEN_SIGN = -1;
-                } else {
-                    NFEN_SIGN = 1;
-                }*/
                 HashMap dn = ae.distances;
                 String NFEN_ID_THIS = fixedEndEventID;
                 double NFEN_DIST_THIS = (double) dn.get(fixedEndEventID);
@@ -228,32 +151,28 @@ public class Alligator {
             }
             JSONObject NFEN_JSON_KV = new JSONObject();
             NFEN_JSON_KV.put(NFEN_ID, NFEN_DIST);
-            //double virtualAnno = getEventById(NFEN_ID).b + ((NFEN_DIST * yearCoefficientEnd) * NFEN_SIGN);
             double virtualAnno = getEventById(NFEN_ID).b;
-            System.out.println(j++ + ": " + getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_JSON_KV.toJSONString() + " b: " + getEventById(NFEN_ID).b + " sign: " + NFEN_SIGN + " vAnno: " + virtualAnno);
             getEventById(fuzzyEndEventID).nextFixedEndNeighbour = NFEN_JSON_KV;
             getEventById(fuzzyEndEventID).b = virtualAnno;
-            //
             AlligatorEvent ae = getEventById(fuzzyEndEventID);
             ae.nn_end_name = getEventById(NFEN_ID).name;
+            System.out.println(getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_DIST + " b: " + getEventById(NFEN_ID).b + " sign: " + NFEN_SIGN + " vAnno: " + virtualAnno);
         }
-        System.out.println("=============== END ===============");
     }
 
     public void calculateAllenSigns() {
+        System.out.println("\r\n===== Allen Relations =====");
         for (Object event : events) {
             AlligatorEvent thisEvent = (AlligatorEvent) event;
-            List rel = new ArrayList();
+            HashMap allenRelations = new HashMap();
             for (Object event2 : events) {
                 AlligatorEvent loopEvent = (AlligatorEvent) event2;
-                List realRealtions = AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b);
-                for (Object item : realRealtions) {
-                    String tmp = (String) item;
-                    rel.add(new AllenObject(thisEvent.id, loopEvent.id, tmp));
+                System.out.println(thisEvent.name + " " + AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b) + " " + loopEvent.name);
+                if (AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).size() > 0) {
+                    allenRelations.put(loopEvent.id, AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
                 }
             }
-            // set allen relations
-            thisEvent.allenRelations = rel;
+            thisEvent.allenRelations = allenRelations;
         }
     }
 
@@ -313,37 +232,14 @@ public class Alligator {
         }
         return dist;
     }
-
-    /*private double angle3D(double x1, double y1, double z1, double x2, double y2, double z2) {
-        double alpha = 0.0;
-        // Skalarprodukt a * b
-        double zaehler = (x1 * x2) + (y1 * y2) + (z1 * z2);
-        // |a|*|b|
-        double nenner = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2) + Math.pow(z1, 2)) * Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2) + Math.pow(z2, 2));
-        // cosinus(alpha)
-        alpha = zaehler / nenner;
-        // alpha[rad]
-        alpha = Math.acos(alpha);
-        // alpha [degree]
-        alpha = Math.toDegrees(alpha);
-        if (alpha < 0.001 || Double.isNaN(alpha)) {
-            alpha = 0.0;
-        }
-        if (alpha < minAlpha) {
-            minAlpha = alpha;
-        }
-        if (alpha > maxAlpha) {
-            maxAlpha = alpha;
-        }
-        return alpha;
-    }*/
+    
     private static String getHASHIDParams(int length) {
         UUID newUUID = UUID.randomUUID();
         Hashids hashids = new Hashids(newUUID.toString(), length);
         String hash = hashids.encode(1234567L);
         char ch = hash.charAt(0);
         if (Character.isDigit(ch)) {
-            return getHASHIDParams(12);
+            return getHASHIDParams(length);
         } else {
             return hash;
         }

@@ -25,7 +25,7 @@ public class AlligatorEvent {
     public String schwebend = "foo";
     //public HashMap angels;
     //public HashMap angelsNormalised;
-    public List<AllenObject> allenRelations;
+    public HashMap allenRelations;
     
     public String toString() {
         return id + " " + name + " " + x + " " + y + " " + z + " " + a + " " + b + " " + fixed + " " + startFixed + " " + endFixed;

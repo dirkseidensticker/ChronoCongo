@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Graph</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://visjs.org/dist/vis.js"></script>
+    <link href="http://visjs.org/dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #mynetwork {
+            width: 800px;
+            height: 800px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="mynetwork"></div>
+<script type="text/javascript">
+    $.ajax({
+        url: 'nodesedges_TM2.json',
+        type : 'GET',
+        dataType : 'json',
+        success: function (data2) {
+            var container = document.getElementById('mynetwork');
+            var data = {
+                nodes: new vis.DataSet(data2.nodes),
+                edges: new vis.DataSet(data2.edges)
+            };
+            var options = {};
+            var network = new vis.Network(container, data, options);
+        },
+        error: function (err) {
+            console.log('Error', err);
+        }
+    });
+</script>
+</body>
+</html>

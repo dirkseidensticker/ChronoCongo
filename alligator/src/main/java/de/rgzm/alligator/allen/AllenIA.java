@@ -52,68 +52,21 @@ public class AllenIA {
             relations.add("d"); // 1 during 2
         }
         if (anfang1 < anfang2 && anfang2 < ende2 && ende2 < ende1) {
-            relations.add("di"); // 1 contains 
+            relations.add("di"); // 1 contains 2
         }
         if (ende1 == ende2 && anfang1 == anfang2) {
             relations.add("="); // 1 equals 2
         }
-        // Freksa (1992) "Temporal Reasoning Based on Semi-Intervals" p.21
-        /*// F1
-        if (anfang1 < anfang2) {
-            relations.add("ol"); // 1 older 2
+        // point data
+        /*if (anfang1 == ende1 && anfang2 < anfang1) { 
+            relations.add("D");
         }
-        if (anfang1 == anfang2) {
-            relations.add("hh"); // 1 head to head with 2
+        if (anfang2 == ende2 && anfang2 < anfang1) { 
+            relations.add("DI");
         }
-        if (anfang1 > anfang2) {
-            relations.add("yo"); // 1 younger 2
-        }
-        // F2
-        if (ende1 < ende2) {
-            relations.add("sb"); // 1 survived by 2
-        }
-        if (ende1 == ende2) {
-            relations.add("tt"); // 1 tail to tail with 2
-        }
-        if (ende1 > ende2) {
-            relations.add("sv"); // 1 survives 2
-        }
-        // F3
-        if (anfang1 < ende2) {
-            relations.add("bd"); // 1 born before death of 2
-        }
-        if (ende1 > anfang2) {
-            relations.add("db"); // 1 died after birth of 2
-        }
-        // F4
-        if (ende1 <= anfang2) {
-            relations.add("pr"); // 1 precedes 2
-        }
-        if (anfang2 >= ende2) {
-            relations.add("sd"); // 1 succeeds 2
-        }
-        // F5
-        if (anfang1 < ende2 && ende1 > anfang2) {
-            relations.add("ct"); // 1 contemporary of 2
-        }
-        // F6
-        if (anfang1 < anfang2 && ende1 < ende2) {
-            relations.add("ob"); // 1 older and survived by 2
-        }
-        if (anfang1 > anfang2 && ende1 > ende2) {
-            relations.add("ys"); // 1 younger and survives 2
-        }
-        if (anfang1 < anfang2 && ende1 > anfang2) {
-            relations.add("oc"); // 1 older contemporary of 2
-        }
-        if (anfang1 > anfang2 && anfang1 > ende2) {
-            relations.add("yc"); // 1 younger contemporary of 2
-        }
-        if (anfang1 < ende2 && ende1 > ende2) {
-            relations.add("sc"); // 1 surviving contemporary of 2
-        }
-        if (ende1 > anfang2 && ende1 < ende2) {
-            relations.add("bc"); // 1 survived by contemporary of 2
+        if (relations.contains("=") && relations.contains("DI") && relations.contains("D")) {
+            //relations.remove("DI");
+            //relations.remove("D");
         }*/
         return relations;
     }
