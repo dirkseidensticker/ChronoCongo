@@ -1,29 +1,29 @@
-mBONAG	fruehkaiserzeitlich
-qP23jz	2ndHalfFirstCentury
-yrN1nz	Usurpator
-MeJBQ7	Galba
-XgzN0E	Otho
-rLlDjz	Vespasian
-EKjRPy	Titus
-vGYN8w	Domitian
-kn0oWN	Nerva
-MyXDWk	Trajan
-pZjQPJ	Vitellius
-XzRGOw	DomitianConsulate2
+Jp6gVR	fruehkaiserzeitlich
+N9DE17	2ndHalfFirstCentury
+RN9q1z	Usurpator
+YPQKao	Galba
+w84Nkz	Otho
+J9gDxv	Vespasian
+gayaA9	Titus
+lpKGJP	Domitian
+mEWrqN	Nerva
+Zmm0Xq	Trajan
+pKZB3V	Vitellius
+VP7OAL	DomitianConsulate2
 
 -- allen relations
 
-      	mBONAG	qP23jz	yrN1nz	MeJBQ7	XgzN0E	rLlDjz	EKjRPy	vGYN8w	kn0oWN	MyXDWk	pZjQPJ	XzRGOw	
-mBONAG	=		di		null	null	null	di		di		di		di		di		null	di		
-qP23jz	d		=		null	null	null	di		di		di		di		o		null	di		
-yrN1nz	null	null	=		=		=		null	null	null	null	null	=		null	
-MeJBQ7	null	null	=		=		=		null	null	null	null	null	=		null	
-XgzN0E	null	null	=		=		=		null	null	null	null	null	=		null	
-rLlDjz	d		d		null	null	null	=		m		<		<		<		null	<		
-EKjRPy	d		d		null	null	null	mi		=		m		<		<		null	m		
-vGYN8w	d		d		null	null	null	>		mi		=		m		<		null	=		
-kn0oWN	d		d		null	null	null	>		>		mi		=		m		null	mi		
-MyXDWk	d		oi		null	null	null	>		>		>		mi		=		null	>		
-pZjQPJ	null	null	=		=		=		null	null	null	null	null	=		null	
-XzRGOw	d		d		null	null	null	>		mi		=		m		<		null	=		
+      	Jp6gVR	N9DE17	RN9q1z	YPQKao	w84Nkz	J9gDxv	gayaA9	lpKGJP	mEWrqN	Zmm0Xq	pKZB3V	VP7OAL	
+Jp6gVR	=		di		null	null	null	di		di		di		di		di		null	di		
+N9DE17	d		=		null	null	null	di		di		di		di		o		null	di		
+RN9q1z	null	null	=		=		=		null	null	null	null	null	=		null	
+YPQKao	null	null	=		=		=		null	null	null	null	null	=		null	
+w84Nkz	null	null	=		=		=		null	null	null	null	null	=		null	
+J9gDxv	d		d		null	null	null	=		m		<		<		<		null	<		
+gayaA9	d		d		null	null	null	mi		=		m		<		<		null	m		
+lpKGJP	d		d		null	null	null	>		mi		=		m		<		null	=		
+mEWrqN	d		d		null	null	null	>		>		mi		=		m		null	mi		
+Zmm0Xq	d		oi		null	null	null	>		>		>		mi		=		null	>		
+pKZB3V	null	null	=		=		=		null	null	null	null	null	=		null	
+VP7OAL	d		d		null	null	null	>		mi		=		m		<		null	=		
 
