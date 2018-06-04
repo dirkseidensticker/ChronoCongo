@@ -25,6 +25,7 @@ public class Alligator {
     public List<String> eventIDs = new ArrayList();
     double yearCoefficientBeginn = 1.0;
     double yearCoefficientEnd = 1.0;
+    public List<String> allenRelationList = new ArrayList();
 
     public boolean writeToAlligatorEventList(List inputLines, Double startFixedValue, Double endFixedValue) {
         try {
@@ -170,6 +171,8 @@ public class Alligator {
                 System.out.println(thisEvent.name + " " + AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b) + " " + loopEvent.name);
                 if (AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).size() > 0) {
                     allenRelations.put(loopEvent.id, AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
+                    String p = AllenInttervalAlgebra.getAllenRelationProperties(AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
+                    allenRelationList.add("alligator:" + thisEvent.id + " " + p + " alligator:" + loopEvent.id + " .\r\n");
                 }
             }
             thisEvent.allenRelations = allenRelations;

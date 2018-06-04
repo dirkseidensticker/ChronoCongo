@@ -6,6 +6,7 @@ import de.rgzm.alligator.log.Logging;
 import de.rgzm.alligator.allen.AllenInttervalAlgebra;
 import de.rgzm.alligator.amt.AMT;
 import de.rgzm.alligator.functions.Graph;
+import de.rgzm.alligator.functions.RDFEvents;
 import de.rgzm.alligator.functions.Timeline;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -62,6 +63,7 @@ public class MainKaiser {
             // allen
             alligator.calculateAllenSigns();
             Graph.writeGraph("nodesedges_TM2.json", alligator);
+            RDFEvents.writeRDF("Kaiser.ttl", alligator);
 
             // write distance matrix
             File file = new File("mainTM2_distanceMatrix.txt");
