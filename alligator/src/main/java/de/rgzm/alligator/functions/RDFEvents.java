@@ -13,7 +13,7 @@ public class RDFEvents {
     public static void writeRDF(String filename, Alligator alligator) {
         StringBuilder rdfString = new StringBuilder();
         // prefixes
-        rdfString.append("@prefix alligator: <http://rgzm.github.io/alligator/ontology/#> .\r\n");
+        rdfString.append("@prefix alligator: <http://rgzm.github.io/alligator/ontology#> .\r\n");
         rdfString.append("@prefix ae: <http://example.net/event#> .\r\n");
         rdfString.append("@prefix time: <http://www.w3.org/2006/time#> .\r\n");
         rdfString.append("@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\r\n");
