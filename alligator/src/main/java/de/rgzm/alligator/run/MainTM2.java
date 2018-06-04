@@ -3,7 +3,7 @@ package de.rgzm.alligator.run;
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
-import de.rgzm.alligator.allen.AllenIA;
+import de.rgzm.alligator.allen.AllenInttervalAlgebra;
 import de.rgzm.alligator.amt.AMT;
 import de.rgzm.alligator.functions.Graph;
 import de.rgzm.alligator.functions.Timeline;

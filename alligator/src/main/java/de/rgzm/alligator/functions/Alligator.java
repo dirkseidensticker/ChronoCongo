@@ -2,7 +2,7 @@ package de.rgzm.alligator.functions;
 
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.log.Logging;
-import de.rgzm.alligator.allen.AllenIA;
+import de.rgzm.alligator.allen.AllenInttervalAlgebra;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -167,9 +167,9 @@ public class Alligator {
             HashMap allenRelations = new HashMap();
             for (Object event2 : events) {
                 AlligatorEvent loopEvent = (AlligatorEvent) event2;
-                System.out.println(thisEvent.name + " " + AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b) + " " + loopEvent.name);
-                if (AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).size() > 0) {
-                    allenRelations.put(loopEvent.id, AllenIA.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
+                System.out.println(thisEvent.name + " " + AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b) + " " + loopEvent.name);
+                if (AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).size() > 0) {
+                    allenRelations.put(loopEvent.id, AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
                 }
             }
             thisEvent.allenRelations = allenRelations;

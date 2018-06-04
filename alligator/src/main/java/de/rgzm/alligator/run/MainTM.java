@@ -3,7 +3,7 @@ package de.rgzm.alligator.run;
 import de.rgzm.alligator.classes.AlligatorEvent;
 import de.rgzm.alligator.functions.Alligator;
 import de.rgzm.alligator.log.Logging;
-import de.rgzm.alligator.allen.AllenIA;
+import de.rgzm.alligator.allen.AllenInttervalAlgebra;
 import de.rgzm.alligator.amt.AMT;
 import de.rgzm.alligator.functions.Timeline;
 import java.io.BufferedReader;
@@ -136,14 +136,14 @@ public class MainTM {
                 out.append("\r\n");
             }*/
             // Allen Tests
-            AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
+            /*AlligatorEvent t1 = alligator.getEventByName("Nijmegen-Kops Plateau");
             AlligatorEvent t2 = alligator.getEventByName("Pompeii-Hoard");
             System.out.println(t1.name + " [" + t1.a + ";" + t1.b + "]");
             System.out.println(t2.name + " [" + t2.a + ";" + t2.b + "]");
-            System.out.println(t1.name + " " + AllenIA.getAllenRelationShortDescriptions(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
-            System.out.println(t1.name + " " + AllenIA.getAllenRelationSigns(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
-            System.out.println(t2.name + " " + AllenIA.getAllenRelationShortDescriptions(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
-            System.out.println(t2.name + " " + AllenIA.getAllenRelationSigns(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
+            System.out.println(t1.name + " " + AllenInttervalAlgebra.getAllenRelationShortDescriptions(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
+            System.out.println(t1.name + " " + AllenInttervalAlgebra.getAllenRelationSigns(t1.a, t1.b, t2.a, t2.b) + " " + t2.name);
+            System.out.println(t2.name + " " + AllenInttervalAlgebra.getAllenRelationShortDescriptions(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);
+            System.out.println(t2.name + " " + AllenInttervalAlgebra.getAllenRelationSigns(t2.a, t2.b, t1.a, t1.b) + " " + t1.name);*/
             // output events
             out.append("\r\n");
             System.out.println("virtuell: ===================================");
@@ -155,13 +155,13 @@ public class MainTM {
             // write timeline json
             Timeline.writeTimeline("output_TM.json", alligator);
             // NEO4J tests
-            String nodes = alligator.getEventsAsCypherNodes();
-            List<String> properties = AllenIA.getAllenRelationCypherProperties(t1.a, t1.b, t2.a, t2.b, t1, t2);
+            /*String nodes = alligator.getEventsAsCypherNodes();
+            List<String> properties = AllenInttervalAlgebra.getAllenRelationCypherProperties(t1.a, t1.b, t2.a, t2.b, t1, t2);
             String listString = "";
             for (String s : properties) {
                 listString += s + "\r\n";
             }
-            String ret = alligator.getEventsAsCypherReturn();
+            String ret = alligator.getEventsAsCypherReturn();*/
             //out.append("\r\n").append("-- cypher").append("\r\n\r\n").append(nodes + listString + ret).append("\r\n");
             // more Allen
             alligator.calculateAllenSigns();
