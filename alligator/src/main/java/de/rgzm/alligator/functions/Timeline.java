@@ -19,7 +19,7 @@ public class Timeline {
             id_t++;
             JSONObject t = new JSONObject();
             AlligatorEvent ae = (AlligatorEvent) event;
-            t.put("id", id_t);
+            t.put("id", ae.id);
             if (ae.nn_start_name != null && ae.nn_end_name != null) {
                 t.put("content", ae.name + "-->" + ae.nn_start_name + "," + ae.nn_end_name);
             } else if (ae.nn_start_name == null && ae.nn_end_name != null) {
