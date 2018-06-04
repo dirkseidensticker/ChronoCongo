@@ -1,0 +1,29 @@
+mBONAG	fruehkaiserzeitlich
+qP23jz	2ndHalfFirstCentury
+yrN1nz	Usurpator
+MeJBQ7	Galba
+XgzN0E	Otho
+rLlDjz	Vespasian
+EKjRPy	Titus
+vGYN8w	Domitian
+kn0oWN	Nerva
+MyXDWk	Trajan
+pZjQPJ	Vitellius
+XzRGOw	DomitianConsulate2
+
+-- allen relations
+
+      	mBONAG	qP23jz	yrN1nz	MeJBQ7	XgzN0E	rLlDjz	EKjRPy	vGYN8w	kn0oWN	MyXDWk	pZjQPJ	XzRGOw	
+mBONAG	=		di		null	null	null	di		di		di		di		di		null	di		
+qP23jz	d		=		null	null	null	di		di		di		di		o		null	di		
+yrN1nz	null	null	=		=		=		null	null	null	null	null	=		null	
+MeJBQ7	null	null	=		=		=		null	null	null	null	null	=		null	
+XgzN0E	null	null	=		=		=		null	null	null	null	null	=		null	
+rLlDjz	d		d		null	null	null	=		m		<		<		<		null	<		
+EKjRPy	d		d		null	null	null	mi		=		m		<		<		null	m		
+vGYN8w	d		d		null	null	null	>		mi		=		m		<		null	=		
+kn0oWN	d		d		null	null	null	>		>		mi		=		m		null	mi		
+MyXDWk	d		oi		null	null	null	>		>		>		mi		=		null	>		
+pZjQPJ	null	null	=		=		=		null	null	null	null	null	=		null	
+XzRGOw	d		d		null	null	null	>		mi		=		m		<		null	=		
+

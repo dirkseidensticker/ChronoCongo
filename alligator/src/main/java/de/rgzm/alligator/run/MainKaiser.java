@@ -59,14 +59,14 @@ public class MainKaiser {
                 System.out.println(ae.name + "\t" + String.valueOf(ae.a) + "\t" + String.valueOf(ae.b) + " " + ae.startFixed + " " + ae.endFixed);
             }
             // write timeline json
-            Timeline.writeTimeline("output_TM2.json", alligator);
+            Timeline.writeTimeline("output_Kaiser.json", alligator);
             // allen
             alligator.calculateAllenSigns();
-            Graph.writeGraph("nodesedges_TM2.json", alligator);
+            Graph.writeGraph("nodesedges_Kaiser.json", alligator);
             RDFEvents.writeRDF("Kaiser.ttl", alligator);
 
             // write distance matrix
-            File file = new File("mainTM2_distanceMatrix.txt");
+            File file = new File("../matrix/Kaiser_distanceMatrix.txt");
             String path = file.getCanonicalPath();
             File filePath = new File(path);
             filePath.delete();
@@ -96,7 +96,7 @@ public class MainKaiser {
             out.close();
 
             // write allen matrix
-            file = new File("mainTM2_allenMatrix.txt");
+            file = new File("../matrix/Kaiser_allenMatrix.txt");
             path = file.getCanonicalPath();
             filePath = new File(path);
             filePath.delete();
