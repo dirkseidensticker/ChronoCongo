@@ -22,9 +22,9 @@ public class AlligatorEvent {
     public JSONObject nextFixedEndNeighbour = new JSONObject();
     public String nn_start_name = null;
     public String nn_end_name = null;
+    public String nn_start_id = null;
+    public String nn_end_id = null;
     public String schwebend = "foo";
-    //public HashMap angels;
-    //public HashMap angelsNormalised;
     public HashMap allenRelations;
     
     public String toString() {

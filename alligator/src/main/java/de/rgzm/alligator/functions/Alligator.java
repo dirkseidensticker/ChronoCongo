@@ -129,6 +129,7 @@ public class Alligator {
             getEventById(fuzzyBeginnEventID).a = virtualAnno;
             AlligatorEvent ae = getEventById(fuzzyBeginnEventID);
             ae.nn_start_name = getEventById(NFBN_ID).name;
+            ae.nn_start_id = getEventById(NFBN_ID).id;
             System.out.println(getEventById(fuzzyBeginnEventID).name + " --> " + getEventById(NFBN_ID).name + " " + NFBN_DIST + " a: " + getEventById(NFBN_ID).a + " sign: " + NFBN_SIGN + " vAnno: " + virtualAnno);
         }
         // end
@@ -157,6 +158,7 @@ public class Alligator {
             getEventById(fuzzyEndEventID).b = virtualAnno;
             AlligatorEvent ae = getEventById(fuzzyEndEventID);
             ae.nn_end_name = getEventById(NFEN_ID).name;
+            ae.nn_end_id = getEventById(NFEN_ID).id;
             System.out.println(getEventById(fuzzyEndEventID).name + " --> " + getEventById(NFEN_ID).name + " " + NFEN_DIST + " b: " + getEventById(NFEN_ID).b + " sign: " + NFEN_SIGN + " vAnno: " + virtualAnno);
         }
     }
@@ -172,7 +174,7 @@ public class Alligator {
                 if (AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).size() > 0) {
                     allenRelations.put(loopEvent.id, AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
                     String p = AllenInttervalAlgebra.getAllenRelationProperties(AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
-                    allenRelationList.add("alligator:" + thisEvent.id + " " + p + " alligator:" + loopEvent.id + " .\r\n");
+                    allenRelationList.add("ae:" + thisEvent.id + " " + p + " ae:" + loopEvent.id + " .\r\n");
                 }
             }
             thisEvent.allenRelations = allenRelations;
