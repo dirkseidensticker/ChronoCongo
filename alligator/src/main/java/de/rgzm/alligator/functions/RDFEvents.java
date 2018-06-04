@@ -23,17 +23,17 @@ public class RDFEvents {
         for (Object event : alligator.events) {
             AlligatorEvent ae = (AlligatorEvent) event;
             String aeSubject = "ae:" + ae.id;
-            rdfString.append(aeSubject).append(" a alligator:Event").append(" .\r\n");
+            rdfString.append(aeSubject).append(" a alligator:event").append(" .\r\n");
             rdfString.append(aeSubject).append(" a time:Interval").append(" .\r\n");
             rdfString.append(aeSubject).append(" dc:identifier \"").append(ae.id).append("\" .\r\n");
             rdfString.append(aeSubject).append(" rdfs:label \"").append(ae.name).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:estimatedStart \"").append(ae.a).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:estimatedEnd \"").append(ae.b).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:CAx \"").append(ae.x).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:CAy \"").append(ae.y).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:CAz \"").append(ae.z).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:startFixed \"").append(ae.startFixed).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:endFixed \"").append(ae.endFixed).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:estimatedstart \"").append(ae.a).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:estimatedend \"").append(ae.b).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:cax \"").append(ae.x).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:cay \"").append(ae.y).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:caz \"").append(ae.z).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:startfixed \"").append(ae.startFixed).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:endfixed \"").append(ae.endFixed).append("\" .\r\n");
             if (ae.nn_start_id != null) {
                 rdfString.append(aeSubject).append(" alligator:nfsn \"").append(ae.nn_start_name).append("\" .\r\n");
             }
