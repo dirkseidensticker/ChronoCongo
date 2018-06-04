@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainTM2 {
+public class MainKaiser {
 
     public static void main(String[] args) throws IOException, SQLException {
         try {
