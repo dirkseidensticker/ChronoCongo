@@ -27,18 +27,18 @@ public class RDFEvents {
             rdfString.append(aeSubject).append(" a time:Interval").append(" .\r\n");
             rdfString.append(aeSubject).append(" dc:identifier \"").append(ae.id).append("\" .\r\n");
             rdfString.append(aeSubject).append(" rdfs:label \"").append(ae.name).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:a \"").append(ae.a).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:b \"").append(ae.b).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:x \"").append(ae.x).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:y \"").append(ae.y).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" alligator:z \"").append(ae.z).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:estimatedStart \"").append(ae.a).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:estimatedEnd \"").append(ae.b).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:CAx \"").append(ae.x).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:CAy \"").append(ae.y).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:CAz \"").append(ae.z).append("\" .\r\n");
             rdfString.append(aeSubject).append(" alligator:startFixed \"").append(ae.startFixed).append("\" .\r\n");
             rdfString.append(aeSubject).append(" alligator:endFixed \"").append(ae.endFixed).append("\" .\r\n");
             if (ae.nn_start_id != null) {
-                rdfString.append(aeSubject).append(" alligator:nnStart ").append("ae:").append(ae.nn_start_id).append(" .\r\n");
+                rdfString.append(aeSubject).append(" alligator:nextFixedStartNeighbour ").append("ae:").append(ae.nn_start_id).append(" .\r\n");
             }
             if (ae.nn_end_id != null) {
-                rdfString.append(aeSubject).append(" alligator:nnEnd ").append("ae:").append(ae.nn_end_id).append(" .\r\n");
+                rdfString.append(aeSubject).append(" alligator:nextFixedEndNeighbour ").append("ae:").append(ae.nn_end_id).append(" .\r\n");
             }
             rdfString.append("\r\n");
         }
