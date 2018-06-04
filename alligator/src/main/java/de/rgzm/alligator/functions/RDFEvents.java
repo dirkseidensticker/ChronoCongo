@@ -35,10 +35,10 @@ public class RDFEvents {
             rdfString.append(aeSubject).append(" alligator:startFixed \"").append(ae.startFixed).append("\" .\r\n");
             rdfString.append(aeSubject).append(" alligator:endFixed \"").append(ae.endFixed).append("\" .\r\n");
             if (ae.nn_start_id != null) {
-                rdfString.append(aeSubject).append(" alligator:nfsn ").append("ae:").append(ae.nn_start_id).append(" .\r\n");
+                rdfString.append(aeSubject).append(" alligator:nfsn \"").append(ae.nn_start_name).append("\" .\r\n");
             }
             if (ae.nn_end_id != null) {
-                rdfString.append(aeSubject).append(" alligator:nfen ").append("ae:").append(ae.nn_end_id).append(" .\r\n");
+                rdfString.append(aeSubject).append(" alligator:nfen \"").append(ae.nn_end_name).append("\" .\r\n");
             }
             rdfString.append("\r\n");
         }

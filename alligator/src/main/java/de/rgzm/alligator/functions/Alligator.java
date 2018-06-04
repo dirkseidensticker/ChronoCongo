@@ -174,7 +174,9 @@ public class Alligator {
                 if (AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).size() > 0) {
                     allenRelations.put(loopEvent.id, AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
                     String p = AllenInttervalAlgebra.getAllenRelationProperties(AllenInttervalAlgebra.getAllenRelationSigns(thisEvent.a, thisEvent.b, loopEvent.a, loopEvent.b).get(0));
-                    allenRelationList.add("ae:" + thisEvent.id + " " + p + " ae:" + loopEvent.id + " .\r\n");
+                    if (thisEvent.id != loopEvent.id) {
+                        allenRelationList.add("ae:" + thisEvent.id + " " + p + " ae:" + loopEvent.id + " .\r\n");
+                    }
                 }
             }
             thisEvent.allenRelations = allenRelations;
@@ -237,7 +239,7 @@ public class Alligator {
         }
         return dist;
     }
-    
+
     private static String getHASHIDParams(int length) {
         UUID newUUID = UUID.randomUUID();
         Hashids hashids = new Hashids(newUUID.toString(), length);
