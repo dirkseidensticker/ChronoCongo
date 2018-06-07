@@ -50,47 +50,24 @@ d <- filter(d, !grepl("Rand", ATTR))
 ```
 
 
->> filter out varieties of vessel shapes and only go with base shape (A-J)
-
-
->> use function for iteratative analysis ... removing attributes or observations that distract the CA & clustering
+# Analysis of all styles and attributes
 
 ```{r}
 plt <- anlys(d, 2)
-plt
-ggsave("img/Anlys.png", width = 20, height = 10)
+plt$basicPlot
+ggsave("img/1_all.png", width = 20, height = 10)
 ```
-
-
-
-# combiing clusters & ca:
 
 ```{r}
-c <- read.csv("data/processed/crosstab.csv", row.names = 1)
-
-c.ca <- CA(c, 
-           graph = FALSE)
-
-c.hcpc <- HCPC(c.ca, 
-               graph = FALSE, 
-               max = 3)
-
-# Dendrogram
-clust.plt <- fviz_dend(c.hcpc)
-# Individuals facor map
-ca.plt <- fviz_cluster(c.hcpc)
-
-bottom_row <- plot_grid(clust.plt, 
-                        NULL, 
-                        align = 'h', 
-                        labels = c("B", "C"))
-plt <- plot_grid(ca.plt, 
-                 bottom_row,
-                 ncol = 1, 
-                 labels = c("A", ""), 
-                 rel_heights = c(2, 1))
-ggsave("img/Anlys2.png", width = 10, height = 10)
+plt$caPlot
+ggsave("img/1_all_ca.png", width = 20, height = 10)
 ```
+
+# Iterative filtering based on the initial CA
+
+## Remove ...
+
+
 
 
 
@@ -99,22 +76,28 @@ ggsave("img/Anlys2.png", width = 10, height = 10)
 - both styles are part of the *North-Tradition* and ...
 
 ```{r}
-d <- subset(d, STYLE != "NKB" & 
-               STYLE != "LSL")
-plt <- anlys(d, 2)
-plt
-ggsave("img/Anlys1.png", width = 20, height = 10)
+# d <- subset(d, STYLE != "NKB" & 
+#                STYLE != "LSL")
+# plt <- anlys(d, 2)
+# plt
+# ggsave("img/Anlys1.png", width = 20, height = 10)
 ```
 
 
 
 
+## ToDo
+
+- [ ] filter out varieties of vessel shapes and only go with base shape (A-J)
 
 
 
 
 
 
+
+
+# Radiocabron datings (featuring c14bazAAr & aDRAC)
 
 
 

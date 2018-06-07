@@ -57,6 +57,10 @@ anlys <- function(d = data,
   ca.plt.23 <- fviz_ca_biplot(res.ca,
                                axes = c(2, 3),
                                repel = TRUE)
+  # 3nd and 2rd axes
+  ca.plt.32 <- fviz_ca_biplot(res.ca,
+                              axes = c(3, 2),
+                              repel = TRUE)
   
   # export coordinates
   # ------------------
@@ -90,12 +94,63 @@ anlys <- function(d = data,
                           nbclust, 
                           ncol = 1,
                           labels = c("C", "D"))
-  plt <- plot_grid(ca.plt.12,
-                   ca.plt.23,
-                   cluster_col,
-                   ncol = 3, 
-                   labels = c("A", "B", ""), 
-                   rel_heights = c(1, 1, 1))
   
-  return(plt)
+  plt1 <- plot_grid(ca.plt.12,
+                    ca.plt.23,
+                    cluster_col,
+                    ncol = 3, 
+                    labels = c("A", "B", ""), 
+                    rel_heights = c(1, 1, 1))
+
+  # CA Plot
+  plt2 <- plot_grid(ca.plt.12,
+                    ca.plt.32,
+                    ncol = 2, 
+                    labels = c("A", "B"), 
+                    rel_heights = c(1, 1))
+  
+  # Individual ggplots of CA output
+  # ===============================
+  
+  # ggplot of styles with age as fill
+  # ---------------------------------
+  
+  
+  
+  # ggplot of attributes with type as shape & variante as fill
+  # ----------------------------------------------------------
+  
+
+  
+  
+  # Build returned list
+  # ===================
+  
+  pltList <- list("basicPlot" = plt1, 
+                  "caPlot" = plt2)
+  
+  return(pltList)
+  
+  # # combiing clusters & ca:
+  # c <- read.csv("data/processed/crosstab.csv", row.names = 1)
+  # c.ca <- CA(c, 
+  #            graph = FALSE)
+  # c.hcpc <- HCPC(c.ca, 
+  #                graph = FALSE, 
+  #                max = 3)
+  
+  # # Dendrogram
+  # clust.plt <- fviz_dend(c.hcpc)
+  # Individuals facor map
+  # ca.plt <- fviz_cluster(c.hcpc)
+  # bottom_row <- plot_grid(clust.plt, 
+  #                         NULL, 
+  #                         align = 'h', 
+  #                         labels = c("B", "C"))
+  # plt <- plot_grid(ca.plt, 
+  #                  bottom_row,
+  #                  ncol = 1, 
+  #                  labels = c("A", ""), 
+  #                  rel_heights = c(2, 1))
+  # ggsave("img/Anlys2.png", width = 10, height = 10)
 }
