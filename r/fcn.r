@@ -120,7 +120,6 @@ anlys <- function(d = data,
   # ggplot of attributes with type as shape & variante as fill
   # ----------------------------------------------------------
   
-
   
   
   # Build returned list
