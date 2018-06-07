@@ -49,6 +49,10 @@ d <- filter(d, !grepl("Rand", ATTR))
 #d <- filter(d, !grepl("Fabric", ATTR))
 ```
 
+
+>> filter out varieties of vessel shapes and only go with base shape (A-J)
+
+
 >> use function for iteratative analysis ... removing attributes or observations that distract the CA & clustering
 
 ```{r}
