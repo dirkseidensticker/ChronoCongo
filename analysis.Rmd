@@ -60,7 +60,7 @@ d <- filter(d, !grepl("Rand", ATTR))
 ```{r}
 plt <- anlys(d, 2)
 plt$basicPlot
-ggsave("img/1_all.png", width = 20, height = 10)
+ggsave("img/_all.png", width = 20, height = 10)
 ```
 
 ```{r}
