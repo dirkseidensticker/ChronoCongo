@@ -112,21 +112,64 @@ anlys <- function(d = data,
   # Individual ggplots of CA output
   # ===============================
   
+  style <- get_ca_row(res.ca)
+  style_xyz <- as.data.frame(style[1]$coord[,1:3])
+  
+  attr <- get_ca_col(res.ca)
+  attr_xyz <- as.data.frame(attr[1]$coord[,1:3])
+  
   # ggplot of styles with age as fill
   # ---------------------------------
+  chron$MeanAge <- (chron$FROM + chron$TO) / 2
   
+  style_xyz <- merge(x = style_xyz, 
+                     y = chron[, c("STYLE", "MeanAge")], 
+                     by.x = "row.names", 
+                     by.y = "STYLE")
   
+  plt3 <- ggplot(style_xyz, aes(x = `Dim 1`, y = `Dim 2`, label = Row.names)) + 
+    geom_text_repel() + 
+    geom_point(aes(fill = MeanAge), 
+               shape = 21, 
+               size = 3) + 
+    scale_fill_viridis() + 
+    coord_equal() +
+    geom_hline(yintercept = 0, linetype="dashed") +
+    geom_vline(xintercept = 0, linetype="dashed") + 
+    theme_light() + 
+    theme(legend.position="left")
   
   # ggplot of attributes with type as shape & variante as fill
   # ----------------------------------------------------------
+  attr_xyz$Attribute <- gsub("\\..*", "", row.names(attr_xyz))
+  attr_xyz$Variety <- gsub("^.*?\\.", "", row.names(attr_xyz))
   
+  plt4 <- ggplot(attr_xyz, aes(x = `Dim 1`, 
+                               y = `Dim 2`, 
+                               label = rownames(attr_xyz), 
+                               shape = attr_xyz$Attribute)) +
+    geom_text_repel() + 
+    geom_point(aes(fill = attr_xyz$Variety), 
+               size = 3) +
+    coord_equal() +
+    scale_shape_manual(values = c(21, 22, 23, 24)) + 
+    geom_hline(yintercept = 0, linetype="dashed") +
+    geom_vline(xintercept = 0, linetype="dashed") + 
+    theme_light()
   
+  plt5 <- plot_grid(plt3,
+                    plt4,
+                    ncol = 2, 
+                    labels = c("A", "B"), 
+                    rel_heights = c(1, 1))
   
   # Build returned list
   # ===================
   
   pltList <- list("basicPlot" = plt1, 
-                  "caPlot" = plt2)
+                  "caPlot" = plt2, 
+                  "ggplot" = plt5, 
+                  "hclust" = res)
   
   return(pltList)
   

@@ -7,10 +7,14 @@ output: html_notebook
 library("cowplot")
 library("data.table")
 library("dplyr")
+library("ggplot2")
+library("ggrepel")
 library("FactoMineR")
 library("factoextra")
 library("plyr")
 library("reshape2")
+library("tidyr")
+library("viridis")
 
 # library(devtools)
 # install_github('ISAAKiel/quantAAR')
@@ -22,6 +26,8 @@ source("r/fcn.r")
 see:
 - [ ] http://www.sthda.com/english/rpkgs/factoextra/
 - [ ] http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/113-ca-correspondence-analysis-in-r-essentials/#export-plots-to-pdfpng-files
+- [ ] https://stackoverflow.com/questions/30891559/r-biplot-with-clusters-as-colors
+
 
 ## data preparation
 
@@ -33,8 +39,8 @@ d <- read.csv("data/base/StyleAttributes.csv", encoding = 'UTF-8')
 ### replace vessel shape typology from Wotzka 1995 with universal typology for diachronic question:
 ```{r}
 k <- read.csv("data/base/Wotzka1995_GefFormenKonkordanz.csv")
-k$TypOrig <- paste("GefTyp", k$TypHPW, sep = "")
-k$TypNew <- paste("GefTyp", k$TypDS, sep = "")
+k$TypOrig <- paste("GefTyp.", k$TypHPW, sep = "")
+k$TypNew <- paste("GefTyp.", k$TypDS, sep = "")
 
 d$ATTR <- mapvalues(d$ATTR, 
           from = k$TypOrig, 
@@ -49,7 +55,6 @@ d <- filter(d, !grepl("Rand", ATTR))
 #d <- filter(d, !grepl("Fabric", ATTR))
 ```
 
-
 # Analysis of all styles and attributes
 
 ```{r}
@@ -60,46 +65,179 @@ ggsave("img/1_all.png", width = 20, height = 10)
 
 ```{r}
 plt$caPlot
-ggsave("img/1_all_ca.png", width = 20, height = 10)
+ggsave("img/_all_ca.png", width = 20, height = 10)
+```
+
+```{r}
+plt$ggplot
+ggsave("img/_all_ggplot.png", width = 20, height = 10)
 ```
 
 # Iterative filtering based on the initial CA
 
-## Remove ...
-
-
-
-
-
-# remove styles NKB & LSL and rerun analysis
-
-- both styles are part of the *North-Tradition* and ...
+## Styles from cluster 1 & 2
 
 ```{r}
-# d <- subset(d, STYLE != "NKB" & 
-#                STYLE != "LSL")
-# plt <- anlys(d, 2)
-# plt
-# ggsave("img/Anlys1.png", width = 20, height = 10)
+filt1.1 <- as.data.frame(subset(plt$hclust$cluster, plt$hclust$cluster == 1))
+filt1.1 <- row.names(filt1.1)
+filt1.1
+```
+
+```{r}
+d1.1 <- subset(d, STYLE %in% filt1.1)
 ```
 
 
+```{r}
+filt1.2 <- as.data.frame(subset(plt$hclust$cluster, plt$hclust$cluster == 2))
+filt1.2 <- row.names(filt1.2)
+filt1.2
+```
 
+```{r}
+d1.2 <- subset(d, STYLE %in% filt1.2)
+```
 
-## ToDo
+### Cluster 1
 
-- [ ] filter out varieties of vessel shapes and only go with base shape (A-J)
+```{r}
+plt <- anlys(d1.1, 2)
+plt$basicPlot
+ggsave("img/1-1_all.png", width = 20, height = 10)
+```
 
+```{r}
+plt$ggplot
+ggsave("img/1-1_all_ggplot.png", width = 20, height = 10)
+```
 
+### Cluster 2
 
+```{r}
+plt <- anlys(d1.2, 2)
+plt$basicPlot
+ggsave("img/1-2_all.png", width = 20, height = 10)
+```
 
+```{r}
+plt$ggplot
+ggsave("img/1-2_all_ggplot.png", width = 20, height = 10)
+```
 
+## lock at Cluster 1 from #2
 
+```{r}
+filt2.1 <- as.data.frame(subset(plt$hclust$cluster, plt$hclust$cluster == 1))
+filt2.1 <- row.names(filt2.1)
+filt2.1
+```
+
+```{r}
+d2.1 <- subset(d, STYLE %in% filt2.1)
+```
+
+```{r}
+plt <- anlys(d2.1, 2)
+plt$basicPlot
+ggsave("img/2-1_all.png", width = 20, height = 10)
+```
+
+```{r}
+plt$ggplot
+ggsave("img/2-1_all_ggplot.png", width = 20, height = 10)
+```
+
+## lock at Cluster 2 from #3
+
+```{r}
+filt3.2 <- as.data.frame(subset(plt$hclust$cluster, plt$hclust$cluster == 2))
+filt3.2 <- row.names(filt3.2)
+filt3.2
+```
+
+```{r}
+d3.2 <- subset(d, STYLE %in% filt3.2)
+```
+
+```{r}
+plt <- anlys(d3.2, 2)
+plt$basicPlot
+ggsave("img/3-2_all.png", width = 20, height = 10)
+```
+
+```{r}
+plt$ggplot
+ggsave("img/3-2_all_ggplot.png", width = 20, height = 10)
+```
+
+## Styles from clusters 1 & 2
+
+```{r}
+filt4.1 <- as.data.frame(subset(plt$hclust$cluster, plt$hclust$cluster == 1))
+filt4.1 <- row.names(filt4.1)
+filt4.1
+```
+
+```{r}
+d4.1 <- subset(d, STYLE %in% filt4.1)
+```
+
+```{r}
+filt4.2 <- as.data.frame(subset(plt$hclust$cluster, plt$hclust$cluster == 2))
+filt4.2 <- row.names(filt4.2)
+filt4.2
+```
+
+```{r}
+d4.2 <- subset(d, STYLE %in% filt4.2)
+```
+
+```{r}
+plt <- anlys(d4.1, 2)
+plt$basicPlot
+ggsave("img/4-1_all.png", width = 20, height = 10)
+```
+
+```{r}
+plt$ggplot
+ggsave("img/4-1_all_ggplot.png", width = 20, height = 10)
+```
+
+```{r}
+plt <- anlys(d4.2, 2)
+plt$basicPlot
+ggsave("img/4-2_all.png", width = 20, height = 10)
+```
+
+```{r}
+plt$ggplot
+ggsave("img/4-2_all_ggplot.png", width = 20, height = 10)
+```
 
 
 # Radiocabron datings (featuring c14bazAAr & aDRAC)
 
+```{r}
+#if(!require('devtools')) install.packages('devtools')
+#devtools::install_github("ISAAKiel/c14bazAAR")
+library(c14bazAAR)
 
+library(oxcAAR)
+```
+
+```{r}
+c14 <- get_aDRAC()
+c14
+```
+
+```{r}
+# TODO
+# - filter for dates with Pottery
+# - use oxcAAR() for summed 14C curves for the individual styles
+
+
+
+```
 
 
 
