@@ -1,0 +1,23 @@
+pYXjP7	AlbLimes
+D9n46l	DonauLimes
+M2abym	Elisabethenstrasse
+kR9MbE	HadriansWall
+N9VKX4	Neckarlimes
+jZZkrP	NördlingerRies
+gyJzy5	Odenwaldlimes
+ZpMYEL	WestRätLimes
+jk7dBz	Wetteraulimes
+
+-- allen relations
+
+      	pYXjP7	D9n46l	M2abym	kR9MbE	N9VKX4	jZZkrP	gyJzy5	ZpMYEL	jk7dBz	
+pYXjP7	=		fi		f		o		=		f		f		f		f		
+D9n46l	f		=		f		s		f		f		f		f		f		
+M2abym	fi		fi		=		o		fi		fi		fi		fi		fi		
+kR9MbE	oi		si		oi		=		oi		oi		oi		oi		oi		
+N9VKX4	=		fi		f		o		=		f		f		f		f		
+jZZkrP	fi		fi		f		o		fi		=		=		=		=		
+gyJzy5	fi		fi		f		o		fi		=		=		=		=		
+ZpMYEL	fi		fi		f		o		fi		=		=		=		=		
+jk7dBz	fi		fi		f		o		fi		=		=		=		=		
+
