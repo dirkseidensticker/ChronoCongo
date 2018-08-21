@@ -23,10 +23,9 @@ public class RDFEvents {
         for (Object event : alligator.events) {
             AlligatorEvent ae = (AlligatorEvent) event;
             String aeSubject = "ae:" + ae.id;
-            rdfString.append(aeSubject).append(" a alligator:event").append(" .\r\n");
-            rdfString.append(aeSubject).append(" a time:Interval").append(" .\r\n");
+            rdfString.append(aeSubject).append(" a alligator:Event").append(" .\r\n");
             rdfString.append(aeSubject).append(" dc:identifier \"").append(ae.id).append("\" .\r\n");
-            rdfString.append(aeSubject).append(" rdfs:label \"").append(ae.name).append("\" .\r\n");
+            rdfString.append(aeSubject).append(" alligator:eventname \"").append(ae.name).append("\" .\r\n");
             rdfString.append(aeSubject).append(" alligator:estimatedstart \"").append(ae.a).append("\" .\r\n");
             rdfString.append(aeSubject).append(" alligator:estimatedend \"").append(ae.b).append("\" .\r\n");
             rdfString.append(aeSubject).append(" alligator:cax \"").append(ae.x).append("\" .\r\n");
@@ -36,9 +35,11 @@ public class RDFEvents {
             rdfString.append(aeSubject).append(" alligator:endfixed \"").append(ae.endFixed).append("\" .\r\n");
             if (ae.nn_start_id != null) {
                 rdfString.append(aeSubject).append(" alligator:nfsn \"").append(ae.nn_start_name).append("\" .\r\n");
+                rdfString.append(aeSubject).append(" alligator:nfsnE alligator:").append(ae.nn_start_id).append(" .\r\n");
             }
             if (ae.nn_end_id != null) {
                 rdfString.append(aeSubject).append(" alligator:nfen \"").append(ae.nn_end_name).append("\" .\r\n");
+                rdfString.append(aeSubject).append(" alligator:nfenE alligator:").append(ae.nn_end_id).append(" .\r\n");
             }
             rdfString.append("\r\n");
         }
