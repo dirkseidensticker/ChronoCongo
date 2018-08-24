@@ -1,7 +1,12 @@
 # CA & Cluster Analysis
 
-anlys <- function(d = data, 
-                  t = threshold){
+anlys <- function(d = data,
+                  t = threshold, 
+                  n = name){
+
+  # setup filepath for output
+  p <- "output/"
+
   c <- dcast(d, STYLE ~ ATTR, 
              value.var = "STYLE",
              fun.aggregate = length)
@@ -15,7 +20,7 @@ anlys <- function(d = data,
   c <- quantAAR::itremove(c,t)
   
   # write out the abundance table
-  write.csv(c, "data/processed/crosstab.csv")
+  write.csv(c, paste(p, n, "_crosstab.csv", sep = ""))
   
   # Hierarchical clustering
   # =======================
@@ -82,8 +87,8 @@ anlys <- function(d = data,
   CA_export$fixed[CA_export$fixed == 0 | is.na(CA_export$fixed)] <- "schwebend"
   CA_export$fixed[CA_export$fixed == 1] <- 'fix'
   
-  write.table(CA_export, 
-              "data/processed/CA_export.tsv", 
+  write.table(CA_export,
+              paste(p, n, "_CAexport.tsv", sep = ""),
               quote=FALSE, 
               sep='\t', 
               row.names = FALSE)
@@ -102,12 +107,18 @@ anlys <- function(d = data,
                     labels = c("A", "B", ""), 
                     rel_heights = c(1, 1, 1))
 
+  ggsave(paste(p, n, "_ca-clust.png", sep = ""), 
+         plot = plt1, width = 20, height = 10)
+  
   # CA Plot
   plt2 <- plot_grid(ca.plt.12,
                     ca.plt.32,
                     ncol = 2, 
                     labels = c("A", "B"), 
                     rel_heights = c(1, 1))
+
+  ggsave(paste(p, n, "_ca.png", sep = ""), 
+         plot = plt2, width = 20, height = 10)
   
   # Individual ggplots of CA output
   # ===============================
@@ -162,6 +173,9 @@ anlys <- function(d = data,
                     ncol = 2, 
                     labels = c("A", "B"), 
                     rel_heights = c(1, 1))
+  
+  ggsave(paste(p, n, "_ggplot.png", sep = ""), 
+         plot = plt5, width = 20, height = 10)
   
   # Build returned list
   # ===================

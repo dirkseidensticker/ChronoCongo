@@ -3,15 +3,15 @@ title: "Archaeological Analysis"
 output: html_notebook
 ---
 
-```{r}
+```{r message=FALSEe}
 library("cowplot")
 library("data.table")
+library("plyr")
 library("dplyr")
 library("ggplot2")
 library("ggrepel")
 library("FactoMineR")
 library("factoextra")
-library("plyr")
 library("reshape2")
 library("tidyr")
 library("viridis")
@@ -33,12 +33,12 @@ see:
 
 ### load & clean dataset 
 ```{r}
-d <- read.csv("data/base/StyleAttributes.csv", encoding = 'UTF-8')
+d <- read.csv("data/Congo_StyleAttributes.csv", encoding = 'UTF-8')
 ```
 
 ### replace vessel shape typology from Wotzka 1995 with universal typology for diachronic question:
 ```{r}
-k <- read.csv("data/base/Wotzka1995_GefFormenKonkordanz.csv")
+k <- read.csv("data/Wotzka1995_GefFormenKonkordanz.csv")
 k$TypOrig <- paste("GefTyp.", k$TypHPW, sep = "")
 k$TypNew <- paste("GefTyp.", k$TypDS, sep = "")
 
@@ -58,19 +58,10 @@ d <- filter(d, !grepl("Rand", ATTR))
 # Analysis of all styles and attributes
 
 ```{r}
-plt <- anlys(d, 2)
+plt <- anlys(d, 2, '1')
 plt$basicPlot
-ggsave("img/_all.png", width = 20, height = 10)
-```
-
-```{r}
 plt$caPlot
-ggsave("img/_all_ca.png", width = 20, height = 10)
-```
-
-```{r}
 plt$ggplot
-ggsave("img/_all_ggplot.png", width = 20, height = 10)
 ```
 
 # Iterative filtering based on the initial CA
@@ -101,27 +92,17 @@ d1.2 <- subset(d, STYLE %in% filt1.2)
 ### Cluster 1
 
 ```{r}
-plt <- anlys(d1.1, 2)
+plt <- anlys(d1.1, 2, "1-1")
 plt$basicPlot
-ggsave("img/1-1_all.png", width = 20, height = 10)
-```
-
-```{r}
 plt$ggplot
-ggsave("img/1-1_all_ggplot.png", width = 20, height = 10)
 ```
 
 ### Cluster 2
 
 ```{r}
-plt <- anlys(d1.2, 2)
+plt <- anlys(d1.2, 2, "1-2")
 plt$basicPlot
-ggsave("img/1-2_all.png", width = 20, height = 10)
-```
-
-```{r}
 plt$ggplot
-ggsave("img/1-2_all_ggplot.png", width = 20, height = 10)
 ```
 
 ## lock at Cluster 1 from #2
@@ -137,14 +118,9 @@ d2.1 <- subset(d, STYLE %in% filt2.1)
 ```
 
 ```{r}
-plt <- anlys(d2.1, 2)
+plt <- anlys(d2.1, 2, "2-1")
 plt$basicPlot
-ggsave("img/2-1_all.png", width = 20, height = 10)
-```
-
-```{r}
 plt$ggplot
-ggsave("img/2-1_all_ggplot.png", width = 20, height = 10)
 ```
 
 ## lock at Cluster 2 from #3
@@ -160,14 +136,9 @@ d3.2 <- subset(d, STYLE %in% filt3.2)
 ```
 
 ```{r}
-plt <- anlys(d3.2, 2)
+plt <- anlys(d3.2, 2, "3-2")
 plt$basicPlot
-ggsave("img/3-2_all.png", width = 20, height = 10)
-```
-
-```{r}
 plt$ggplot
-ggsave("img/3-2_all_ggplot.png", width = 20, height = 10)
 ```
 
 ## Styles from clusters 1 & 2
@@ -193,25 +164,15 @@ d4.2 <- subset(d, STYLE %in% filt4.2)
 ```
 
 ```{r}
-plt <- anlys(d4.1, 2)
+plt <- anlys(d4.1, 2, "4-1")
 plt$basicPlot
-ggsave("img/4-1_all.png", width = 20, height = 10)
-```
-
-```{r}
 plt$ggplot
-ggsave("img/4-1_all_ggplot.png", width = 20, height = 10)
 ```
 
 ```{r}
-plt <- anlys(d4.2, 2)
+plt <- anlys(d4.2, 2, "4-2")
 plt$basicPlot
-ggsave("img/4-2_all.png", width = 20, height = 10)
-```
-
-```{r}
 plt$ggplot
-ggsave("img/4-2_all_ggplot.png", width = 20, height = 10)
 ```
 
 
