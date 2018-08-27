@@ -55,9 +55,9 @@ anlys <- function(d = data,
               stand = TRUE)
   clust.plt <- fviz_dend(res, 
                          rect = TRUE, 
-                         cex = 0.5)
+                         cex = 0.5, 
+                         palette = "jco", rect_border = "jco", rect_fill = TRUE)
 
-  
   # Correspondance Analysis
   # =======================
   res.ca <- CA(c, graph = FALSE)
@@ -111,7 +111,7 @@ anlys <- function(d = data,
          plot = plt1, width = 20, height = 10)
   
   # Combining Clusters & CA
-  # -----------------------
+  # =======================
 
   c.ca <- CA(c, 
              graph = FALSE)
@@ -121,15 +121,18 @@ anlys <- function(d = data,
                  k = k, 
                  stand = TRUE)
   
-  clust.plt
-  
-  
-  clust.plt <- fviz_dend(c.hcpc) # Dendrogram
+  # clust.plt <- fviz_dend(c.hcpc) # Dendrogram
   # Individuals facor map
-  ca.plt12 <- fviz_cluster(c.hcpc)
+  ca.plt12 <- fviz_cluster(c.hcpc,
+                           palette = "jco", 
+                           show.clust.cent = FALSE,
+                           ggtheme = theme_minimal())
   
   ca.plt32 <- fviz_cluster(c.hcpc, 
-                           axes = c(3, 2))
+                           axes = c(3, 2), 
+                           palette = "jco", 
+                           show.clust.cent = FALSE,
+                           ggtheme = theme_minimal())
   
   # combine plots
   cluster_col <- plot_grid(clust.plt, 
@@ -190,9 +193,9 @@ anlys <- function(d = data,
     geom_text_repel() + 
     geom_point(size = 3) +
     coord_equal() +
-    scale_shape_manual(values = c(21, 22, 23, 24)) + 
-    scale_fill_discrete(name = "Feature",
-                        guide = FALSE) + 
+    scale_shape_manual(name = "Feature", 
+                       values = c(21, 22, 23, 24)) + 
+    scale_fill_discrete(guide = FALSE) + 
     geom_hline(yintercept = 0, linetype="dashed") +
     geom_vline(xintercept = 0, linetype="dashed") + 
     theme_light() + 

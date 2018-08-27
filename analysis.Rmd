@@ -3,7 +3,7 @@ title: "Archaeological Analysis"
 output: html_notebook
 ---
 
-```{r message=FALSEe}
+```{r message=FALSE}
 library("cowplot")
 library("data.table")
 library("plyr")
@@ -60,7 +60,7 @@ d <- filter(d, !grepl("Rand", ATTR))
 ```{r}
 plt <- anlys(d, 2, '1')
 plt$basicPlot
-plt$caPlot
+plt$clustPlot
 plt$ggplot
 ```
 
