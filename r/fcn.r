@@ -37,7 +37,9 @@ anlys <- function(d = data,
   # fviz_nbclust(c.scaled, kmeans, method = "wss")
   # fviz_nbclust(c.scaled, hcut, method = "wss")
   
-  nbclust <- fviz_nbclust(c.scaled, hcut, method = "silhouette", 
+  nbclust <- fviz_nbclust(c.scaled, 
+                          hcut, 
+                          method = "silhouette", 
                           hc_method = "complete")
   nbclust
   
@@ -48,8 +50,12 @@ anlys <- function(d = data,
   
   # Clustering
   # ----------
-  res <- hcut(c, k = k, stand = TRUE)
-  clust.plt <- fviz_dend(res, rect = TRUE, cex = 0.5)
+  res <- hcut(c, 
+              k = k, 
+              stand = TRUE)
+  clust.plt <- fviz_dend(res, 
+                         rect = TRUE, 
+                         cex = 0.5)
 
   
   # Correspondance Analysis
@@ -93,31 +99,52 @@ anlys <- function(d = data,
               sep='\t', 
               row.names = FALSE)
   
-  # Build plot
-  # ==========
-  cluster_col <- plot_grid(clust.plt, 
-                          nbclust, 
-                          ncol = 1,
-                          labels = c("C", "D"))
-  
+  # Build basic CA plot
+  # ===================
   plt1 <- plot_grid(ca.plt.12,
-                    ca.plt.23,
-                    cluster_col,
-                    ncol = 3, 
-                    labels = c("A", "B", ""), 
-                    rel_heights = c(1, 1, 1))
-
-  ggsave(paste(p, n, "_ca-clust.png", sep = ""), 
-         plot = plt1, width = 20, height = 10)
-  
-  # CA Plot
-  plt2 <- plot_grid(ca.plt.12,
                     ca.plt.32,
                     ncol = 2, 
                     labels = c("A", "B"), 
                     rel_heights = c(1, 1))
-
+  
   ggsave(paste(p, n, "_ca.png", sep = ""), 
+         plot = plt1, width = 20, height = 10)
+  
+  # Combining Clusters & CA
+  # -----------------------
+
+  c.ca <- CA(c, 
+             graph = FALSE)
+  # c.hcpc <- HCPC(c.ca, graph = FALSE, max = 3)
+  
+  c.hcpc <- hcut(c, 
+                 k = k, 
+                 stand = TRUE)
+  
+  clust.plt
+  
+  
+  clust.plt <- fviz_dend(c.hcpc) # Dendrogram
+  # Individuals facor map
+  ca.plt12 <- fviz_cluster(c.hcpc)
+  
+  ca.plt32 <- fviz_cluster(c.hcpc, 
+                           axes = c(3, 2))
+  
+  # combine plots
+  cluster_col <- plot_grid(clust.plt, 
+                           nbclust, 
+                           ncol = 1,
+                           labels = c("C", "D"))
+  
+  plt2 <- plot_grid(ca.plt12,
+                    ca.plt32,
+                    cluster_col,
+                    ncol = 3, 
+                    labels = c("A", "B", ""), 
+                    rel_heights = c(1, 1, 1))
+  
+  ggsave(paste(p, n, "_cluster.png", sep = ""), 
          plot = plt2, width = 20, height = 10)
   
   # Individual ggplots of CA output
@@ -148,7 +175,7 @@ anlys <- function(d = data,
     geom_hline(yintercept = 0, linetype="dashed") +
     geom_vline(xintercept = 0, linetype="dashed") + 
     theme_light() + 
-    theme(legend.position="left")
+    theme(legend.position="bottom")
   
   # ggplot of attributes with type as shape & variante as fill
   # ----------------------------------------------------------
@@ -158,15 +185,18 @@ anlys <- function(d = data,
   plt4 <- ggplot(attr_xyz, aes(x = `Dim 1`, 
                                y = `Dim 2`, 
                                label = rownames(attr_xyz), 
-                               shape = attr_xyz$Attribute)) +
+                               shape = attr_xyz$Attribute, 
+                               fill = rownames(attr_xyz))) +
     geom_text_repel() + 
-    geom_point(aes(fill = attr_xyz$Variety), 
-               size = 3) +
+    geom_point(size = 3) +
     coord_equal() +
     scale_shape_manual(values = c(21, 22, 23, 24)) + 
+    scale_fill_discrete(name = "Feature",
+                        guide = FALSE) + 
     geom_hline(yintercept = 0, linetype="dashed") +
     geom_vline(xintercept = 0, linetype="dashed") + 
-    theme_light()
+    theme_light() + 
+    theme(legend.position="bottom")
   
   plt5 <- plot_grid(plt3,
                     plt4,
@@ -181,32 +211,10 @@ anlys <- function(d = data,
   # ===================
   
   pltList <- list("basicPlot" = plt1, 
-                  "caPlot" = plt2, 
+                  "clustPlot" = plt2, 
                   "ggplot" = plt5, 
                   "hclust" = res)
   
   return(pltList)
   
-  # # combiing clusters & ca:
-  # c <- read.csv("data/processed/crosstab.csv", row.names = 1)
-  # c.ca <- CA(c, 
-  #            graph = FALSE)
-  # c.hcpc <- HCPC(c.ca, 
-  #                graph = FALSE, 
-  #                max = 3)
-  
-  # # Dendrogram
-  # clust.plt <- fviz_dend(c.hcpc)
-  # Individuals facor map
-  # ca.plt <- fviz_cluster(c.hcpc)
-  # bottom_row <- plot_grid(clust.plt, 
-  #                         NULL, 
-  #                         align = 'h', 
-  #                         labels = c("B", "C"))
-  # plt <- plot_grid(ca.plt, 
-  #                  bottom_row,
-  #                  ncol = 1, 
-  #                  labels = c("A", ""), 
-  #                  rel_heights = c(2, 1))
-  # ggsave("img/Anlys2.png", width = 10, height = 10)
 }
